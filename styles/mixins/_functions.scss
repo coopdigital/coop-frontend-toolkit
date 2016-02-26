@@ -7,8 +7,8 @@ Functions - Co-op Front-end Toolkit
  * @param  {string} $url the relative URL for the resource
  * @return {string}      the fully-formed url() value
  */
-@function base-url($url) {
-  @return url($base-url + $url);
+@function asset-url($url) {
+  @return url($base-asset-url + $url);
 }
 
 
