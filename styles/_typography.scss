@@ -1,0 +1,164 @@
+/*===============================================
+Typography - Co-op Front-end Toolkit
+===============================================*/
+
+h1, .h1, .alpha,
+h2, .h2, .beta,
+h3, .h3, .gamma,
+h4, .h4, .delta,
+h5, .h5, .epsilon,
+h6, .h6, .zeta,
+ul,
+ol,
+p,
+address {
+  font-weight: normal;
+  margin-top: 0;
+}
+
+h1, .h1, .alpha {
+  font-size: em-calc(30);
+  line-height: 1.2;
+
+  @media #{$medium} {
+    h1, .alpha {
+      font-size: em-calc(36);
+    }
+  }
+}
+
+
+
+h2, .h2, .beta {
+  font-size: em-calc(24);
+}
+
+h3, .h3, .gamma {
+  font-size: em-calc(19);
+}
+
+h4, .h4, .delta {
+  font-family: $bold;
+  font-size: em-calc(16);
+}
+
+h5, .h5, .epsilon {
+  font-family: $bold;
+  font-size: em-calc(13);
+}
+
+h6, .h6, .zeta {
+  font-size: em-calc(11);
+  font-family: $bold;
+  text-transform: uppercase;
+}
+
+p {
+  margin-bottom: $half-spacing-unit;
+}
+
+.smallprint {
+  font-size: em-calc(11);
+
+  @media #{$large} {
+    font-size: em-calc(13);
+  }
+}
+
+em {
+  font-family: $regular-italic;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  color: $coop-border-grey;
+  background-color: $coop-border-grey;
+  margin-bottom: $half-spacing-unit;
+}
+
+.regular {
+  font-family: $regular;
+}
+
+.regular-italic {
+  font-family: $regular-italic;
+}
+
+.bold {
+  font-family: $bold;
+}
+
+.bold-italic {
+  font-family: $bold-italic;
+}
+
+strong {
+  font-family: $bold;
+}
+
+blockquote {
+  margin: 0 0 $half-spacing-unit;
+  padding: $quarter-spacing-unit;
+  font-size: em-calc(18);
+  background-color: $offwhite;
+
+  cite {
+    display: block;
+    margin-top: $quarter-spacing-unit;
+  }
+}
+
+small {
+  font-size: em-calc(11);
+  line-height: 1.25;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+cite {
+  font-style: normal;
+
+  &:before {
+    content: '--';
+  }
+}
+
+.line-through {
+  text-decoration: line-through;
+}
+
+.byline {
+  color: $coop-grey;
+}
+
+address {
+  color: $coop-grey;
+  font-style: normal;
+}
+
+.intro-text {
+  font-size: em-calc(24);
+  color: $coop-grey;
+  line-height: 1.2;
+}
+
+ul, ol {
+  margin-bottom: $half-spacing-unit;
+}
+
+.undecorated-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+dt {
+  margin-bottom: $quarter-spacing-unit;
+  color: $coop-blue;
+}
+
+dd {
+  margin: 0 0 $half-spacing-unit;
+}

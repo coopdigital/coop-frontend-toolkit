@@ -1,0 +1,22 @@
+/*===============================================
+Screens - Co-op Front-end Toolkit
+===============================================*/
+
+// Breakpoints
+$screen-320: 320px;
+$screen-480: 480px;
+$screen-768: 768px;
+$screen-990: 990px;
+$screen-1300: 1300px;
+
+// Viewport sizes
+$screen: "only screen";
+$small: "only screen and (min-width: #{$screen-320})";
+$medium: "only screen and (min-width: #{$screen-480})";
+$large: "only screen and (min-width: #{$screen-768})";
+$xlarge: "only screen and (min-width: #{$screen-990})";
+$xxlarge: "only screen and (min-width: #{$screen-1300})";
+
+// Viewport orientation
+$landscape: "only screen and (orientation: landscape)";
+$portrait: "only screen and (orientation: portrait)";
