@@ -1,0 +1,121 @@
+/*===============================================
+Main header - Co-op Front-end Toolkit
+===============================================*/
+
+.header-primary {
+  @include clearfix;
+  position: relative;
+  border-bottom: 1px solid $coop-border-grey;
+  text-align: center;
+
+  @media #{$medium} {
+    padding: 0;
+    border-bottom: 0;
+  }
+
+  .logo {
+    position: absolute;
+    display: block;
+    left: 50%;
+    margin-left: -31px;
+    top: 4px;
+    padding: $quarter-spacing-unit /2;
+    border: none;
+
+    @media #{$medium} {
+      padding: $quarter-spacing-unit;
+      margin-left: -54px;
+      top: 10px;
+    }
+
+    &:hover {
+      border: none;
+    }
+
+    svg {
+      width: 47px;
+      height: 45px;
+      fill: $coop-blue;
+
+      @media #{$medium} {
+        height: 76px;
+        width: 79px;
+      }
+    }
+  }
+
+  .identifier {
+    float: left;
+    padding: $quarter-spacing-unit;
+    margin-left: -$quarter-spacing-unit;
+    margin-top: 4px;
+    border-bottom: 0;
+    color: $coop-grey;
+    font-size: em-calc(21px);
+
+    &:hover,
+    &:active {
+      color: $coop-grey;
+      border-bottom: 0;
+    }
+
+    &:focus {
+      color: $coop-grey;
+      outline: 1px dotted $coop-blue;
+    }
+
+    @media #{$medium} {
+      font-size: em-calc(28);
+      margin-left: 0;
+      margin-top: 54px;
+      padding-left: 12px;
+      padding-bottom: 12px;
+    }
+  }
+}
+
+.mobile-menu-toggle {
+  float: right;
+  padding: $quarter-spacing-unit;
+  margin-right: -$quarter-spacing-unit;
+  margin-top: 1px;
+  border-bottom: 0;
+  color: $coop-blue;
+
+  @media #{$medium} {
+    display: none;
+  }
+
+  &:hover,
+  &:active,
+  &:visited,
+  &:focus {
+    color: $coop-blue;
+    border-bottom: 0;
+  }
+
+  &:focus {
+    outline: 1px dotted $coop-blue;
+  }
+
+  .icon-menu {
+    &:before {
+      content: '\e61a';
+    }
+  }
+
+  &.open {
+    .icon-menu {
+      &:before {
+        content: '\e61b';
+      }
+    }
+  }
+
+  .mobile-menu-text {
+    display: block;
+    font-family: $bold;
+    font-size: em-calc(10);
+  }
+
+}

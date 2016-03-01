@@ -6,7 +6,7 @@ a {
   color: $coop-link-blue;
   border-bottom: 1px dotted $coop-link-blue;
   text-decoration: none;
-  transition: all, 0.25s, ease;
+  transition: all 0.25s ease;
 
   &:hover {
     color: $coop-blue-highlighted;

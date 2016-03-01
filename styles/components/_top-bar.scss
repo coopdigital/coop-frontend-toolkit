@@ -2,19 +2,14 @@
 Top bar - Co-op Front-end Toolkit
 ===============================================*/
 
-.coop-membership-header {
-
+.top-bar {
   background: $coop-blue;
+  padding: em-calc(5) 0 em-calc(9);
+  color: $white;
+  font-size: em-calc(13);
 
-  .coop-membership-header--inner {
-    height: 30px;
-
-  }
-
-  .coop-membership-header--link {
+  a {
     color: $white;
     border-bottom-color: $white;
-    font-size: em-calc(13px);
   }
-
 }
