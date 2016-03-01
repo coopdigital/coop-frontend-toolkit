@@ -2,84 +2,116 @@
 Helpers - Co-op Front-end Toolkit
 ===============================================*/
 
-
 // Colour helpers
-.coop-blue { @extend %coop-blue; }
-.coop-blue-bg { @extend %coop-blue-bg; }
-.coop-blue-highlighted-bg { @extend %coop-blue-highlighted-bg; }
-.button-green { @extend %button-green; }
-.button-green-bg { @extend %button-green-bg; }
-.button-green-highlighted-bg { @extend %button-green-highlighted-bg; }
-.info-orange { @extend %info-orange; }
-.info-orange-bg { @extend %info-orange-bg; }
-.saleerror-red { @extend %saleerror-red; }
-.saleerror-red-bg { @extend %saleerror-red-bg; }
-.coop-link-blue { @extend %coop-link-blue; }
-.coop-link-blue-bg { @extend %coop-link-blue-bg; }
-.coop-link-blue-hover { @extend %coop-link-blue-hover; }
-.coop-link-blue-hover-bg { @extend %coop-link-blue-hover-bg; }
-.coop-link-visited { @extend %coop-link-visited; }
-.coop-link-visited-bg { @extend %coop-link-visited-bg; }
-.added-to-page-bg { @extend %added-to-page-bg; }
-.white { @extend %white; }
-.white-bg { @extend %white-bg; }
-.black { @extend %black; }
-.black-bg { @extend %black-bg; }
-.coop-grey { @extend %coop-grey; }
-.coop-grey-bg { @extend %coop-grey-bg; }
-.coop-border-grey { @extend %coop-border-grey; }
-.offwhite { @extend %offwhite; }
-.offwhite-bg { @extend %offwhite-bg; }
-.offwhite-highlighted-bg { @extend %offwhite-highlighted-bg; }
-.light-grey { @extend %light-grey; }
-.light-grey-bg { @extend %light-grey-bg; }
-.dark-grey { @extend %dark-grey; }
-.dark-grey-bg { @extend %dark-grey-bg; }
+.coop-blue { color: $coop-blue; }
+.coop-blue-bg { background: $coop-blue; }
+.coop-blue-highlighted-bg { background: $coop-blue-highlighted; }
+.button-green { color: $button-green; }
+.button-green-bg { background: $button-green; }
+.button-green-highlighted-bg { background: $button-green-highlighted; }
+.info-orange { color: $info-orange; }
+.info-orange-bg { background: $info-orange; }
+.saleerror-red { color: $saleerror-red; }
+.saleerror-red-bg { background: $saleerror-red; }
+.coop-link-blue { color: $coop-link-blue; }
+.coop-link-blue-bg { background: $coop-link-blue; }
+.coop-link-blue-hover { color: $coop-blue-highlighted; }
+.coop-link-blue-hover-bg { background: $coop-blue-highlighted; }
+.coop-link-visited { color: $coop-link-visited; }
+.coop-link-visited-bg { background: $coop-link-visited; }
+.added-to-page-bg { background: $added-to-page; }
+.white { color: $white; }
+.white-bg { background: $white; }
+.black { color: $black; }
+.black-bg { background: $black; }
+.coop-grey { color: $coop-grey; }
+.coop-grey-bg { background: $coop-grey; }
+.coop-border-grey { border: 1px solid $coop-border-grey; }
+.offwhite { color: $offwhite; }
+.offwhite-bg { background: $offwhite; }
+.offwhite-highlighted-bg { background: $offwhite-highlighted-bg; }
+.light-grey { color: $light-grey; }
+.light-grey-bg { background: $light-grey; }
+.dark-grey { color: $dark-grey; }
+.dark-grey-bg { background: $dark-grey; }
 
 // Padding
-.padding-e { @extend %padding-e; }
-.padding-q { @extend %padding-q; }
-.padding-h { @extend %padding-h; }
-.padding-b { @extend %padding-b; }
+.padding-e { padding: $quarter-spacing-unit / 2; }
+.padding-q { padding: $quarter-spacing-unit; }
+.padding-h { padding: $half-spacing-unit; }
+.padding-b { padding: $base-spacing-unit; }
 
 // Margin
-.margin-e { @extend %margin-e; }
-.margin-q { @extend %margin-q; }
-.margin-h { @extend %margin-h; }
-.margin-b { @extend %margin-b; }
+.margin-e { margin: $quarter-spacing-unit / 2; }
+.margin-q { margin: $quarter-spacing-unit; }
+.margin-h { margin: $half-spacing-unit; }
+.margin-b { margin: $base-spacing-unit; }
 
 // Margin-bottom
-.margin-be { @extend %margin-be; }
-.margin-bq { @extend %margin-bq; }
-.margin-bh { @extend %margin-bh; }
-.margin-bb { @extend %margin-bb; }
+.margin-be { margin-bottom: $quarter-spacing-unit / 2; }
+.margin-bq { margin-bottom: $quarter-spacing-unit; }
+.margin-bh { margin-bottom: $half-spacing-unit; }
+.margin-bb { margin-bottom: $base-spacing-unit; }
 
 // Borders
-.border { @extend %border; }
-.border-t { @extend %border-t; }
-.border-r { @extend %border-r; }
-.border-b { @extend %border-b; }
-.border-l { @extend %border-l; }
+.border { border: 1px solid $coop-border-grey; }
+.border-t { border-top: 1px solid $coop-border-grey; }
+.border-r { border-right: 1px solid $coop-border-grey; }
+.border-b { border-bottom: 1px solid $coop-border-grey; }
+.border-l { border-left: 1px solid $coop-border-grey; }
 
 // Icon links
 .link-icon-right {
-  @extend %link-icon-right;
+  position: relative;
+  margin-right: 30px;
+
+  &:after {
+    position: absolute;
+    top: 4px;
+    padding-left: 4px;
+  }
 
   .icon-text-left {
-    @extend %icon-text-left;
+    margin-right: -20px;
+    font-size: em-calc(16);
   }
 }
 
 .link-icon-left {
-  @extend %link-icon-left;
+  position: relative;
+  margin-left: 20px;
+
+  &:after {
+    position: absolute;
+    top: 4px;
+    padding-left: 4px;
+  }
 
   .icon-text-right {
-    @extend %icon-text-right;
+    margin-left: -20px;
+    font-size: em-calc(16);
   }
 }
 
 .link-icon-arrow {
-  @extend %link-icon-arrow;
+  &:after {
+    @extend .icon;
+    content: '\e608';
+    position: absolute;
+    top: 4px;
+    padding-left: 4px;
+    font-size: em-calc(14);
+  }
 }
 
+.text-centre {
+  text-align: center;
+}
 
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
