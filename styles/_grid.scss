@@ -5,27 +5,29 @@ Grid layout - Co-op Front-end Toolkit
 @import "mixins/global";
 @import "mixins/grid";
 
+.wrap {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $grid-gutter/2;
+  padding-right: $grid-gutter/2;
+  max-width: $screen-xlarge;
+
+  @media #{$medium} {
+    padding-left: $grid-gutter;
+    padding-right: $grid-gutter;
+  }
+}
+
 .row {
   @include clearfix;
 
-  padding-left: $grid-gutter /4;
-  padding-right: $grid-gutter /4;
+  margin-left: -$grid-gutter /4;
+  margin-right: -$grid-gutter /4;
 
-  .row & {
-    padding-left: 0;
-    padding-right: 0;
-    margin-left: - $grid-gutter /4;
-    margin-right: - $grid-gutter /4;
-  }
-
-  @media #{$large} {
-    padding-left: $grid-gutter /2;
-    padding-right: $grid-gutter /2;
-
-    .row & {
-      margin-left: - $grid-gutter /2;
-      margin-right: - $grid-gutter /2;
-    }
+  @media #{$medium} {
+    margin-left: -$grid-gutter /2;
+    margin-right: -$grid-gutter /2;
   }
 }
 
@@ -36,12 +38,13 @@ Grid layout - Co-op Front-end Toolkit
   padding-left: $grid-gutter /4;
   padding-right: $grid-gutter /4;
 
-  @media #{$large} {
+  @media #{$medium} {
     padding-left: $grid-gutter /2;
     padding-right: $grid-gutter /2;
   }
 
-  .collapse > & {
+  .row.collapse > &,
+  .collapse {
     padding-left: 0;
     padding-right: 0;
   }
