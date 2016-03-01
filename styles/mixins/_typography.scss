@@ -60,16 +60,6 @@ Typography mixins - Co-op Front-end Toolkit
   text-decoration: line-through;
 }
 
-// Lists
-%list {
-  margin-bottom: $half-spacing-unit;
-}
-
-%list-bare {
-  list-style-type: none;
-  padding: 0;
-}
-
 // Other typographic elements
 %blockquote {
   margin: 0 0 $half-spacing-unit;

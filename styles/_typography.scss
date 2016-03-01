@@ -107,14 +107,6 @@ address {
   @extend %intro-text;
 }
 
-ul, ol {
-  @extend %list;
-}
-
-.undecorated-list {
-  @extend %list-bare;
-}
-
 dt {
   margin-bottom: $quarter-spacing-unit;
   color: $coop-blue;

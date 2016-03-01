@@ -1,0 +1,18 @@
+/*===============================================
+Lists - Co-op Front-end Toolkit
+===============================================*/
+
+@import "mixins/lists";
+
+ul, ol {
+  @extend %list;
+}
+
+.undecorated-list,
+.list-bare {
+  @extend %list-bare;
+}
+
+.list-inline {
+  @extend %list-inline;
+}
