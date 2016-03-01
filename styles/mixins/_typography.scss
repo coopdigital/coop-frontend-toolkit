@@ -1,0 +1,105 @@
+/*===============================================
+Typography mixins - Co-op Front-end Toolkit
+===============================================*/
+
+@import "functions";
+
+
+// Headings
+%heading-h1 {
+  font-size: em-calc(30);
+  line-height: 1.2;
+
+  @media #{$medium} {
+    font-size: em-calc(36);
+  }
+}
+
+%heading-h2 {
+  font-size: em-calc(24);
+}
+
+%heading-h3 {
+  font-size: em-calc(19);
+}
+
+%heading-h4 {
+  font-family: $bold;
+  font-size: em-calc(16);
+}
+
+%heading-h5 {
+  font-family: $bold;
+  font-size: em-calc(13);
+}
+
+%heading-h6 {
+  font-size: em-calc(11);
+  font-family: $bold;
+  text-transform: uppercase;
+}
+
+// Text styles
+%regular {
+  font-family: $regular;
+}
+
+%regular-italic {
+  font-family: $regular-italic;
+}
+
+%bold {
+  font-family: $bold;
+}
+
+%bold-italic {
+  font-family: $bold-italic;
+}
+
+%line-through {
+  text-decoration: line-through;
+}
+
+// Lists
+%list {
+  margin-bottom: $half-spacing-unit;
+}
+
+%list-bare {
+  list-style-type: none;
+  padding: 0;
+}
+
+// Other typographic elements
+%blockquote {
+  margin: 0 0 $half-spacing-unit;
+  padding: $quarter-spacing-unit;
+  font-size: em-calc(18);
+  background-color: $offwhite;
+}
+
+%cite {
+  display: block;
+  margin-top: $quarter-spacing-unit;
+  font-style: normal;
+
+  &:before {
+    content: '--';
+  }
+}
+
+%intro-text {
+  font-size: em-calc(24);
+  line-height: 1.2;
+}
+
+
+// Miscellaneous
+%small {
+  font-size: em-calc(11);
+  line-height: 1.25;
+
+  @media #{$large} {
+    font-size: em-calc(13);
+  }
+}
