@@ -2,6 +2,8 @@
 Helpers - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "mixins/functions";
+
 // Colour helpers
 .coop-blue { color: $coop-blue; }
 .coop-blue-bg { background: $coop-blue; }
