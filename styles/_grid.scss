@@ -2,5 +2,80 @@
 Grid layout - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "mixins/global";
 @import "mixins/grid";
 
+.row {
+  @include clearfix;
+
+  padding-left: $grid-gutter /4;
+  padding-right: $grid-gutter /4;
+
+  .row & {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: - $grid-gutter /4;
+    margin-right: - $grid-gutter /4;
+  }
+
+  @media #{$large} {
+    padding-left: $grid-gutter /2;
+    padding-right: $grid-gutter /2;
+
+    .row & {
+      margin-left: - $grid-gutter /2;
+      margin-right: - $grid-gutter /2;
+    }
+  }
+}
+
+.column,
+.columns {
+  position: relative;
+  float: left;
+  padding-left: $grid-gutter /4;
+  padding-right: $grid-gutter /4;
+
+  @media #{$large} {
+    padding-left: $grid-gutter /2;
+    padding-right: $grid-gutter /2;
+  }
+
+  .collapse > & {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@each $size in $grid-screen-sizes {
+  // Standard columns
+  @if index($grid-screen-sizes, $size) {
+
+    @if $size == "small" {
+      @include grid-columns();
+    }
+    @else {
+
+      $media: $small;
+
+      @if $size == "medium" {
+        $media: $medium;
+      }
+      @if $size == "large" {
+        $media: $large;
+      }
+      @if $size == "xlarge" {
+        $media: $xlarge;
+      }
+      @if $size == "xxlarge" {
+        $media: $xxlarge;
+      }
+
+      @media #{$media} {
+        @include grid-columns($size);
+      }
+
+    }
+  }
+
+}

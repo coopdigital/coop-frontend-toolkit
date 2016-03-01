@@ -2,3 +2,56 @@
 Grid layout mixins - Co-op Front-end Toolkit
 ===============================================*/
 
+/**
+ * Creates the classes necessary for all columns to exist for the specified
+ * screen size. This relies on the following global variables being set:
+ * - $grid-total-columns
+ * - $grid-include-offset-classes
+ * - $grid-include-push-classes
+ * - $grid-include-pull-classes
+ * - $grid-include-center-classes
+ */
+@mixin grid-columns($size: "small") {
+  @for $i from 1 through $grid-total-columns {
+
+    .#{$size}-#{$i} {
+      width: percentage($i / $grid-total-columns);
+    }
+
+    @if $i < $grid-total-columns {
+      @if $grid-include-offset-classes == true {
+        $column: ($i - 1);
+        .#{$size}-offset-#{$column} {
+          margin-left: percentage($column / $grid-total-columns);
+        }
+      }
+
+      @if $grid-include-push-classes == true {
+        .#{$size}-push-#{$i} {
+          left: percentage($i / $grid-total-columns);
+          right: auto;
+        }
+      }
+
+      @if $grid-include-pull-classes == true {
+        .#{$size}-pull-#{$i} {
+          left: auto;
+          right: percentage($i / $grid-total-columns);
+        }
+      }
+    }
+  }
+
+  @if $grid-include-center-classes == true {
+    .#{$size}-centered {
+      float: none !important;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .#{$size}-uncentered {
+      float: left;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}

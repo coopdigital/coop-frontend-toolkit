@@ -1,0 +1,304 @@
+/*===============================================
+Helpers - Co-op Front-end Toolkit
+===============================================*/
+
+
+// Colour helpers
+%coop-blue,
+.coop-blue {
+  color: $coop-blue;
+}
+
+%coop-blue-bg,
+.coop-blue-bg {
+  background: $coop-blue;
+}
+
+%coop-blue-highlighted-bg,
+.coop-blue-highlighted-bg {
+  background: $coop-blue-highlighted;
+}
+
+%button-green,
+.button-green {
+  color: $button-green;
+}
+
+%button-green-bg,
+.button-green-bg {
+  background: $button-green;
+}
+
+%button-green-highlighted-bg,
+.button-green-highlighted-bg {
+  background: $button-green-highlighted;
+}
+
+%info-orange,
+.info-orange {
+  color: $info-orange;
+}
+
+%info-orange-bg,
+.info-orange-bg {
+  background: $info-orange;
+}
+
+%saleerror-red,
+.saleerror-red {
+  color: $saleerror-red;
+}
+
+%saleerror-red-bg,
+.saleerror-red-bg {
+  background: $saleerror-red;
+}
+
+%coop-link-blue,
+.coop-link-blue {
+  color: $coop-link-blue;
+}
+
+%coop-link-blue-bg,
+.coop-link-blue-bg {
+  background: $coop-link-blue;
+}
+
+%coop-link-blue-hover,
+.coop-link-blue-hover {
+  color: $coop-blue-highlighted;
+}
+
+%coop-link-blue-hover-bg,
+.coop-link-blue-hover-bg {
+  background: $coop-blue-highlighted;
+}
+
+%coop-link-visited,
+.coop-link-visited {
+  color: $coop-link-visited;
+}
+
+%coop-link-visited-bg,
+.coop-link-visited-bg {
+  background: $coop-link-visited;
+}
+
+%added-to-page-bg,
+.added-to-page-bg {
+  background: $added-to-page;
+}
+
+%white,
+.white {
+  color: $white;
+}
+
+%white-bg,
+.white-bg {
+  background: $white;
+}
+
+%black,
+.black {
+  color: $black;
+}
+
+%black-bg,
+.black-bg {
+  background: $black;
+}
+
+%coop-grey,
+.coop-grey {
+  color: $coop-grey;
+}
+
+%coop-grey-bg,
+.coop-grey-bg {
+  background: $coop-grey;
+}
+
+%coop-border-grey,
+.coop-border-grey {
+  border: 1px solid $coop-border-grey;
+}
+
+%offwhite,
+.offwhite {
+  color: $offwhite;
+}
+
+%offwhite-bg,
+.offwhite-bg {
+  background: $offwhite;
+}
+
+%offwhite-highlighted-bg,
+.offwhite-highlighted-bg {
+  background: $offwhite-highlighted-bg;
+}
+
+%light-grey,
+.light-grey {
+  color: $light-grey;
+}
+
+%light-grey-bg,
+.light-grey-bg {
+  background: $light-grey;
+}
+
+%dark-grey,
+.dark-grey {
+  color: $dark-grey;
+}
+
+%dark-grey-bg,
+.dark-grey-bg {
+  background: $dark-grey;
+}
+
+// padding / margin
+%padding-e,
+.padding-e {
+  padding: $quarter-spacing-unit / 2;
+}
+
+%padding-q,
+.padding-q {
+  padding: $quarter-spacing-unit;
+}
+
+%padding-h,
+.padding-h {
+  padding: $half-spacing-unit;
+}
+
+%padding-b,
+.padding-b {
+  padding: $base-spacing-unit;
+}
+
+%margin-e,
+.margin-e {
+  margin: $quarter-spacing-unit / 2;
+}
+
+%margin-q,
+.margin-q {
+  margin: $quarter-spacing-unit;
+}
+
+%margin-h,
+.margin-h {
+  margin: $half-spacing-unit;
+}
+
+%margin-b,
+.margin-b {
+  margin: $base-spacing-unit;
+}
+
+// margin-bottom
+
+%margin-be,
+.margin-be {
+  margin-bottom: $quarter-spacing-unit / 2;
+}
+
+%margin-bq,
+.margin-bq {
+  margin-bottom: $quarter-spacing-unit;
+}
+
+%margin-bh,
+.margin-bh {
+  margin-bottom: $half-spacing-unit;
+}
+
+%margin-bb,
+.margin-bb {
+  margin-bottom: $base-spacing-unit;
+}
+
+// borders
+
+%border,
+.border {
+  border: 1px solid $coop-border-grey;
+}
+
+%border-t,
+.border-t {
+  border-top: 1px solid $coop-border-grey;
+}
+
+%border-r,
+.border-r {
+  border-right: 1px solid $coop-border-grey;
+}
+
+%border-b,
+.border-b {
+  border-bottom: 1px solid $coop-border-grey;
+}
+
+%border-l,
+.border-l {
+  border-left: 1px solid $coop-border-grey;
+}
+
+%link-icon-right,
+.link-icon-right {
+  position: relative;
+  margin-right: 30px;
+
+  &:after {
+    position: absolute;
+    top: 4px;
+    padding-left: 4px;
+  }
+
+  %icon-text-left,
+  .icon-text-left {
+    margin-right: -20px;
+    font-size: em-calc(16px);
+  }
+
+}
+
+%link-icon-left,
+.link-icon-left {
+  position: relative;
+  margin-left: 20px;
+
+  &:after {
+    position: absolute;
+    top: 4px;
+    padding-left: 4px;
+  }
+
+  %icon-text-right,
+  .icon-text-right {
+    margin-left: -20px;
+    font-size: em-calc(16px);
+  }
+
+}
+
+%link-icon-arrow,
+.link-icon-arrow {
+
+  &:after {
+    @extend %icon;
+    content: '\e608';
+    position: absolute;
+    top: 4px;
+    padding-left: 4px;
+    font-size: em-calc(14px);
+  }
+
+}
+
+

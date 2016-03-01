@@ -2,6 +2,8 @@
 Icons - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "mixins/functions";
+
 @font-face {
   font-family: 'coopicons';
   src: asset-url('fonts/coopicons.eot?-1cb1l5');
@@ -43,8 +45,10 @@ Icons - Co-op Front-end Toolkit
 
 .icon-information:before,
 %icon-information:before { content: '\e600'; }
+
 .icon-search:before,
 %icon-search:before { content: '\e601'; }
+
 .icon-location:before,
 %icon-location:before { content: '\e602'; }
 
@@ -53,7 +57,6 @@ Icons - Co-op Front-end Toolkit
 %icon-location-alt:before { content: '\e90a'; }
 
 // This icon code needs to go back to its original.
-
 .icon-filter:before,
 %icon-filter:before { content: '\e604'; }
 
@@ -207,31 +210,31 @@ Icons - Co-op Front-end Toolkit
 .icon-comment-small:before,
 %icon-comment-small:before { content: '\e904'; }
 
-.icon-comment:before {,
+.icon-comment:before,
 %icon-comment:before { content: '\e905'; }
 
 .icon-cross-alt:before,
 %icon-cross-alt:before { content: '\e906'; }
 
-.icon-cross:before {,
+.icon-cross:before,
 %icon-cross:before { content: '\e907'; }
 
-.icon-event:before {,
+.icon-event:before,
 %icon-event:before { content: '\e908'; }
 
-.icon-internet:before {,
+.icon-internet:before,
 %icon-internet:before { content: '\e909'; }
 
 .icon-tick-alt:before,
 %icon-tick-alt:before { content: '\e90b'; }
 
-.icon-video:before {,
+.icon-video:before,
 %icon-video:before { content: '\e90c'; }
 
-.icon-list:before {,
+.icon-list:before,
 %icon-list:before { content: '\e910'; }
 
-.icon-share:before {,
+.icon-share:before,
 %icon-share:before { content: '\e90e'; }
 
 .icon-award-fill:before,

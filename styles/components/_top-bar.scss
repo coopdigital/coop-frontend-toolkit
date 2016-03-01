@@ -1,0 +1,20 @@
+/*===============================================
+Top bar - Co-op Front-end Toolkit
+===============================================*/
+
+.coop-membership-header {
+
+  background: $coop-blue;
+
+  .coop-membership-header--inner {
+    height: 30px;
+
+  }
+
+  .coop-membership-header--link {
+    color: $white;
+    border-bottom-color: $white;
+    font-size: em-calc(13px);
+  }
+
+}

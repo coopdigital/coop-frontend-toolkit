@@ -10,7 +10,6 @@ Variables - Co-op Front-end Toolkit
 // Base URL for any linked assets
 $base-asset-url: '../' !default;
 
-
 // Vertical rhythm
 $base-spacing-unit: 60px !default;
 $three-quarter-spacing-unit: $base-spacing-unit / 4 * 3 !default; // 45px
@@ -29,3 +28,33 @@ $regular: 'AvenirNextLTW01-Regular', 'Helvetica Neue', Helvetica, Arial, sans-se
 $regular-italic: 'AvenirNextLTW01-Italic', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
 $bold: 'AvenirNextLTW01-Demi', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
 $bold-italic: 'AvenirNextLTW01-DemiIta', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
+
+
+// Grid settings
+$grid-gutter: 30px !default;
+$grid-screen-sizes: ("x-small", "small", "medium", "large", "x-large") !default;
+$grid-total-columns: 12 !default;
+$grid-include-center-classes: true !default;
+$grid-include-pull-classes: true !default;
+$grid-include-push-classes: true !default;
+$grid-include-offset-classes: true !default;
+
+
+// Breakpoints
+$screen-xsmall: 320px;
+$screen-small: 480px;
+$screen-medium: 768px;
+$screen-large: 960px;
+$screen-xlarge: 1300px;
+
+// Viewport sizes
+$screen: "only screen";
+$x-small: "only screen and (min-width: #{$screen-xsmall})";
+$small: "only screen and (min-width: #{$screen-small})";
+$medium: "only screen and (min-width: #{$screen-medium})";
+$large: "only screen and (min-width: #{$screen-large})";
+$x-large: "only screen and (min-width: #{$screen-xlarge})";
+
+// Viewport orientation
+$landscape: "only screen and (orientation: landscape)";
+$portrait: "only screen and (orientation: portrait)";
