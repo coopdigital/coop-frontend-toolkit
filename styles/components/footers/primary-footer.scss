@@ -2,6 +2,47 @@
 Main footer - Co-op Front-end Toolkit
 ===============================================*/
 
+.footer-main {
+  background: $offwhite;
+
+  font-size: em-calc(12);
+  color: $black;
+
+  nav {
+    ul {
+      @extend %list-inline;
+      margin: 0;
+
+      li {
+        display: block;
+
+        @media #{$medium} {
+          display: inline-block;
+        }
+
+        a {
+          display: block;
+          padding: $quarter-spacing-unit $quarter-spacing-unit / 2;
+          border-width: 0;
+
+          @media #{$medium} {
+            padding: $quarter-spacing-unit / 2;
+          }
+        }
+      }
+    }
+  }
+
+  .colophon {
+    display: block;
+    padding: $quarter-spacing-unit / 2;
+
+    @media #{$medium} {
+      text-align: right;
+    }
+  }
+}
+
 .nav-footer {
   @include clearfix;
   margin-bottom: 0;

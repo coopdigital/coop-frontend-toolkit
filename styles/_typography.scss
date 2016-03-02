@@ -57,11 +57,17 @@ em {
 }
 
 hr {
-  border: 0;
-  height: 1px;
-  color: $coop-border-grey;
-  background-color: $coop-border-grey;
-  margin-bottom: $half-spacing-unit;
+  display: block;
+  margin: 2em 0 3em;
+  border: 1px solid $coop-border-grey;
+  border-width: 0 0 1px;
+  height: 0;
+  color: $coop-grey;
+
+  &.dashed {
+    border-style: dashed;
+    border-color: $coop-grey;
+  }
 }
 
 .regular {
