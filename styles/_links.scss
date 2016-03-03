@@ -14,7 +14,8 @@ a {
   }
 
   &:focus {
-    outline: 1px dotted $coop-blue;
+    transition: none;
+    outline: 4px solid $coop-blue-highlighted;
   }
 
   // &:visited {

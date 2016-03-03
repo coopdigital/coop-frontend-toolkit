@@ -64,7 +64,6 @@ Main header - Co-op Front-end Toolkit
 
     &:focus {
       color: $coop-grey;
-      outline: 1px dotted $coop-blue;
     }
 
     @include media(medium) {
@@ -99,10 +98,6 @@ Main header - Co-op Front-end Toolkit
   &:focus {
     color: $coop-blue;
     border-bottom: 0;
-  }
-
-  &:focus {
-    outline: 1px dotted $coop-blue;
   }
 
   .icon-menu {
