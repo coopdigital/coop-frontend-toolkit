@@ -2,17 +2,17 @@
 Lists mixins - Co-op Front-end Toolkit
 ===============================================*/
 
-%list {
+@mixin list {
   margin-bottom: $half-spacing-unit;
 }
 
-%list-bare {
+@mixin list-bare {
   list-style-type: none;
   padding: 0;
 }
 
-%list-inline {
-  @extend %list-bare;
+@mixin list-inline {
+  @include list-bare;
 
   li {
     display: inline-block;

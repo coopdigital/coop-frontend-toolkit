@@ -20,27 +20,27 @@ address {
 }
 
 h1, .h1, .alpha {
-  @extend %heading-h1;
+  @include heading-h1;
 }
 
 h2, .h2, .beta {
-  @extend %heading-h2;
+  @include heading-h2;
 }
 
 h3, .h3, .gamma {
-  @extend %heading-h3;
+  @include heading-h3;
 }
 
 h4, .h4, .delta {
-  @extend %heading-h4;
+  @include heading-h4;
 }
 
 h5, .h5, .epsilon {
-  @extend %heading-h5;
+  @include heading-h5;
 }
 
 h6, .h6, .zeta {
-  @extend %heading-h6;
+  @include heading-h6;
 }
 
 p {
@@ -49,7 +49,7 @@ p {
 
 small,
 .smallprint {
-  @extend %small;
+  @include small;
 }
 
 em {
@@ -71,34 +71,34 @@ hr {
 }
 
 .regular {
-  @extend %regular;
+  @include regular;
 }
 
 .regular-italic,
 em {
-  @extend %regular-italic;
+  @include regular-italic;
 }
 
 .bold,
 strong {
-  @extend %bold;
+  @include bold;
 }
 
 .bold-italic {
-  @extend %bold-italic;
+  @include bold-italic;
 }
 
 blockquote {
-  @extend %blockquote;
+  @include blockquote;
 }
 
 cite {
-  @extend %cite;
+  @include cite;
 }
 
 del,
 .line-through {
-  @extend %line-through;
+  @include line-through;
 }
 
 .byline {
@@ -106,11 +106,11 @@ del,
 }
 
 address {
-  @extend %regular;
+  @include regular;
 }
 
 .intro-text {
-  @extend %intro-text;
+  @include intro-text;
 }
 
 dt {

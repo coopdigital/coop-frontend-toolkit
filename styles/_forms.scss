@@ -91,34 +91,34 @@ textarea  {
 
   &.input--width_small {
     width: 5.5em;
-    @media #{$medium} {
+    @include media(medium) {
       width: 8em;
     }
   }
 
   &.input--width_smallest {
     width: 4.5em;
-    @media #{$medium} {
+    @include media(medium) {
       width: 8em;
     }
   }
 
   &.input--width_medium {
     width: 50%;
-    @media #{$medium} {
+    @include media(medium) {
       width: 45%;
     }
-    @media #{$large} {
+    @include media(large) {
       width: 45%;
     }
   }
 
   &.input--width_large {
     width: 85%;
-    @media #{$medium} {
+    @include media(medium) {
       width: 80%;
     }
-    @media #{$large} {
+    @include media(large) {
       width: 60%;
     }
   }

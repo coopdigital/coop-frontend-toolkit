@@ -17,17 +17,17 @@ Main navigation - Co-op Front-end Toolkit
     margin-left: 0;
   }
 
-  @media #{$medium} {
+  @include media(medium) {
     position: static;
     margin-left: 0;
     height: auto;
   }
 
   ul {
-    @extend %list-bare;
+    @include list-bare;
     margin: 0;
 
-    @media #{$medium} {
+    @include media(medium) {
       border: 1px solid $coop-border-grey;
       border-width: 1px 0;
 
@@ -52,7 +52,7 @@ Main navigation - Co-op Front-end Toolkit
         outline: 1px dotted $white;
       }
 
-      @media #{$medium} {
+      @include media(medium) {
         color: $coop-link-blue;
       }
     }
@@ -64,7 +64,7 @@ Main navigation - Co-op Front-end Toolkit
     a {
       font-size: em-calc(38);
 
-      @media #{$medium} {
+      @include media(medium) {
         font-size: em-calc(16);
       }
     }
@@ -77,7 +77,7 @@ Main navigation - Co-op Front-end Toolkit
   text-align: center;
 
   ul {
-    @extend %list-inline;
+    @include list-inline;
     border: 1px dashed $coop-grey;
     border-width: 1px 0;
 
@@ -142,7 +142,7 @@ Main navigation - Co-op Front-end Toolkit
 //     opacity: 1;
 //   }
 
-//   @media #{$large} {
+//   @include media(large) {
 //     position: static;
 //     height: 60px;
 //     margin-left: 0;
@@ -161,7 +161,7 @@ Main navigation - Co-op Front-end Toolkit
 //   border-top: 0;
 //   border-bottom: 0;
 //   text-align: center;
-//   @media #{$large} {
+//   @include media(large) {
 //     border-top: 1px solid $coop-border-grey;
 //     border-bottom: 1px solid $coop-border-grey;
 //   }
@@ -174,7 +174,7 @@ Main navigation - Co-op Front-end Toolkit
 // .nav--primary_right {
 //   display: none;
 
-//   @media #{$large} {
+//   @include media(large) {
 //     float: right;
 //     display: block;
 //   }
@@ -192,7 +192,7 @@ Main navigation - Co-op Front-end Toolkit
 //     float: none;
 //     text-align: left;
 
-//     @media #{$large} {
+//     @include media(large) {
 //       display: inline-block;
 //       text-align: center;
 //     }
@@ -215,7 +215,7 @@ Main navigation - Co-op Front-end Toolkit
 //       outline: 1px dotted $white;
 //     }
 
-//     @media #{$large} {
+//     @include media(large) {
 //       color: $coop-link-blue;
 
 //       &:hover {
@@ -237,7 +237,7 @@ Main navigation - Co-op Front-end Toolkit
 
 //     background: $offwhite;
 
-//     @media #{$large} {
+//     @include media(large) {
 //       background: $offwhite;
 //     }
 
@@ -259,7 +259,7 @@ Main navigation - Co-op Front-end Toolkit
 //     text-align: center;
 //     font-size: em-calc(38px);
 
-//     @media #{$large} {
+//     @include media(large) {
 //       text-align: center;
 //       font-size: em-calc(16px);
 //     }
@@ -285,6 +285,3 @@ Main navigation - Co-op Front-end Toolkit
 //   }
 
 // }
-
-
-

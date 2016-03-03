@@ -1,0 +1,79 @@
+/*===============================================
+Helpers mixins - Co-op Front-end Toolkit
+===============================================*/
+
+/**
+ * Clearfix
+ */
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+/**
+ * Wraps the content into a media query. Requires $breakpoints map to be set.
+ * @param  {string} $size Breakpoint key
+ */
+@mixin media($size) {
+  @if map-has-key($breakpoints, $size) {
+    @media (min-width: #{map-get($breakpoints, $size)}) {
+      @content;
+    }
+  }
+  @else {
+    @warn "No breakpoint found for `#{$breakpoint}`.";
+  }
+}
+
+
+/**
+ * Hide content visually (available to screen readers)
+ */
+@mixin visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/**
+ * Un-hide content
+ */
+@mixin visuallyshown {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/**
+ * Clear classes
+ */
+@mixin clear {
+  clear: both;
+}
+
+@mixin clear-left {
+  clear: left;
+}
+
+@mixin clear-right {
+  clear: right;
+}
+
+@mixin clear-none {
+  clear: none;
+}

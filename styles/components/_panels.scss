@@ -18,7 +18,7 @@ Panels - Co-op Front-end Toolkit
 .panel-xs {
   padding: $quarter-spacing-unit / 2;
 
-  @media #{$medium} {
+  @include media(medium) {
     padding: $quarter-spacing-unit / 2;
   }
 
@@ -27,7 +27,7 @@ Panels - Co-op Front-end Toolkit
 .panel-s {
   padding: $quarter-spacing-unit;
 
-  @media #{$medium} {
+  @include media(medium) {
     padding: $quarter-spacing-unit;
   }
 
@@ -36,7 +36,7 @@ Panels - Co-op Front-end Toolkit
 .panel-m {
   padding: $quarter-spacing-unit;
 
-  @media #{$medium} {
+  @include media(medium) {
     padding: $half-spacing-unit;
   }
 
@@ -45,7 +45,7 @@ Panels - Co-op Front-end Toolkit
 .panel-l {
   padding: $half-spacing-unit;
 
-  @media #{$medium} {
+  @include media(medium) {
     padding: $base-spacing-unit;
   }
 

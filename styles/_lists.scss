@@ -5,14 +5,14 @@ Lists - Co-op Front-end Toolkit
 @import "mixins/lists";
 
 ul, ol {
-  @extend %list;
+  @include list;
 }
 
 .undecorated-list,
 .list-bare {
-  @extend %list-bare;
+  @include list-bare;
 }
 
 .list-inline {
-  @extend %list-inline;
+  @include list-inline;
 }

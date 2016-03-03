@@ -1,0 +1,188 @@
+/*===============================================
+Main footer - Co-op Front-end Toolkit
+===============================================*/
+
+.footer-main {
+  padding-top: $quarter-spacing-unit;
+  background: $offwhite;
+
+  .coop-logo {
+    display: block;
+    margin: 0 auto;
+    padding: 5px;
+    width: 55px;
+    height: 55px;
+    color: $coop-blue;
+    border: none;
+
+    &:hover {
+      border: none;
+    }
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      fill: $coop-blue;
+    }
+  }
+
+  .support-links {
+    margin-top: $quarter-spacing-unit;
+    margin-bottom: $quarter-spacing-unit;
+    padding-top: $half-spacing-unit;
+    padding-bottom: $half-spacing-unit;
+    border-top: 1px solid $coop-border-grey;
+
+    h4 {
+      color: $coop-blue;
+    }
+
+    ul {
+      @include list-bare;
+      margin-bottom: $half-spacing-unit;
+
+      li {
+        margin-bottom: $quarter-spacing-unit;
+      }
+
+      a {
+        border: none;
+      }
+    }
+
+    .social-links {
+      @include list-inline;
+      text-align: center;
+
+      @include media(medium) {
+        text-align: left;
+      }
+
+      li {
+        margin: 0 .5em;
+      }
+    }
+  }
+
+  .bottom-links {
+    background: $coop-blue;
+    text-align: center;
+
+    ul {
+      @include list-inline;
+      margin: 0;
+    }
+
+    a {
+      display: inline-block;
+      padding: $quarter-spacing-unit /2 $quarter-spacing-unit;
+      border-width: 0;
+      color: $white;
+      font-size: em-calc(12);
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+
+      @include media(medium) {
+        padding: $quarter-spacing-unit;
+        font-size: em-calc(16);
+      }
+    }
+  }
+
+  .legalese {
+    padding-top: $quarter-spacing-unit;
+    padding-bottom: $quarter-spacing-unit;
+    text-align: center;
+
+    p {
+      margin: 0;
+      font-size: em-calc(12);
+
+      @include media(medium) {
+        font-size: em-calc(16);
+      }
+    }
+  }
+}
+//
+// .nav-footer {
+//   @include clearfix;
+//   margin-bottom: 0;
+//
+//   .nav-footer-utility {
+//     padding-left: 0;
+//     margin-bottom: 0;
+//   }
+//
+//   .nav-footer-colophon {
+//     display: block;
+//     width: 100%;
+//     padding: $quarter-spacing-unit / 2;
+//     font-size: em-calc(12px);
+//     color: $black;
+//     text-align: left;
+//
+//     @include media(large) {
+//       text-align: right;
+//     }
+//
+//   }
+//
+//   li {
+//     display: block;
+//     width: 100%;
+//
+//     @include media(large) {
+//       display: inline;
+//     }
+//
+//   }
+//
+//   .nav-footer_link {
+//     padding: $quarter-spacing-unit $quarter-spacing-unit / 2;
+//     font-size: em-calc(12px);
+//     border: 0;
+//
+//     &:hover {
+//       text-decoration: underline;
+//     }
+//
+//     @include media(large) {
+//       padding: $quarter-spacing-unit / 2;
+//     }
+//
+//   }
+//
+// }
+//
+//
+// // Sticky footer
+// // New browsers and will need to be implemented per project due
+// // to the height value required.
+//
+// .main--sticky-footer {
+//   min-height: 100%;
+//   // equal to footer height
+//   margin-bottom: -33px;
+//
+//   &:after {
+//     content: '';
+//     display: block;
+//   }
+//
+// }
+//
+// .footer--sticky,
+// .main--sticky-footer {
+//   height: 33px;
+//
+//   &:after {
+//     content: '';
+//     display: block;
+//   }
+//
+// }

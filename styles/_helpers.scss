@@ -3,6 +3,7 @@ Helpers - Co-op Front-end Toolkit
 ===============================================*/
 
 @import "mixins/functions";
+@import "mixins/helpers";
 
 // Colour helpers
 .coop-blue { color: $coop-blue; }
@@ -116,4 +117,12 @@ Helpers - Co-op Front-end Toolkit
 
 .text-right {
   text-align: right;
+}
+
+.visuallyhidden {
+  @include visuallyhidden;
+}
+
+.visuallyshown {
+  @include visuallyshown;
 }

@@ -2,6 +2,26 @@
 Grid layout mixins - Co-op Front-end Toolkit
 ===============================================*/
 
+@mixin wrap {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $grid-gutter/2;
+  padding-right: $grid-gutter/2;
+  max-width: map-get($breakpoints, "large");
+
+  @include media(medium) {
+    padding-left: $grid-gutter *.8;
+    padding-right: $grid-gutter *.8;
+  }
+
+  @include media(large) {
+    padding-left: $grid-gutter;
+    padding-right: $grid-gutter;
+  }
+}
+
 /**
  * Creates the classes necessary for all columns to exist for the specified
  * screen size. This relies on the following global variables being set:
@@ -11,7 +31,7 @@ Grid layout mixins - Co-op Front-end Toolkit
  * - $grid-include-pull-classes
  * - $grid-include-center-classes
  */
-@mixin grid-columns($size: "small") {
+@mixin grid-columns($size) {
   @for $i from 1 through $grid-total-columns {
 
     .#{$size}-#{$i} {

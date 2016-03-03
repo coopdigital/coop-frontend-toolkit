@@ -2,27 +2,11 @@
 Grid layout - Co-op Front-end Toolkit
 ===============================================*/
 
-@import "mixins/global";
+@import "mixins/helpers";
 @import "mixins/grid";
 
 .wrap {
-  position: relative;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: $grid-gutter/2;
-  padding-right: $grid-gutter/2;
-  max-width: $screen-xlarge;
-
-  @media #{$medium} {
-    padding-left: $grid-gutter *.8;
-    padding-right: $grid-gutter *.8;
-  }
-
-  @media #{$large} {
-    padding-left: $grid-gutter;
-    padding-right: $grid-gutter;
-  }
+  @include wrap;
 }
 
 .row {
@@ -31,7 +15,7 @@ Grid layout - Co-op Front-end Toolkit
   margin-left: -$grid-gutter /4;
   margin-right: -$grid-gutter /4;
 
-  @media #{$medium} {
+  @include media(medium) {
     margin-left: -$grid-gutter /2;
     margin-right: -$grid-gutter /2;
   }
@@ -44,7 +28,7 @@ Grid layout - Co-op Front-end Toolkit
   padding-left: $grid-gutter /4;
   padding-right: $grid-gutter /4;
 
-  @media #{$medium} {
+  @include media(medium) {
     padding-left: $grid-gutter /2;
     padding-right: $grid-gutter /2;
   }
@@ -59,32 +43,13 @@ Grid layout - Co-op Front-end Toolkit
 @each $size in $grid-screen-sizes {
   // Standard columns
   @if index($grid-screen-sizes, $size) {
-
-    @if $size == "small" {
-      @include grid-columns();
+    @if $size == first($grid-screen-sizes) {
+      @include grid-columns($size);
     }
     @else {
-
-      $media: $small;
-
-      @if $size == "medium" {
-        $media: $medium;
-      }
-      @if $size == "large" {
-        $media: $large;
-      }
-      @if $size == "xlarge" {
-        $media: $xlarge;
-      }
-      @if $size == "xxlarge" {
-        $media: $xxlarge;
-      }
-
-      @media #{$media} {
+      @include media($size) {
         @include grid-columns($size);
       }
-
     }
   }
-
 }

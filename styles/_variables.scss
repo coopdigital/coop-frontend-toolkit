@@ -32,7 +32,7 @@ $bold-italic: 'AvenirNextLTW01-DemiIta', 'Helvetica Neue', Helvetica, Arial, san
 
 // Grid settings
 $grid-gutter: $half-spacing-unit !default;
-$grid-screen-sizes: ("x-small", "small", "medium", "large", "x-large") !default;
+$grid-screen-sizes: ("xsmall", "small", "medium", "large", "xlarge") !default;
 $grid-total-columns: 12 !default;
 $grid-include-center-classes: true !default;
 $grid-include-pull-classes: true !default;
@@ -41,19 +41,13 @@ $grid-include-offset-classes: true !default;
 
 
 // Breakpoints
-$screen-xsmall: 320px;
-$screen-small: 480px;
-$screen-medium: 750px;
-$screen-large: 960px;
-$screen-xlarge: 1300px;
-
-// Viewport sizes
-$screen: "only screen";
-$x-small: "only screen and (min-width: #{$screen-xsmall})";
-$small: "only screen and (min-width: #{$screen-small})";
-$medium: "only screen and (min-width: #{$screen-medium})";
-$large: "only screen and (min-width: #{$screen-large})";
-$x-large: "only screen and (min-width: #{$screen-xlarge})";
+$breakpoints: (
+  xsmall: 320px,
+  small: 480px,
+  medium: 750px,
+  large: 960px,
+  xlarge: 1300px
+);
 
 // Viewport orientation
 $landscape: "only screen and (orientation: landscape)";
