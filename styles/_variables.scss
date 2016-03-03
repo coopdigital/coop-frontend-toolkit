@@ -31,7 +31,7 @@ $bold-italic: 'AvenirNextLTW01-DemiIta', 'Helvetica Neue', Helvetica, Arial, san
 
 
 // Grid settings
-$grid-gutter: 30px !default;
+$grid-gutter: $half-spacing-unit !default;
 $grid-screen-sizes: ("x-small", "small", "medium", "large", "x-large") !default;
 $grid-total-columns: 12 !default;
 $grid-include-center-classes: true !default;
@@ -43,7 +43,7 @@ $grid-include-offset-classes: true !default;
 // Breakpoints
 $screen-xsmall: 320px;
 $screen-small: 480px;
-$screen-medium: 768px;
+$screen-medium: 750px;
 $screen-large: 960px;
 $screen-xlarge: 1300px;
 

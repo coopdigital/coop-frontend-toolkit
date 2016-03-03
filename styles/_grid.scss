@@ -6,6 +6,7 @@ Grid layout - Co-op Front-end Toolkit
 @import "mixins/grid";
 
 .wrap {
+  position: relative;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -14,6 +15,11 @@ Grid layout - Co-op Front-end Toolkit
   max-width: $screen-xlarge;
 
   @media #{$medium} {
+    padding-left: $grid-gutter *.8;
+    padding-right: $grid-gutter *.8;
+  }
+
+  @media #{$large} {
     padding-left: $grid-gutter;
     padding-right: $grid-gutter;
   }
