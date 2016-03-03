@@ -9,7 +9,7 @@ Grid layout mixins - Co-op Front-end Toolkit
   margin-right: auto;
   padding-left: $grid-gutter/2;
   padding-right: $grid-gutter/2;
-  max-width: map-get($breakpoints, "large");
+  max-width: map-get($breakpoints, "xlarge");
 
   @include media(medium) {
     padding-left: $grid-gutter *.8;

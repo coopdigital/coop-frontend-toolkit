@@ -55,7 +55,8 @@ Main footer - Co-op Front-end Toolkit
       @include list-inline;
       text-align: center;
 
-      @include media(medium) {
+      @include media(small) {
+        margin-left: -.5em;
         text-align: left;
       }
 
