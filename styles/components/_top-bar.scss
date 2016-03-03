@@ -4,7 +4,7 @@ Top bar - Co-op Front-end Toolkit
 
 .top-bar {
   background: $coop-blue;
-  padding: 10px 0;
+  padding: $quarter-spacing-unit /3 0;
   color: $white;
   font-size: em-calc(13);
 

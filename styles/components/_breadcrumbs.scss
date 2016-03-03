@@ -26,7 +26,6 @@ Breadcrumbs - Co-op Front-end Toolkit
       color: $coop-grey;
       border-bottom: 0;
     }
-
   }
 
   .active {
@@ -35,7 +34,5 @@ Breadcrumbs - Co-op Front-end Toolkit
     &:after {
       content: '';
     }
-
   }
-
 }

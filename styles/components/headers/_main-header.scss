@@ -84,7 +84,7 @@ Main header - Co-op Front-end Toolkit
   position: absolute;
   right: 0;
   bottom: 0;
-  padding: 10px $quarter-spacing-unit;
+  padding: $quarter-spacing-unit;
   border-bottom: 0;
   color: $coop-blue;
 
@@ -120,5 +120,4 @@ Main header - Co-op Front-end Toolkit
     font-size: em-calc(10);
     line-height: 1;
   }
-
 }
