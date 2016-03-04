@@ -1,0 +1,29 @@
+/*===============================================
+Logo mixins - Co-op Front-end Toolkit
+===============================================*/
+
+@mixin coop-logo($size: "small") {
+  box-sizing: content-box;
+  display: block;
+  border: none;
+
+  @if $size == "small" {
+    width: 45px;
+    height: 45px;
+  }
+  @if $size == "medium" {
+    width: 66px;
+    height: 66px;
+  }
+  @if $size == "large" {
+    width: 76px;
+    height: 76px;
+  }
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: $coop-blue;
+  }
+}

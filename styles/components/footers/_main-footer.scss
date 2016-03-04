@@ -2,6 +2,8 @@
 Main footer - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "mixins/logo";
+
 .footer-main {
   background: $offwhite;
 
@@ -11,24 +13,9 @@ Main footer - Co-op Front-end Toolkit
   }
 
   .coop-logo {
-    display: block;
+    @include coop-logo();
     margin: 0 auto;
     padding: 5px;
-    width: 55px;
-    height: 55px;
-    color: $coop-blue;
-    border: none;
-
-    &:hover {
-      border: none;
-    }
-
-    svg {
-      display: block;
-      width: 100%;
-      height: 100%;
-      fill: $coop-blue;
-    }
   }
 
   .support-links {
