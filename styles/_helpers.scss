@@ -63,49 +63,6 @@ Helpers - Co-op Front-end Toolkit
 .border-b { border-bottom: 1px solid $coop-border-grey; }
 .border-l { border-left: 1px solid $coop-border-grey; }
 
-// Icon links
-.link-icon-right {
-  position: relative;
-  margin-right: 30px;
-
-  &:after {
-    position: absolute;
-    top: 4px;
-    padding-left: 4px;
-  }
-
-  .icon-text-left {
-    margin-right: -20px;
-    font-size: em-calc(16);
-  }
-}
-
-.link-icon-left {
-  position: relative;
-  margin-left: 20px;
-
-  &:after {
-    position: absolute;
-    top: 4px;
-    padding-left: 4px;
-  }
-
-  .icon-text-right {
-    margin-left: -20px;
-    font-size: em-calc(16);
-  }
-}
-
-.link-icon-arrow {
-  &:after {
-    @extend .icon;
-    content: '\e608';
-    position: absolute;
-    top: 4px;
-    padding-left: 4px;
-    font-size: em-calc(14);
-  }
-}
 
 .text-centre {
   text-align: center;

@@ -43,6 +43,72 @@ Icons - Co-op Front-end Toolkit
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-size-16:before,
+%icon-size-16:before {
+  font-size: 16px;
+}
+
+.icon-size-24:before,
+%icon-size-24:before {
+  font-size: 24px;
+}
+
+.icon-size-32:before,
+%icon-size-32:before {
+  font-size: 32px;
+}
+
+.icon-size-64:before,
+%icon-size-64:before {
+  font-size: 64px;
+}
+
+// Icon links
+.link-icon-right {
+  position: relative;
+  margin-right: 30px;
+
+  &:after {
+    position: absolute;
+    top: 4px;
+    padding-left: 4px;
+  }
+
+  .icon-text-left {
+    margin-right: -20px;
+    font-size: em-calc(16);
+  }
+}
+
+.link-icon-left {
+  position: relative;
+  margin-left: 20px;
+
+  &:after {
+    position: absolute;
+    top: 4px;
+    padding-left: 4px;
+  }
+
+  .icon-text-right {
+    margin-left: -20px;
+    font-size: em-calc(16);
+  }
+}
+
+.link-icon-arrow {
+  &:after {
+    @extend %icon;
+    content: '\e608';
+    position: absolute;
+    top: 4px;
+    padding-left: 4px;
+    font-size: em-calc(14);
+  }
+}
+
+
+// Icons
 .icon-information:before,
 %icon-information:before { content: '\e600'; }
 
@@ -239,6 +305,61 @@ Icons - Co-op Front-end Toolkit
 
 .icon-award-fill:before,
 %icon-award-fill:before { content: '\e903'; }
+
+.icon-disabled-access:before,
+%icon-disabled-access:before { content: "\e90f"; }
+
+.icon-logo:before,
+%icon-logo:before { content: "\e911"; }
+
+.icon-amazon:before,
+%icon-amazon:before { content: "\e912"; }
+
+.icon-atm:before,
+%icon-atm:before { content: "\e913"; }
+
+.icon-baby-changing-facilities:before,
+%icon-baby-changing-facilities:before { content: "\e914"; }
+
+.icon-bakery:before,
+%icon-bakery:before { content: "\e915"; }
+
+.icon-cafe:before,
+%icon-cafe:before { content: "\e916"; }
+
+.icon-costa:before,
+%icon-costa:before { content: "\e917"; }
+
+.icon-customer-toilets:before,
+%icon-customer-toilets:before { content: "\e918"; }
+
+.icon-dunkin-donuts:before,
+%icon-dunkin-donuts:before { content: "\e919"; }
+
+.icon-hermes:before,
+%icon-hermes:before { content: "\e91a"; }
+
+.icon-my-location:before,
+%icon-my-location:before { content: "\e91b"; }
+
+.icon-national-lottery:before,
+%icon-national-lottery:before { content: "\e91c"; }
+
+.icon-parking:before,
+%icon-parking:before { content: "\e91d"; }
+
+.icon-paypoint:before,
+%icon-paypoint:before { content: "\e91e"; }
+
+.icon-petrol-station:before,
+%icon-petrol-station:before { content: "\e91f"; }
+
+.icon-photobooth:before,
+%icon-photobooth:before { content: "\e920"; }
+
+.icon-post-office:before,
+%icon-post-office:before { content: "\e921"; }
+
 
 
 // COLOURS
