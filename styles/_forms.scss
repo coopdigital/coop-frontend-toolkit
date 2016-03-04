@@ -2,17 +2,7 @@
 Forms - Co-op Front-end Toolkit
 ===============================================*/
 
-/**
- *
- * I have grouped all the form atoms together here for now
- * I felt as a naming convention for other devs this was easier
- * If it becomes too big, then i suggest a form/atom-name.scss sub section of atoms
- *
- */
-
-form {
-  margin: 0;
-}
+@import "mixins/forms";
 
 fieldset,
 .fieldset {
@@ -29,158 +19,17 @@ legend,
   color: $coop-blue;
 }
 
-.legend--block {
+.legend-block {
   display: block;
 }
 
 input,
-.input,
-input:not([type]),
-input[type='text'],
-input[type='password'],
-input[type='date'],
-input[type='datetime'],
-input[type='datetime-local'],
-input[type='month'],
-input[type='week'],
-input[type='email'],
-input[type='number'],
-input[type='search'],
-input[type='tel'],
-input[type='time'],
-input[type='url'],
-input[type='color'],
 textarea  {
-  height: auto;
-  margin-bottom: $quarter-spacing-unit;
-  padding: $quarter-spacing-unit / 2;
-  border: 2px solid $coop-grey;
-  color: $coop-grey;
-  border-radius: $border-radius;
-  line-height: 1.6;
-  outline: 0;
-  -webkit-appearance: none;
-  transition: all 0.3s ease-in-out;
-
-  &:hover, &:focus {
-    border: 2px solid $coop-blue;
-  }
-
-  &:focus {
-    background: $white;
-  }
-
-  &.input--small {
-    padding: $quarter-spacing-unit / 3;
-    font-size: em-calc(16px);
-  }
-
-  &.input--medium {
-    padding: 0.46875em;
-  }
-
-  &.input--large {
-    padding: $quarter-spacing-unit;
-  }
-
-  &.input--prefix {
-    border-left: 0;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
-  &.input--width_small {
-    width: 5.5em;
-    @include media(medium) {
-      width: 8em;
-    }
-  }
-
-  &.input--width_smallest {
-    width: 4.5em;
-    @include media(medium) {
-      width: 8em;
-    }
-  }
-
-  &.input--width_medium {
-    width: 50%;
-    @include media(medium) {
-      width: 45%;
-    }
-    @include media(large) {
-      width: 45%;
-    }
-  }
-
-  &.input--width_large {
-    width: 85%;
-    @include media(medium) {
-      width: 80%;
-    }
-    @include media(large) {
-      width: 60%;
-    }
-  }
-
-  &.input--width_fill {
-    width: 100%;
-  }
-
-  &.input--inline {
-    display: inline-block;
-    float: left;
-    margin-right: .25em;
-  }
-
-}
-
-
-
-input[type='submit'] {
-  border-radius: $border-radius;
-}
-
-input[type='search'],
-input[type='text'] {
-  -webkit-appearance: none;
-  box-sizing: border-box;
+  @include form-field;
 }
 
 select {
-  -webkit-appearance: menulist !important;
-  -moz-appearance: menulist !important;
-  text-indent: 0.25em;
-  margin-bottom: $quarter-spacing-unit;
-  display: block;
-  height: $base-spacing-unit;
-  min-height: 15px;
-  background: $white;
-  border: 2px solid $coop-grey;
-  border-radius: $border-radius;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-
-  &:hover, &:focus {
-    border: 2px solid $coop-blue;
-  }
-
-  &.select--small {
-    font-size: .875em;
-    height: $half-spacing-unit * 1.5;
-  }
-
-  &.select--medium {
-    height: $half-spacing-unit;
-  }
-
-  &.select--large {
-    height: $base-spacing-unit * 1.5;
-  }
-}
-
-textarea {
-  min-height: 200px;
+  @include form-select;
 }
 
 input[type='range'] {
@@ -203,7 +52,8 @@ input[type='range'] {
     background: $coop-blue;
     margin-top: -4px;
 
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       box-shadow: 0 0 20px lighten($coop-blue, 20%);
     }
   }
@@ -218,42 +68,18 @@ input[type='range'] {
 }
 
 
-// A nicer placeholder interaction
-input:hover::-webkit-input-placeholder {
-  color: $coop-grey;
-}
-
-input:focus::-webkit-input-placeholder {
-  transition: opacity 0.5s 0.5s ease;
-  opacity: 0;
-}
-
 label,
 .label {
   font-size: 1em;
 }
 
-.label--block {
+.label-block {
   display: block;
   margin-bottom: $quarter-spacing-unit / 2;
 }
 
 // Input states
-
-input[type='text'].parsley-error,
-input[type='password'].parsley-error,
-input[type='date'].parsley-error,
-input[type='datetime'].parsley-error,
-input[type='datetime-local'].parsley-error,
-input[type='month'].parsley-error,
-input[type='week'].parsley-error,
-input[type='email'].parsley-error,
-input[type='number'].parsley-error,
-input[type='search'].parsley-error,
-input[type='tel'].parsley-error,
-input[type='time'].parsley-error,
-input[type='url'].parsley-error,
-input[type='color'].parsley-error,
+input.parsley-error,
 textarea.parsley-error {
   border: 2px solid $saleerror-red;
 
@@ -456,18 +282,18 @@ span.postfix {
   border-bottom-right-radius: $border-radius;
 }
 
-.prefix--small,
-.postfix--small  {
+.prefix-small,
+.postfix-small  {
   padding: $quarter-spacing-unit / 3;
 }
 
-.prefix--medium,
-.postfix--medium  {
+.prefix-medium,
+.postfix-medium  {
   padding: $quarter-spacing-unit / 2;
 }
 
-.prefix--large,
-.postfix--large {
+.prefix-large,
+.postfix-large {
   padding: $quarter-spacing-unit;
 }
 

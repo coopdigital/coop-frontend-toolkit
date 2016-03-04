@@ -1,0 +1,125 @@
+/*===============================================
+Forms mixins - Co-op Front-end Toolkit
+===============================================*/
+
+@mixin form-field($include-sizes: true) {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: $quarter-spacing-unit;
+  padding: $quarter-spacing-unit / 2;
+  background: $white;
+  border: 2px solid $coop-grey;
+  border-radius: $border-radius;
+  color: $coop-grey;
+  line-height: 1.6;
+  outline: 0;
+  transition: all 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background: $white;
+    border: 2px solid $coop-blue;
+  }
+
+  &:hover::-webkit-input-placeholder {
+    color: $coop-grey;
+  }
+
+  &:focus::-webkit-input-placeholder {
+    transition: opacity 0.5s 0.5s ease;
+    opacity: 0;
+  }
+
+  @if $include-sizes == true {
+    &.input-small {
+      padding: $quarter-spacing-unit / 3;
+      font-size: em-calc(16px);
+    }
+
+    &.input-medium {
+      padding: $quarter-spacing-unit / 3 * 2;
+    }
+
+    &.input-large {
+      padding: $quarter-spacing-unit;
+    }
+
+    &.input-prefix {
+      border-left: 0;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    &.input-width_small {
+      width: 5.5em;
+
+      @include media(medium) {
+        width: 8em;
+      }
+    }
+
+    &.input-width_smallest {
+      width: 4.5em;
+
+      @include media(medium) {
+        width: 8em;
+      }
+    }
+
+    &.input-width_medium {
+      width: 50%;
+
+      @include media(medium) {
+        width: 45%;
+      }
+
+      @include media(large) {
+        width: 45%;
+      }
+    }
+
+    &.input-width_large {
+      width: 85%;
+
+      @include media(medium) {
+        width: 80%;
+      }
+
+      @include media(large) {
+        width: 60%;
+      }
+    }
+  }
+
+
+  &.input-inline {
+    display: inline-block;
+    float: left;
+    width: auto;
+    margin-right: .25em;
+  }
+}
+
+@mixin form-select {
+  @include form-field($include-sizes: false);
+
+  -webkit-appearance: menulist !important;
+  -moz-appearance: menulist !important;
+  text-indent: 0.25em;
+  height: $base-spacing-unit;
+  cursor: pointer;
+
+  &.select-small {
+    font-size: .875em;
+    height: $half-spacing-unit * 1.5;
+  }
+
+  &.select-medium {
+    height: $half-spacing-unit;
+  }
+
+  &.select-large {
+    height: $base-spacing-unit * 1.5;
+  }
+}
