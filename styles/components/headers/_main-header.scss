@@ -15,6 +15,10 @@ Main header - Co-op Front-end Toolkit
     border-bottom: 0;
   }
 
+  @include ie() {
+    text-align: left;
+  }
+
   .coop-logo {
     @include coop-logo();
     margin: 0 auto;
