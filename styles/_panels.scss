@@ -1,0 +1,13 @@
+/*===============================================
+Panels - Co-op Front-end Toolkit
+===============================================*/
+
+@import "mixins/panels";
+
+.boxed {
+  @include boxed;
+}
+
+.panel-grey {
+  @include panel-grey;
+}

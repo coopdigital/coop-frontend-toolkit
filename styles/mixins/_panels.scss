@@ -1,0 +1,20 @@
+/*===============================================
+Panels mixins - Co-op Front-end Toolkit
+===============================================*/
+
+@mixin boxed {
+  padding: $quarter-spacing-unit;
+  border: 1px solid $coop-border-grey;
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+@mixin panel-grey {
+  background: $offwhite;
+}
