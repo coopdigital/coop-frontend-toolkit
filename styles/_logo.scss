@@ -4,7 +4,8 @@ Logo - Co-op Front-end Toolkit
 
 @import "mixins/logo";
 
-.coop-logo {
+.coop-logo,
+.coop-logo-small {
   @include coop-logo();
 }
 
