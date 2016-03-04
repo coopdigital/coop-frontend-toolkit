@@ -10,6 +10,8 @@ Variables - Co-op Front-end Toolkit
 // Base URL for any linked assets
 $base-asset-url: '../' !default;
 
+$ie: 999 !default;
+
 // Vertical rhythm
 $base-spacing-unit: 60px !default;
 $three-quarter-spacing-unit: $base-spacing-unit / 4 * 3 !default; // 45px

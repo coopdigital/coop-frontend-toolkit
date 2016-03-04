@@ -18,6 +18,16 @@ Helpers mixins - Co-op Front-end Toolkit
 }
 
 /**
+ * Add styles for IE browsers
+ * @param  {int} $version: 8  Max IE version targetted
+ */
+@mixin ie($version: 8) {
+  @if $ie <= $version {
+    @content;
+  }
+}
+
+/**
  * Wraps the content into a media query. Requires $breakpoints map to be set.
  * @param  {string} $size Breakpoint key
  */
@@ -26,11 +36,16 @@ Helpers mixins - Co-op Front-end Toolkit
     @media (min-width: #{map-get($breakpoints, $size)}) {
       @content;
     }
+    @include ie() {
+      @content;
+    }
   }
   @else {
     @warn "No breakpoint found for `#{$breakpoint}`.";
   }
 }
+
+
 
 
 /**
