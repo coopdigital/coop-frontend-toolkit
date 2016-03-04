@@ -1,0 +1,17 @@
+/*===============================================
+Logo - Co-op Front-end Toolkit
+===============================================*/
+
+@import "mixins/logo";
+
+.coop-logo {
+  @include coop-logo();
+}
+
+.coop-logo-medium {
+  @include coop-logo("medium");
+}
+
+.coop-logo-large {
+  @include coop-logo("large");
+}
