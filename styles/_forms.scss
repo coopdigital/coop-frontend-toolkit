@@ -4,23 +4,20 @@ Forms - Co-op Front-end Toolkit
 
 @import "mixins/forms";
 
-fieldset,
-.fieldset {
-  border: 0;
-  padding: $quarter-spacing-unit 0 0;
-  margin: 0 0 $half-spacing-unit;
+.form-row {
+  @include form-row;
 }
 
-legend,
-.legend {
-  font-size: em-calc(24px);
-  font-weight: $bold;
-  line-height: 1.250em;
-  color: $coop-blue;
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 
-.legend-block {
-  display: block;
+label,
+legend {
+  @include form-label;
 }
 
 input,
@@ -30,6 +27,18 @@ textarea  {
 
 select {
   @include form-select;
+}
+
+input[type=checkbox] {
+  @include form-check-field("checkbox");
+}
+input[type=radio] {
+  @include form-check-field("radio");
+}
+
+.tap-input,
+input[type=radio].tap-input {
+  @include form-tap-tile;
 }
 
 input[type='range'] {
@@ -65,17 +74,6 @@ input[type='range'] {
       background: $dark-grey;
     }
   }
-}
-
-
-label,
-.label {
-  font-size: 1em;
-}
-
-.label-block {
-  display: block;
-  margin-bottom: $quarter-spacing-unit / 2;
 }
 
 // Input states
@@ -141,125 +139,10 @@ textarea.parsley-error {
 
 // }
 
-input[type=checkbox] {
-  position: absolute;
-  left: -9999px;
-}
-
-input[type=checkbox] + label {
-  cursor: pointer;
-}
-
-input[type=checkbox] + label:before {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 10px;
-  content: '';
-  border: 2px solid $coop-grey;
-  width: 30px;
-  height: 30px;
-  border-radius: 5px;
-  font-size: 1.75em;
-  cursor: pointer;
-
-  &:hover {
-    background-color: $offwhite;
-  }
-}
-
-input[type=checkbox]:hover + label:hover:before {
-  background-color: $offwhite;
-}
-
-input[type=checkbox]:checked + label {
-  color: $coop-blue;
-
-  &:before {
-    content: '\e60c';
-    font-family: 'coopicons';
-    font-size: 20px;
-    font-weight: bold;
-    color: $coop-blue;
-    background-color: $white;
-    padding: 0 0 4px 4px;
-    border: 2px solid $coop-blue;
-  }
-}
-
-.tap-tile-examples {
-  margin-bottom: 2em;
-}
-
-.tap-input {
-  position: absolute;
-  left: -9999px;
-}
-
-.tap-input, .tap-tile {
-  color: $coop-grey;
-}
-
-.tap-tile {
-  display: inline;
-  margin-right: $quarter-spacing-unit;
-
-  span {
-    display: inline-block;
-    cursor: pointer;
-    min-width: 70px;
-    // min-height: 70px;
-    text-align: center;
-    padding: $quarter-spacing-unit * 1.5;
-    border-radius: 5px;
-    color: $coop-grey;
-    background-color: $white;
-    border: 2px solid $coop-grey;
-
-    &:hover {
-      background-color: $coop-blue;
-      color: $white;
-      border: 2px solid $coop-blue;
-    }
-  }
-
-  &.small {
-    span {
-      font-size: .875em;
-      padding: $quarter-spacing-unit / 2;
-    }
-  }
-
-  &.medium {
-    span {
-      padding: $quarter-spacing-unit * 1.5;
-    }
-  }
-
-  &.large {
-    span {
-      padding: $half-spacing-unit;
-    }
-  }
-
-}
 
 
 
-.tap-input:checked + label {
-  span {
-    background-color: $coop-blue;
-    color: $white;
-    border: 2px solid $coop-blue;
-  }
-}
 
-.tap-input + label span,
-.tap-input:checked + label span {
-  -webkit-transition: background-color 0.05s linear;
-  -o-transition: background-color 0.05s linear;
-  -moz-transition: background-color 0.05s linear;
-  transition: background-color 0.05s linear;
-}
 
 span.prefix,
 span.postfix {
@@ -295,69 +178,4 @@ span.postfix {
 .prefix-large,
 .postfix-large {
   padding: $quarter-spacing-unit;
-}
-
-
-
-.radio-group {
-
-  input[type=radio] {
-    // visibility: hidden;
-    position: absolute;
-    left: -9999px;
-  }
-
-  input[type=radio] + label {
-    position: relative;
-    padding-left: 30px;
-    padding-bottom: 0;
-    cursor: pointer;
-  }
-
-  input[type=radio] + label:before {
-    display: inline-block;
-    content: '';
-    border: 2px solid $coop-grey;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    font-size: 1.75em;
-    position: absolute;
-    left: 0;
-
-    &:hover {
-      background-color: $offwhite;
-    }
-
-  }
-
-
-  input[type=radio]:hover + label:hover:before {
-    background-color: $offwhite;
-  }
-
-  input[type=radio]:checked + label {
-    color: $coop-blue;
-
-    &:before {
-      background-color: $white;
-      padding-left: 2px;
-      border: 2px solid $coop-blue;
-    }
-
-    &:after {
-      display: inline-block;
-      content: '';
-      width: 15px;
-      height: 15px;
-      vertical-align: middle;
-      border-radius: 50%;
-      background-color: $coop-blue;
-      position: absolute;
-      left: 5px;
-      top: 5px;
-    }
-
-  }
-
 }
