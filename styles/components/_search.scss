@@ -8,22 +8,27 @@ Search field - Co-op Front-end Toolkit
 
   input {
     margin-bottom: 0;
+    padding-right: 4em;
+
+    &:hover + button,
+    &:focus + button {
+      background: $coop-blue;
+    }
   }
 
   button {
     position: absolute;
     bottom: 0;
-    right: -1px;
+    right: 0;
     height: 100%;
     padding: 10px 15px;
     margin-bottom: 0;
-    background: $coop-blue;
+    background: $coop-grey;
     border: 0;
     border-radius: 0 $border-radius $border-radius 0;
     box-shadow: none;
 
     &:hover,
-    &:active,
     &:focus {
       background: $coop-blue-highlighted;
     }
