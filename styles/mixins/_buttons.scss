@@ -1,0 +1,125 @@
+/*===============================================
+Buttons mixins - Co-op Front-end Toolkit
+===============================================*/
+
+@mixin button {
+  display: inline-block;
+  border: 0;
+  border-radius: $border-radius;
+  padding: $quarter-spacing-unit $half-spacing-unit * 1.25;
+  text-align: center;
+  font-size: em-calc(18);
+  line-height: 1.5;
+  color: $coop-link-blue;
+  background-color: $offwhite;
+  box-shadow: 0 4px darken($offwhite, 8%);
+  transition: all 0.15s linear;
+
+  &:hover,
+  &:focus {
+    background-color: darken($offwhite, 5%);
+  }
+
+  &:after {
+    transition: color 0s;
+  }
+
+  &:disabled,
+  &.disabled {
+    opacity: .75;
+    cursor: not-allowed;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      background-color: $offwhite;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $offwhite;
+    }
+  }
+
+  &.btn-full {
+    width: 100%;
+  }
+
+  &.btn-small {
+    padding: $quarter-spacing-unit / 3 $quarter-spacing-unit;
+    font-size: .875em;
+  }
+
+  &.btn-medium {
+    padding: $quarter-spacing-unit / 2 $quarter-spacing-unit;
+  }
+
+  &.btn-large {
+    padding: $quarter-spacing-unit $half-spacing-unit;
+  }
+
+  &.btn-pill {
+    box-shadow: none;
+  }
+
+  &.btn-loading:after {
+    content: "";
+    animation: three-quarters-loader 1250ms infinite linear;
+    border: 3px solid $white;
+    border-right-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    width: em-calc(20);
+    height: em-calc(20);
+    margin-left: .25em;
+    vertical-align: middle;
+  }
+
+  &.btn-back {
+    &:before {
+      @extend %icon;
+      content: "\e609";
+      position: relative;
+      left: 0;
+      margin-right: .25em;
+      font-size: em-calc(20);
+      transition: all 0.15s linear;
+    }
+
+    &:hover,
+    &:focus {
+      &:before {
+        left: -.25em;
+      }
+    }
+  }
+
+  &.btn-proceed {
+    &:after {
+      @extend %icon;
+      content: "\e608";
+      position: relative;
+      left: 0;
+      margin-left: .25em;
+      font-size: em-calc(20);
+      transition: all 0.15s linear;
+    }
+
+    &:hover,
+    &:focus {
+      &:after {
+        left: .25em;
+      }
+    }
+  }
+}
+
+@keyframes three-quarters-loader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
