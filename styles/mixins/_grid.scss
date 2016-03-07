@@ -22,6 +22,23 @@ Grid layout mixins - Co-op Front-end Toolkit
   }
 }
 
+@mixin row {
+  @include clearfix;
+
+  margin-left: -$grid-gutter /4;
+  margin-right: -$grid-gutter /4;
+
+  @include media(medium) {
+    margin-left: -$grid-gutter /2;
+    margin-right: -$grid-gutter /2;
+  }
+
+  & & {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 /**
  * Creates the classes necessary for all columns to exist for the specified
  * screen size. This relies on the following global variables being set:

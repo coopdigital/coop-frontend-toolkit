@@ -15,6 +15,10 @@ fieldset {
   width: 100%;
 }
 
+.form-section {
+  margin-bottom: $half-spacing-unit;
+}
+
 label,
 legend {
   @include form-label;
@@ -23,6 +27,10 @@ legend {
 input,
 textarea  {
   @include form-field;
+}
+
+textarea {
+  resize: vertical;
 }
 
 select {
@@ -76,16 +84,18 @@ input[type='range'] {
   }
 }
 
-// Input states
-input.parsley-error,
-textarea.parsley-error {
-  border: 2px solid $saleerror-red;
+span.prefix {
+  @include form-prefix;
+}
 
-  &:hover,
-  &:focus {
-    border: 2px solid $saleerror-red;
-  }
+span.suffix {
+  @include form-suffix;
+}
 
+
+// Error states
+.invalid {
+  @include form-invalid;
 }
 
 .parsley-errors-list {
@@ -140,42 +150,37 @@ textarea.parsley-error {
 // }
 
 
-
-
-
-
-span.prefix,
-span.postfix {
-  height: auto;
-  font-size: em-calc(16px);
-  line-height: 1.6;
-  border-top: 2px solid $coop-grey;
-  border-right: 0;
-  border-bottom: 2px solid $coop-grey;
-  border-left: 2px solid $coop-grey;
+.form-wrap-header {
+  @include media(medium) {
+    padding: $quarter-spacing-unit $half-spacing-unit;
+    background: $coop-blue;
+    color: $white;
+  }
 }
 
-span.prefix {
-  border-top-left-radius: $border-radius;
-  border-bottom-left-radius: $border-radius;
+.form-wrap-title {
+  margin: 0;
+  color: $coop-blue;
+
+  @include media(medium) {
+    color: $white;
+  }
 }
 
-span.postfix {
-  border-top-right-radius: $border-radius;
-  border-bottom-right-radius: $border-radius;
+.form-wrap {
+  padding: $half-spacing-unit 0;
+  margin-bottom: $half-spacing-unit;
+
+  @include media(medium) {
+    padding: $half-spacing-unit;
+    border: 1px solid $coop-border-grey;
+  }
 }
 
-.prefix-small,
-.postfix-small  {
-  padding: $quarter-spacing-unit / 3;
-}
+.form-navigation {
+  @include clearfix;
 
-.prefix-medium,
-.postfix-medium  {
-  padding: $quarter-spacing-unit / 2;
-}
-
-.prefix-large,
-.postfix-large {
-  padding: $quarter-spacing-unit;
+  margin-top: $half-spacing-unit;
+  padding-top: $half-spacing-unit;
+  border-top: 1px solid $coop-border-grey;
 }

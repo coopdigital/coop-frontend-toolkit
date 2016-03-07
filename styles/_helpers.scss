@@ -83,3 +83,11 @@ Helpers - Co-op Front-end Toolkit
 .visuallyshown {
   @include visuallyshown;
 }
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}

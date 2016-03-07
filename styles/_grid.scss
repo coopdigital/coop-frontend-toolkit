@@ -10,15 +10,7 @@ Grid layout - Co-op Front-end Toolkit
 }
 
 .row {
-  @include clearfix;
-
-  margin-left: -$grid-gutter /4;
-  margin-right: -$grid-gutter /4;
-
-  @include media(medium) {
-    margin-left: -$grid-gutter /2;
-    margin-right: -$grid-gutter /2;
-  }
+  @include row;
 }
 
 .column,
