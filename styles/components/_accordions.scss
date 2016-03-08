@@ -1,0 +1,21 @@
+/*===============================================
+Accordions - Co-op Front-end Toolkit
+===============================================*/
+
+@import "components/toggles";
+
+.accordion {
+  border-bottom: 2px dotted $coop-grey;
+
+  .toggle-trigger {
+    @extend .toggle-trigger;
+
+    margin-bottom: 0;
+    border-bottom-width: 0;
+
+    &.open {
+      margin-bottom: $quarter-spacing-unit;
+      border-bottom-width: 2px;
+    }
+  }
+}

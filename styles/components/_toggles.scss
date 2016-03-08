@@ -1,0 +1,9 @@
+/*===============================================
+Toggles - Co-op Front-end Toolkit
+===============================================*/
+
+@import "mixins/toggles";
+
+.toggle-trigger {
+  @include toggle;
+}

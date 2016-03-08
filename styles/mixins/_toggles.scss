@@ -1,0 +1,54 @@
+/*===============================================
+Toggles mixins - Co-op Front-end Toolkit
+===============================================*/
+
+@mixin toggle {
+  display: block;
+  padding: $quarter-spacing-unit;
+  margin-bottom: $quarter-spacing-unit;
+  border: 2px dotted $coop-grey;
+  border-width: 2px 0;
+  color: $coop-grey;
+  transition: all .3s linear;
+
+  &:hover,
+  &:focus {
+    background: $offwhite;
+    color: $coop-blue;
+    border-bottom: 2px dotted $coop-grey;
+  }
+
+  & + .toggle-content {
+    padding-left: $quarter-spacing-unit;
+    padding-right: $quarter-spacing-unit;
+    transition: all .5s ease-in-out;
+  }
+
+  &.init {
+
+    &:after {
+      @extend %icon;
+      content: "\e630";
+      float: right;
+      transition: all .15s linear;
+    }
+
+    & + .toggle-content {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+    }
+
+    &.open {
+      color: $coop-blue;
+      &:after {
+        transform: rotate(180deg);
+      }
+
+      & + .toggle-content {
+        max-height: 500px;
+        opacity: 1;
+      }
+    }
+  }
+}
