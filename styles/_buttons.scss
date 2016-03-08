@@ -10,72 +10,22 @@ button,
 }
 
 .btn-green {
-  @extend .btn;
-
-  color: $white;
-  background-color: $button-green;
-  box-shadow: 0 4px darken($button-green, 6%);
-
-  &:hover,
-  &:focus {
-    background-color: $button-green-highlighted;
-  }
-
-  &:disabled,
-  &.disabled {
-    background-color: rgba($button-green, 0.9);
-
-    &:hover,
-    &:focus {
-      background-color: rgba($button-green, 0.9);
-    }
-  }
+  @include button($text-colour: $white,
+                  $bg-colour: $button-green,
+                  $shadow-colour: darken($button-green, 6%),
+                  $hover-bg-colour: $button-green-highlighted);
 }
 
 .btn-blue {
-  @extend .btn;
-
-  color: $white;
-  background: $coop-blue;
-  box-shadow: 0 4px darken($coop-blue, 6%);
-
-  &:hover,
-  &:focus {
-    background-color: lighten($coop-blue, 10%);
-  }
-
-  &:disabled,
-  &.disabled {
-    background-color: rgba($coop-blue, 0.9);
-
-    &:hover,
-    &:focus {
-      background-color: rgba($coop-blue, 0.9);
-    }
-
-  }
+  @include button($text-colour: $white,
+                  $bg-colour: $coop-blue,
+                  $shadow-colour: darken($coop-blue, 6%),
+                  $hover-bg-colour: lighten($coop-blue, 10%));
 }
 
 .btn-grey {
-  @extend .btn;
-
-  color: $white;
-  background: $coop-grey;
-  box-shadow: 0 4px lighten($coop-grey, 6%);
-
-  &:hover,
-  &:focus {
-    background-color: darken($coop-grey, 10%);
-  }
-
-  &:disabled,
-  &.disabled {
-    background-color: rgba($coop-grey, 0.9);
-
-    &:hover,
-    &:focus {
-      background-color: rgba($coop-grey, 0.9);
-    }
-
-  }
+  @include button($text-colour: $white,
+                  $bg-colour: $coop-grey,
+                  $shadow-colour: darken($coop-grey, 6%),
+                  $hover-bg-colour: lighten($coop-grey, 10%));
 }

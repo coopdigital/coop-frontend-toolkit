@@ -2,7 +2,10 @@
 Buttons mixins - Co-op Front-end Toolkit
 ===============================================*/
 
-@mixin button {
+@mixin button($text-colour: $coop-link-blue,
+              $bg-colour: $offwhite,
+              $shadow-colour: darken($offwhite, 8%),
+              $hover-bg-colour: darken($offwhite, 5%)) {
   display: inline-block;
   border: 0;
   border-radius: $border-radius;
@@ -10,14 +13,14 @@ Buttons mixins - Co-op Front-end Toolkit
   text-align: center;
   font-size: em-calc(18);
   line-height: 1.5;
-  color: $coop-link-blue;
-  background-color: $offwhite;
-  box-shadow: 0 4px darken($offwhite, 8%);
+  color: $text-colour;
+  background-color: $bg-colour;
+  box-shadow: 0 4px $shadow-colour;
   transition: all 0.15s linear;
 
   &:hover,
   &:focus {
-    background-color: darken($offwhite, 5%);
+    background-color: $hover-bg-colour;
   }
 
   &:after {
@@ -32,12 +35,12 @@ Buttons mixins - Co-op Front-end Toolkit
 
     &:hover,
     &:focus {
-      background-color: $offwhite;
+      background-color: $bg-colour;
     }
 
     &:hover,
     &:focus {
-      background-color: $offwhite;
+      background-color: $bg-colour;
     }
   }
 
@@ -59,19 +62,20 @@ Buttons mixins - Co-op Front-end Toolkit
   }
 
   &.btn-pill {
+    margin: .25em .25em .25em 0;
     box-shadow: none;
   }
 
   &.btn-loading:after {
     content: "";
     animation: three-quarters-loader 1250ms infinite linear;
-    border: 3px solid $white;
+    border: 3px solid $text-colour;
     border-right-color: transparent;
     border-radius: 50%;
     display: inline-block;
-    width: em-calc(20);
-    height: em-calc(20);
-    margin-left: .25em;
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
     vertical-align: middle;
   }
 
