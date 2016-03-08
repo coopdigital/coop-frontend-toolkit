@@ -33,7 +33,7 @@ Grid layout mixins - Co-op Front-end Toolkit
     margin-right: -$grid-gutter /2;
   }
 
-  & & {
+  &.collapse {
     margin-left: 0;
     margin-right: 0;
   }
