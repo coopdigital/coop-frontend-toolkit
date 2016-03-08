@@ -5,6 +5,7 @@ Main footer - Co-op Front-end Toolkit
 @import "mixins/logo";
 
 .footer-main {
+  margin-top: $base-spacing-unit;
   background: $offwhite;
 
   .footer-main-top {
@@ -63,7 +64,7 @@ Main footer - Co-op Front-end Toolkit
 
     ul {
       @include list-inline;
-      margin: 0;
+      margin-bottom: 0;
     }
 
     a {
