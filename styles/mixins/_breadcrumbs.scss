@@ -1,0 +1,42 @@
+/*===============================================
+Breadcrumbs mixins - Co-op Front-end Toolkit
+===============================================*/
+
+@mixin breadcrumbs {
+  padding: $quarter-spacing-unit / 2;
+  color: $coop-grey;
+  background: $offwhite;
+  margin-bottom: 0;
+
+  li {
+    display: inline;
+    list-style: none;
+    font-size: em-calc(14);
+
+    &:after {
+      position: relative;
+      top: 1px;
+      font-family: 'coopicons';
+      content: '\e608';
+      font-size: 1em;
+      padding: 5px;
+    }
+
+    a {
+      color: $coop-grey;
+      border-bottom: 0;
+
+      &:hover {
+        border-bottom: 1px dotted $coop-grey;
+      }
+    }
+
+    &:last-child {
+      font-family: $bold;
+
+      &:after {
+        content: none;
+      }
+    }
+  }
+}
