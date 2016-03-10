@@ -2,6 +2,8 @@
 Pagination mixins - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "helpers";
+
 @mixin pagination {
   @include clearfix;
 

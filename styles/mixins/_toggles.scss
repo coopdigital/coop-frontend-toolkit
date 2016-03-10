@@ -2,6 +2,8 @@
 Toggles mixins - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "../icons";
+
 @mixin toggle {
   display: block;
   padding: $quarter-spacing-unit;

@@ -2,6 +2,9 @@
 Logo mixins - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "../functions";
+@import "helpers";
+
 @mixin coop-logo($size: "small") {
   box-sizing: content-box;
   display: block;

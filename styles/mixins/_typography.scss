@@ -2,8 +2,8 @@
 Typography mixins - Co-op Front-end Toolkit
 ===============================================*/
 
-@import "functions";
-
+@import "../functions";
+@import "helpers";
 
 // Headings
 @mixin heading-h1 {

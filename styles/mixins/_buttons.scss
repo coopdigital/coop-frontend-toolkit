@@ -2,6 +2,9 @@
 Buttons mixins - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "../functions";
+@import "../icons";
+
 @mixin button($text-colour: $coop-link-blue,
               $bg-colour: $offwhite,
               $shadow-colour: darken($offwhite, 8%),
