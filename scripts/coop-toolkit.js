@@ -2,6 +2,7 @@
  * Co-op Front-end Toolkit Scripts
  */
 
+alert("Hello");
 $(function() {
   // Mobile menu
   $('.mobile-menu-toggle').on('click', function() {
