@@ -2,6 +2,8 @@
 Grid layout mixins - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "helpers";
+
 @mixin wrap {
   position: relative;
   display: block;

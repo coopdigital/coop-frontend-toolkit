@@ -2,6 +2,8 @@
 Responsive helpers - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "helpers";
+
 @mixin respond-classes($size) {
   .#{$size}-hidden {
     @include visuallyhidden;
