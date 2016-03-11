@@ -2,12 +2,16 @@
 Panels - Co-op Front-end Toolkit
 ===============================================*/
 
-@import "mixins/panels";
+@import "../mixins/panels";
+
+.panel {
+  @extend %panel;
+}
 
 .boxed {
-  @include boxed;
+  @extend %boxed;
 }
 
 .panel-grey {
-  @include panel-grey;
+  @extend %panel-grey;
 }
