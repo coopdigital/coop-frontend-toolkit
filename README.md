@@ -7,7 +7,7 @@ The Co-op Front-end Toolkit contains all the core assets needed to build Co-op-b
 Install the Toolkit by adding it as a [Bower](http://bower.io/) dependency to your project:
 
 ```
-bower install git@github.com:coopdigital/frontend-toolkit.git#0.1.1 --save
+bower install git@github.com:coopdigital/coop-frontend-toolkit.git#0.1.1 --save
 ```
 
 ## Usage
