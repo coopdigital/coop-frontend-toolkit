@@ -10,6 +10,19 @@ Install the Toolkit by adding it as a [Bower](http://bower.io/) dependency to yo
 bower install git@github.com:coopdigital/coop-frontend-toolkit.git#0.1.1 --save
 ```
 
+_Note: in order for the dependency to be saved in your project, you may first need to run `bower init` to create the `bower.json` file._
+
+Alternatively, you can add the dependency to your project's `bower.json` directly then run `bower install`:
+
+```json
+{
+  "name": "project-name",
+  "dependencies": {
+    "coop-frontend-toolkit": "git@github.com:coopdigital/coop-frontend-toolkit.git#0.1.1"
+  }
+}
+```
+
 ## Usage
 
 These assets should be compiled into production-ready versions (minified for CSS/JS, optimised for images), using a task runner or an asset pipeline.
