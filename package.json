@@ -1,0 +1,23 @@
+{
+  "name": "coop-frontend-toolkit",
+  "version": "0.1.1",
+  "description": "A front-end toolkit for building Co-op-branded digital content",
+  "main": "test/test.js",
+  "scripts": {
+    "phantom": "mochify",
+    "test": "npm run phantom"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coopdigital/coop-frontend-toolkit.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coopdigital/coop-frontend-toolkit/issues"
+  },
+  "homepage": "https://github.com/coopdigital/coop-frontend-toolkit#readme",
+  "devDependencies": {
+    "mochify": "^2.17.0"
+  }
+}

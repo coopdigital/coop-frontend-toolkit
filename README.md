@@ -4,15 +4,21 @@ The Co-op Front-end Toolkit contains all the core assets needed to build Co-op-b
 
 ## Installation
 
-Install the Toolkit by adding it as a [Bower](http://bower.io/) dependency to your project:
+Install the Toolkit by adding it as a [Bower](http://bower.io/) or NPM package to your project:
 
 ```
-bower install git@github.com:coopdigital/coop-frontend-toolkit.git#0.1.1 --save
+bower install git@github.com:coopdigital/coop-frontend-toolkit.git#0.1.2 --save
 ```
 
-_Note: in order for the dependency to be saved in your project, you may first need to run `bower init` to create the `bower.json` file._
+_or_
 
-Alternatively, you can add the dependency to your project's `bower.json` directly then run `bower install`:
+```
+npm install git@github.com:coopdigital/coop-frontend-toolkit.git#0.1.2 --save
+```
+
+_Note: if you are installing via Bower, in order for the dependency to be saved in your project, you may first need to run `bower init` to create the `bower.json` file._
+
+Alternatively, you can add the dependency to your project's `bower.json` or `package.json` directly then run `bower install` or `npm install`:
 
 ```json
 {
