@@ -1,12 +1,11 @@
 {
   "name": "coop-frontend-toolkit",
   "homepage": "https://github.com/coopdigital/coop-frontend-toolkit",
-  "authors": [
-    "Matt Tyas <matt.tyas@co-operative.coop>",
-    "Fred Marecesche <fred@froddd.co.uk>"
+  "description": "A front-end toolkit for building Co-op-branded digital content",
+  "main": [
+    "scripts/coop-toolkit.js",
+    "styles/_coop-toolkit.scss"
   ],
-  "description": "Co-op front-end toolkit",
-  "main": "",
   "moduleType": [],
   "license": "MIT",
   "private": true,
@@ -15,7 +14,7 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests",
-    "CONTRIBUTING.md"
+    "CONTRIBUTING.md",
+    "package.json"
   ]
 }
