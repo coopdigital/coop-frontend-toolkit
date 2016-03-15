@@ -10,7 +10,6 @@ Main navigation - Co-op Front-end Toolkit
   height: 100vh;
   margin-left: 100%;
   background: $white;
-  text-align: center;
   transition: all, 0.25s, ease-in-out;
 
   &.open {
@@ -21,6 +20,9 @@ Main navigation - Co-op Front-end Toolkit
     position: static;
     margin-left: 0;
     height: auto;
+    border: 1px solid $coop-border-grey;
+    border-width: 1px 0;
+    text-align: left;
   }
 
   ul {
@@ -28,11 +30,25 @@ Main navigation - Co-op Front-end Toolkit
     margin: 0;
 
     @include media(medium) {
-      border: 1px solid $coop-border-grey;
-      border-width: 1px 0;
-
       li {
+        position: relative;
         display: inline-block;
+
+        &.active a {
+          background: $offwhite;
+
+          &:before {
+            border-color: transparent;
+          }
+        }
+
+        &.active + li,
+        &:hover + li,
+        &:first-child {
+          a:before {
+            border-color: transparent;
+          }
+        }
       }
     }
 
@@ -42,10 +58,22 @@ Main navigation - Co-op Front-end Toolkit
       border-bottom: 0;
       color: $coop-blue;
 
+      &:before {
+        content: " ";
+        position: absolute;
+        left: 0;
+        height: 24px;
+        border-left: 1px solid $coop-border-grey;
+        transition: all, .25s, ease-in-out;
+      }
+
       &:hover,
-      &:focus,
-      &.active {
+      &:focus {
         background: $offwhite;
+
+        &:before {
+          border-color: transparent;
+        }
       }
 
       &:focus {

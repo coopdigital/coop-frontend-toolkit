@@ -5,23 +5,10 @@ Logo mixins - Co-op Front-end Toolkit
 @import "../functions";
 @import "helpers";
 
-@mixin coop-logo($size: "small") {
+@mixin coop-logo {
   box-sizing: content-box;
   display: block;
   border: none;
-
-  @if $size == "small" {
-    width: 45px;
-    height: 45px;
-  }
-  @if $size == "medium" {
-    width: 66px;
-    height: 66px;
-  }
-  @if $size == "large" {
-    width: 76px;
-    height: 76px;
-  }
 
   &:hover,
   &:focus {
@@ -30,8 +17,7 @@ Logo mixins - Co-op Front-end Toolkit
 
   svg {
     display: block;
-    width: 100%;
-    height: 100%;
+    margin-bottom: -5.575%;
     fill: $coop-blue;
   }
 
@@ -40,8 +26,8 @@ Logo mixins - Co-op Front-end Toolkit
   }
 
   @include ie() {
-    width: 76px;
-    height: 80px;
+    width: 72px;
+    height: 78px;
 
     .coop-logo-fallback {
       display: block;

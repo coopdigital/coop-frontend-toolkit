@@ -6,19 +6,13 @@ Logo - Co-op Front-end Toolkit
 
 .coop-logo,
 .coop-logo-small {
-  @include coop-logo();
-}
+  @include coop-logo;
 
-.coop-logo-medium {
-  @extend .coop-logo;
-
-  width: 66px;
-  height: 66px;
+  width: 36px;
 }
 
 .coop-logo-large {
   @extend .coop-logo;
 
-  width: 76px;
-  height: 76px;
+  width: 72px;
 }
