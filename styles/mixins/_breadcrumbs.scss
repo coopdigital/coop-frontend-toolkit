@@ -5,10 +5,16 @@ Breadcrumbs mixins - Co-op Front-end Toolkit
 @import "../functions";
 
 @mixin breadcrumbs {
-  padding: $quarter-spacing-unit / 2;
+  padding: $quarter-spacing-unit / 2 0;
   color: $coop-grey;
-  background: $offwhite;
   margin-bottom: 0;
+  margin-top: -$half-spacing-unit;
+
+  @include media(medium) {
+    background: $offwhite;
+    padding-left: $quarter-spacing-unit;
+    padding-right: $quarter-spacing-unit;
+  }
 
   li {
     display: inline;

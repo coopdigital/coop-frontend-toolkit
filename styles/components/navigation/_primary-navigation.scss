@@ -34,7 +34,7 @@ Main navigation - Co-op Front-end Toolkit
         position: relative;
         display: inline-block;
 
-        &.active a {
+        &.active > a {
           background: $offwhite;
 
           &:before {
@@ -45,10 +45,18 @@ Main navigation - Co-op Front-end Toolkit
         &.active + li,
         &:hover + li,
         &:first-child {
-          a:before {
+          > a:before {
             border-color: transparent;
           }
         }
+
+        &:hover ul {
+          display: block;
+        }
+      }
+
+      > li {
+        margin-right: -.25em;
       }
     }
 
@@ -80,8 +88,45 @@ Main navigation - Co-op Front-end Toolkit
         outline: 1px dotted $white;
       }
 
+      .icon {
+        display: none;
+      }
+
       @include media(medium) {
         color: $coop-link-blue;
+
+        .icon {
+          display: inline-block;
+          font-size: 1em;
+          margin-left: .5em;
+        }
+      }
+    }
+
+    // Sub-nav
+    ul {
+      margin-left: $quarter-spacing-unit;
+      border-left: 2px solid $coop-blue;
+      background: $white;
+
+      @include media(medium) {
+        position: absolute;
+        z-index: 100;
+        display: none;
+        width: 200%;
+        margin-left: 0;
+        border: 1px solid $coop-border-grey;
+        border-top-width: 0;
+
+        li {
+          width: 100%;
+
+          a {
+            &:before {
+              content: none;
+            }
+          }
+        }
       }
     }
   }
