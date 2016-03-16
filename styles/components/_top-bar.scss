@@ -13,7 +13,11 @@ Top bar - Co-op Front-end Toolkit
     border-bottom-color: $white;
 
     &:first-child {
-      margin-left: $quarter-spacing-unit;
+      margin-left: 0;
+
+      @include media(medium) {
+        margin-left: $quarter-spacing-unit;
+      }
     }
   }
 }

@@ -24,6 +24,8 @@ Buttons mixins - Co-op Front-end Toolkit
   &:hover,
   &:focus {
     background-color: $hover-bg-colour;
+    border: none;
+    color: $text-colour;
   }
 
   &:after {
