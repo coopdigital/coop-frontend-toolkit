@@ -11,10 +11,10 @@
 
     <!--[if lte IE 8]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <link rel="stylesheet" type="text/css" href="/path/to/ie.css">
+    <link rel="stylesheet" type="text/css" href="/path/to/css/ie.css">
     <![endif]-->
 
-    <!--[if gt IE 8]><!--><link rel="stylesheet" type="text/css" href="/path/to/main.css"><!--<![endif]-->
+    <!--[if gt IE 8]><!--><link rel="stylesheet" type="text/css" href="/path/to/css/main.css"><!--<![endif]-->
 </head>
 <body>
 
@@ -156,8 +156,9 @@
 </footer>
 <!-- /Main footer -->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="/path/to/main.js"></script>
+<script src="http://code.jquery.com/jquery-1.12.1.min.js" integrity="sha256-I1nTg78tSrZev3kjvfdM5A5Ak/blglGzlaZANLPDl3I=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="/path/to/js/vendor/jquery-1.12.1.min.js"><\/script>')</script>
+<script src="/path/to/js/main.js"></script>
 
 </body>
 </html>
