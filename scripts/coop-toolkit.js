@@ -1,32 +1,23 @@
-/**
- * Co-op Front-end Toolkit Scripts
- */
+// Adapted from https://github.com/Heisenbergjs/heisenberg/blob/master/app/app.js
+(function() {
+  var Coop = {
 
-$(function() {
-  // Mobile menu
-  $('.mobile-menu-toggle').on('click', function() {
-    $('#navigation, .mobile-menu-toggle').toggleClass('open');
-    if ($('.mobile-menu-toggle').hasClass('open')) {
-      $('.mobile-menu-toggle .mobile-menu-text').text('Close');
-    }
-    else {
-      $('.mobile-menu-toggle .mobile-menu-text').text('Menu');
-    }
-  });
+    Modules: {},
 
-  // Tabs
-  $('.tabs').on('click', '.tabs-nav a', function(e) {
-    e.preventDefault();
-    $(this).addClass('active').parent('li').siblings().find('a').removeClass('active');
-    $($(this).attr('href')).addClass('active').siblings().removeClass('active');
-  }).addClass('init').find('.tabs-nav li:first a').trigger('click');
+    Events: $({}),
 
-  // Toggles
-  $('.toggle-trigger').on('click', function(e) {
-    e.preventDefault();
-    $(this).toggleClass('open');
-    if ($(this).parent().hasClass('accordion')) {
-      $(this).siblings('.toggle-trigger').removeClass('open');
+    init: function () {
+      // Loop through all the modules added to the coop.Modules object. We check that the init function of each Module can be called.
+      for(var x in Coop.Modules) {
+        if (typeof Coop.Modules[x].init === 'function') {
+          Coop.Modules[x].init();
+        }
+      }
+
+      Coop.Events.trigger('render');
     }
-  }).addClass('init');
-});
+  };
+
+  // expose the Coop object globally
+  window.Coop = Coop;
+})();
