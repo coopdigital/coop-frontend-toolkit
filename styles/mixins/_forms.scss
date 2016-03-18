@@ -5,7 +5,7 @@ Forms mixins - Co-op Front-end Toolkit
 @import "../functions";
 @import "helpers";
 
-@mixin form-row {
+%form-row {
   @include clearfix;
 
   margin-bottom: $quarter-spacing-unit;
@@ -128,12 +128,6 @@ Forms mixins - Co-op Front-end Toolkit
   height: $base-spacing-unit;
   cursor: pointer;
 
-  &.input-small,
-  &.input-medium,
-  &.input-large {
-    padding: 0;
-  }
-
   &.input-small {
     font-size: .875em;
     height: $half-spacing-unit;
@@ -155,11 +149,11 @@ Forms mixins - Co-op Front-end Toolkit
   }
 }
 
-@mixin form-invalid {
+%form-invalid {
   border: 2px solid $saleerror-red !important;
 }
 
-@mixin form-label {
+%form-label {
   display: block;
   margin: 0 0 $quarter-spacing-unit / 2;
   font-size: em-calc(16);

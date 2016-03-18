@@ -6,7 +6,7 @@ Forms - Co-op Front-end Toolkit
 @import "mixins/forms";
 
 .form-row {
-  @include form-row;
+  @extend %form-row;
 }
 
 fieldset {
@@ -22,7 +22,7 @@ fieldset {
 
 label,
 legend {
-  @include form-label;
+  @extend %form-label;
 }
 
 input,
@@ -96,7 +96,7 @@ span.suffix {
 
 // Error states
 .invalid {
-  @include form-invalid;
+  @extend %form-invalid;
 }
 
 .parsley-errors-list {
