@@ -5,31 +5,24 @@ Buttons mixins - Co-op Front-end Toolkit
 @import "../functions";
 @import "../icons";
 
-@mixin button($text-colour: $coop-link-blue,
-              $bg-colour: $offwhite,
-              $shadow-colour: darken($offwhite, 8%),
-              $hover-bg-colour: darken($offwhite, 5%)) {
+%button-base {
   display: inline-block;
   border: 0;
   border-radius: $border-radius;
   padding: $quarter-spacing-unit $half-spacing-unit * 1.25;
   text-align: center;
+  color: $coop-link-blue;
+  background-color: $offwhite;
   font-size: em-calc(18);
   line-height: 1.5;
-  color: $text-colour;
-  background-color: $bg-colour;
-  box-shadow: 0 4px $shadow-colour;
+  box-shadow: 0 4px darken($offwhite, 8%);
   transition: all 0.15s linear;
 
   &:hover,
   &:focus {
-    background-color: $hover-bg-colour;
     border: none;
-    color: $text-colour;
-  }
-
-  &:after {
-    transition: color 0s;
+    background-color: darken($offwhite, 5%);
+    color: $coop-link-blue;
   }
 
   &:disabled,
@@ -40,8 +33,28 @@ Buttons mixins - Co-op Front-end Toolkit
 
     &:hover,
     &:focus {
-      background-color: $bg-colour;
+      background-color: $offwhite;
     }
+  }
+}
+
+@mixin button-colour($text-colour: $coop-link-blue,
+                     $bg-colour: $offwhite,
+                     $shadow-colour: darken($offwhite, 8%),
+                     $hover-bg-colour: darken($offwhite, 5%)) {
+
+  color: $text-colour;
+  background-color: $bg-colour;
+  box-shadow: 0 4px $shadow-colour;
+
+  &:hover,
+  &:focus {
+    background-color: $hover-bg-colour;
+    color: $text-colour;
+  }
+
+  &:disabled,
+  &.disabled {
 
     &:hover,
     &:focus {
@@ -49,76 +62,83 @@ Buttons mixins - Co-op Front-end Toolkit
     }
   }
 
-  &.btn-full {
-    width: 100%;
-  }
-
-  &.btn-small {
-    padding: $quarter-spacing-unit / 3 $quarter-spacing-unit;
-    font-size: .875em;
-  }
-
-  &.btn-medium {
-    padding: $quarter-spacing-unit / 2 $quarter-spacing-unit;
-  }
-
-  &.btn-large {
-    padding: $quarter-spacing-unit $half-spacing-unit;
-  }
-
-  &.btn-pill {
-    margin: .25em .25em .25em 0;
-    box-shadow: none;
-  }
-
   &.btn-loading:after {
+    border-color: $text-colour;
+  }
+}
+
+%btn-full {
+  width: 100%;
+}
+
+%btn-small {
+  padding: $quarter-spacing-unit / 3 $quarter-spacing-unit;
+  font-size: .875em;
+}
+
+%btn-medium {
+  padding: $quarter-spacing-unit / 2 $quarter-spacing-unit;
+}
+
+%btn-large {
+  padding: $quarter-spacing-unit $half-spacing-unit;
+}
+
+%btn-pill {
+  margin: .25em .25em .25em 0;
+  box-shadow: none !important;
+}
+
+%btn-loading {
+  &:after {
     content: "";
     animation: three-quarters-loader 1250ms infinite linear;
-    border: 3px solid $text-colour;
-    border-right-color: transparent;
+    border: 3px solid;
+    border-right-color: transparent !important;
     border-radius: 50%;
     display: inline-block;
     width: 20px;
     height: 20px;
     margin-left: 10px;
     vertical-align: middle;
+    transition: color 0s;
+  }
+}
+
+%btn-back {
+  &:before {
+    @extend %icon;
+    content: "\e609";
+    position: relative;
+    left: 0;
+    margin-right: .25em;
+    font-size: em-calc(20);
+    transition: all 0.15s linear;
   }
 
-  &.btn-back {
+  &:hover,
+  &:focus {
     &:before {
-      @extend %icon;
-      content: "\e609";
-      position: relative;
-      left: 0;
-      margin-right: .25em;
-      font-size: em-calc(20);
-      transition: all 0.15s linear;
-    }
-
-    &:hover,
-    &:focus {
-      &:before {
-        left: -.25em;
-      }
+      left: -.25em;
     }
   }
+}
 
-  &.btn-proceed {
+%btn-proceed {
+  &:after {
+    @extend %icon;
+    content: "\e608";
+    position: relative;
+    left: 0;
+    margin-left: .25em;
+    font-size: em-calc(20);
+    transition: all 0.15s linear;
+  }
+
+  &:hover,
+  &:focus {
     &:after {
-      @extend %icon;
-      content: "\e608";
-      position: relative;
-      left: 0;
-      margin-left: .25em;
-      font-size: em-calc(20);
-      transition: all 0.15s linear;
-    }
-
-    &:hover,
-    &:focus {
-      &:after {
-        left: .25em;
-      }
+      left: .25em;
     }
   }
 }

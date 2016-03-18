@@ -6,26 +6,58 @@ Buttons - Co-op Front-end Toolkit
 
 button,
 .btn {
-  @include button;
+  @extend %button-base;
 }
 
-.btn-green {
-  @include button($text-colour: $white,
-                  $bg-colour: $button-green,
-                  $shadow-colour: darken($button-green, 6%),
-                  $hover-bg-colour: $button-green-highlighted);
+.btn-primary {
+  @include button-colour($text-colour: $white,
+                         $bg-colour: $button-green,
+                         $shadow-colour: darken($button-green, 6%),
+                         $hover-bg-colour: $button-green-highlighted);
 }
 
-.btn-blue {
-  @include button($text-colour: $white,
-                  $bg-colour: $coop-blue,
-                  $shadow-colour: darken($coop-blue, 6%),
-                  $hover-bg-colour: lighten($coop-blue, 10%));
+.btn-secondary {
+  @include button-colour($text-colour: $white,
+                         $bg-colour: $coop-blue,
+                         $shadow-colour: darken($coop-blue, 6%),
+                         $hover-bg-colour: lighten($coop-blue, 10%));
 }
 
-.btn-grey {
-  @include button($text-colour: $white,
-                  $bg-colour: $coop-grey,
-                  $shadow-colour: darken($coop-grey, 6%),
-                  $hover-bg-colour: lighten($coop-grey, 10%));
+.btn-tertiary {
+  @include button-colour($text-colour: $white,
+                         $bg-colour: $coop-grey,
+                         $shadow-colour: darken($coop-grey, 6%),
+                         $hover-bg-colour: lighten($coop-grey, 10%));
+}
+
+.btn-full {
+  @extend %btn-full;
+}
+
+.btn-small {
+  @extend %btn-small;
+}
+
+.btn-medium {
+  @extend %btn-medium;
+}
+
+.btn-large {
+  @extend %btn-large;
+}
+
+.btn-pill {
+  @extend %btn-pill;
+}
+
+.btn-loading {
+  @extend %btn-loading;
+}
+
+.btn-proceed {
+  @extend %btn-proceed;
+}
+
+.btn-back {
+  @extend %btn-back;
 }
