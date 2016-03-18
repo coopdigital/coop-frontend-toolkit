@@ -2,16 +2,27 @@
 Panels - Co-op Front-end Toolkit
 ===============================================*/
 
-@import "../mixins/panels";
-
+%panel,
 .panel {
-  @extend %panel;
+  padding: $quarter-spacing-unit;
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
 }
 
 .boxed {
-  @extend %boxed;
+  @extend %panel;
+
+  border: 1px solid $coop-border-grey;
 }
 
 .panel-grey {
-  @extend %panel-grey;
+  @extend %panel;
+
+  background: $offwhite;
 }

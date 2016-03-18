@@ -3,13 +3,14 @@ Messages/alerts - Co-op Front-end Toolkit
 ===============================================*/
 
 @import "../mixins/messages";
+@import "../icons";
 
 .message {
-  @include message;
+  @extend %message;
 }
 
 .message-prompt {
-  @extend .message;
+  @extend %message;
 
   &:before {
     @extend %icon-help;

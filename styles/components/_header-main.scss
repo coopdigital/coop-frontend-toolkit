@@ -2,7 +2,8 @@
 Main header - Co-op Front-end Toolkit
 ===============================================*/
 
-@import "mixins/logo";
+@import "../mixins/helpers";
+@import "../logo";
 
 .header-main {
   @include clearfix;

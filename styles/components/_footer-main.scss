@@ -2,7 +2,10 @@
 Main footer - Co-op Front-end Toolkit
 ===============================================*/
 
-@import "mixins/logo";
+@import "../functions";
+@import "../mixins/helpers";
+@import "../mixins/lists";
+@import "../logo";
 
 .footer-main {
   margin-top: $base-spacing-unit;
@@ -14,7 +17,6 @@ Main footer - Co-op Front-end Toolkit
   }
 
   .coop-logo {
-    @include coop-logo();
     margin: 0 auto;
     padding: 5px;
   }

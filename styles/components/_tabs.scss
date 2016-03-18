@@ -2,7 +2,11 @@
 Tabs - Co-op Front-end Toolkit
 ===============================================*/
 
-@mixin tabs {
+@import "../functions";
+@import "../mixins/helpers";
+
+%tabs,
+.tabs {
   @include clearfix;
   margin: 0;
 
@@ -66,9 +70,19 @@ Tabs - Co-op Front-end Toolkit
   }
 }
 
-@mixin tabs-vertical {
-  @include tabs;
+.tabs-spread {
+  .tabs-nav {
+    display: table;
+    width: 100%;
 
+    li {
+      float: none;
+      display: table-cell;
+    }
+  }
+}
+
+.tabs-vertical {
   margin: 0;
 
   .tabs-nav {
@@ -95,27 +109,4 @@ Tabs - Co-op Front-end Toolkit
     width: 80%;
     margin: 0;
   }
-}
-
-
-.tabs {
-  @include tabs;
-}
-
-.tabs-spread {
-  @extend .tabs;
-
-  .tabs-nav {
-    display: table;
-    width: 100%;
-
-    li {
-      float: none;
-      display: table-cell;
-    }
-  }
-}
-
-.tabs-vertical {
-  @include tabs-vertical;
 }

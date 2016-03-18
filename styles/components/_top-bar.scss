@@ -2,6 +2,9 @@
 Top bar - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "../functions";
+@import "../mixins/helpers";
+
 .top-bar {
   background: $coop-blue;
   padding: $quarter-spacing-unit /3 0;

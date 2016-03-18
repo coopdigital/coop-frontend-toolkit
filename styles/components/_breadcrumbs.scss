@@ -2,8 +2,53 @@
 Breadcrumbs - Co-op Front-end Toolkit
 ===============================================*/
 
-@import "mixins/breadcrumbs";
+@import "../functions";
+@import "../mixins/helpers";
 
 .breadcrumbs {
-  @include breadcrumbs;
+  padding: $quarter-spacing-unit / 2 0;
+  color: $coop-grey;
+  margin-bottom: 0;
+
+  @include media(medium) {
+    background: $offwhite;
+    padding-left: $quarter-spacing-unit;
+    padding-right: $quarter-spacing-unit;
+  }
+
+  li {
+    display: inline;
+    list-style: none;
+    font-size: em-calc(14);
+
+    &:after {
+      position: relative;
+      top: 1px;
+      font-family: 'coopicons';
+      content: '\e608';
+      font-size: 1em;
+      padding: 5px;
+    }
+
+    a {
+      color: $coop-grey;
+      border-bottom: 0;
+
+      &:hover {
+        border-bottom: 1px dotted $coop-grey;
+      }
+    }
+
+    &:last-child {
+      font-family: $bold;
+
+      &:after {
+        content: none;
+      }
+    }
+  }
+}
+
+.main > .breadcrumbs:first-child {
+  margin-top: -$half-spacing-unit;
 }

@@ -5,7 +5,7 @@ Messages/alerts mixins - Co-op Front-end Toolkit
 @import "../functions";
 @import "../icons";
 
-@mixin message {
+%message {
   position: relative;
   padding: $quarter-spacing-unit $quarter-spacing-unit $quarter-spacing-unit $base-spacing-unit;
   margin-bottom: $half-spacing-unit;

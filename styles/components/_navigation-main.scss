@@ -2,6 +2,10 @@
 Main navigation - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "../functions";
+@import "../mixins/helpers";
+@import "../mixins/lists";
+
 .nav-primary {
   position: absolute;
   z-index: 100;
