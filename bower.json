@@ -16,5 +16,6 @@
     "test",
     "CONTRIBUTING.md",
     "package.json"
-  ]
+  ],
+  "version": "0.1.5"
 }
