@@ -4,14 +4,14 @@ Grid layout mixins - Co-op Front-end Toolkit
 
 @import "helpers";
 
-@mixin wrap {
+%wrap {
   position: relative;
   display: block;
   margin-left: auto;
   margin-right: auto;
   padding-left: $grid-gutter/2;
   padding-right: $grid-gutter/2;
-  max-width: map-get($breakpoints, "xlarge");
+  max-width: map-get-default($breakpoints, "xlarge", 1300px);
 
   @include media(medium) {
     padding-left: $grid-gutter *.8;
@@ -24,7 +24,7 @@ Grid layout mixins - Co-op Front-end Toolkit
   }
 }
 
-@mixin row {
+@mixin row($collapse-class: '') {
   @include clearfix;
 
   margin-left: -$grid-gutter /4;
@@ -35,9 +35,32 @@ Grid layout mixins - Co-op Front-end Toolkit
     margin-right: -$grid-gutter /2;
   }
 
-  &.collapse {
-    margin-left: 0;
-    margin-right: 0;
+  @if $collapse-class != '' {
+    &.#{$collapse-class} {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}
+
+@mixin column($collapse-class: '') {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding-left: $grid-gutter /4;
+  padding-right: $grid-gutter /4;
+
+  @include media(medium) {
+    padding-left: $grid-gutter /2;
+    padding-right: $grid-gutter /2;
+  }
+
+  @if $collapse-class != '' {
+    .#{$collapse-class} > &,
+    &.#{$collapse-class} {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 }
 

@@ -39,3 +39,16 @@ Functions - Co-op Front-end Toolkit
   @warn "emCalc is deprecated. Please use em-calc() instead.";
   @return em-calc($value);
 }
+
+
+/**
+ * Returns map-get($map, $key) or the default if the key doesn't exist
+ */
+@function map-get-default($map, $key, $default) {
+  @if map-has-key($map, $key) {
+    @return map-get($map, $key);
+  }
+  @else {
+    @return $default;
+  }
+}
