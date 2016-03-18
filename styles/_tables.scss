@@ -50,13 +50,12 @@ table {
 }
 
 // Simple responsive tables. Wrap a div round your table and apply the class.
-
 .table-overflow-x {
   overflow-x: visible;
   overflow-y: hidden;
-}
+  margin-bottom: $half-spacing-unit;
 
-.table-overflow-y {
-  overflow-x: hidden;
-  overflow-y: visible;
+  table {
+    margin-bottom: 0;
+  }
 }
