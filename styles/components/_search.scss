@@ -37,6 +37,10 @@ Search field - Co-op Front-end Toolkit
       position: relative;
       top: -3px;
       color: $white;
+
+      &:before {
+        font-size: 1.5em;
+      }
     }
 
   }

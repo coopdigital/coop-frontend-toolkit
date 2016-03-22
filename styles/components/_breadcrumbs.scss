@@ -4,6 +4,7 @@ Breadcrumbs - Co-op Front-end Toolkit
 
 @import "../functions";
 @import "../mixins/helpers";
+@import "../mixins/icons";
 
 .breadcrumbs {
   padding: $quarter-spacing-unit / 2 0;
@@ -22,11 +23,10 @@ Breadcrumbs - Co-op Front-end Toolkit
     font-size: em-calc(14);
 
     &:after {
+      @extend %icon;
+      @extend %icon-forward-arrow;
       position: relative;
-      top: 1px;
-      font-family: 'coopicons';
-      content: '\e608';
-      font-size: 1em;
+      top: -1px;
       padding: 5px;
     }
 

@@ -3,7 +3,7 @@ Buttons mixins - Co-op Front-end Toolkit
 ===============================================*/
 
 @import "../functions";
-@import "../icons";
+@import "../mixins/icons";
 
 %button-base {
   display: inline-block;
@@ -108,11 +108,11 @@ Buttons mixins - Co-op Front-end Toolkit
 %btn-back {
   &:before {
     @extend %icon;
-    content: "\e609";
+    @extend %icon-back-arrow;
     position: relative;
     left: 0;
     margin-right: .25em;
-    font-size: em-calc(20);
+    font-size: 1.5em;
     transition: all 0.15s linear;
   }
 
@@ -127,11 +127,11 @@ Buttons mixins - Co-op Front-end Toolkit
 %btn-proceed {
   &:after {
     @extend %icon;
-    content: "\e608";
+    @extend %icon-forward-arrow;
     position: relative;
     left: 0;
     margin-left: .25em;
-    font-size: em-calc(20);
+    font-size: 1.5em;
     transition: all 0.15s linear;
   }
 
