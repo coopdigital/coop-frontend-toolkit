@@ -121,7 +121,6 @@ Forms mixins - Co-op Front-end Toolkit
 
 @mixin form-select {
   @include form-field($include-sizes: false);
-
   -webkit-appearance: menulist !important;
   -moz-appearance: menulist !important;
   text-indent: 0.25em;
@@ -131,6 +130,10 @@ Forms mixins - Co-op Front-end Toolkit
   &.input-small {
     font-size: .875em;
     height: $half-spacing-unit;
+
+    @include ie(9) {
+      height: $half-spacing-unit * 1.25;
+    }
   }
 
   &.input-medium {
@@ -165,7 +168,18 @@ Forms mixins - Co-op Front-end Toolkit
   width: 0;
   height: 0;
 
+  @include ie(8) {
+    position: static;
+    left: 0;
+    width: 1em;
+    height: 1em;
+    display: inline;
+    border: none;
+    vertical-align: middle;
+  }
+
   & + label {
+    display: inline-block;
     position: relative;
     cursor: pointer;
 
@@ -190,6 +204,10 @@ Forms mixins - Co-op Front-end Toolkit
         width: 1.375em;
         height: 1.375em;
         border-radius: $border-radius;
+      }
+
+      @include ie(8) {
+        content: none;
       }
     }
 
@@ -242,7 +260,7 @@ Forms mixins - Co-op Front-end Toolkit
     min-width: 70px;
     text-align: center;
     padding: $quarter-spacing-unit * 1.5;
-    margin: .25em .25em .25em 0;
+    margin: 0 1em 1em 0;
     border: 2px solid $coop-grey;
     border-radius: $border-radius;
     color: $coop-grey;
@@ -278,6 +296,18 @@ Forms mixins - Co-op Front-end Toolkit
     background-color: $coop-blue;
     color: $white;
     border-color: $coop-blue;
+  }
+
+  @include ie(8) {
+    position: relative;
+    left: 0;
+
+    & + label {
+      min-width: 0;
+      margin-right: 15px;
+      padding: 0 !important;
+      border: 0;
+    }
   }
 }
 
