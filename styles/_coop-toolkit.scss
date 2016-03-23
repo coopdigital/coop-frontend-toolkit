@@ -1,4 +1,11 @@
-// Variables
+// This file imports all the available styles form the Toolkit.
+
+// Colours and variables:
+// These are required by most of the following styles and should always be
+// included in your project -- they do not produce any CSS by themselves, so
+// there is no overhead when including them.
+// The variables can be overridden by providing alternative defaults: refer to
+// _variables.scss for more information.
 @import "colours";
 @import "variables";
 

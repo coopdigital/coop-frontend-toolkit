@@ -2,14 +2,14 @@
 Variables - Co-op Front-end Toolkit
 ===============================================*/
 
-/**
- * These default settings can be overriden. To do so, declare them before this
- * file is included, which will replace the defaults given here.
- */
+// These default settings can be overriden if they are followed by the '!default'
+// declaration. To do so, declare them before thisfile is included, which will
+// replace the defaults given here.
 
-// Base URL for any linked assets
+// Base URL for any linked assets.
 $base-asset-url: '../' !default;
 
+// Maximum IE version targetted by the generated stylesheet.
 $ie: 999 !default;
 
 // Vertical rhythm
@@ -34,12 +34,12 @@ $bold-italic: 'AvenirNextLTW01-DemiIta', 'Helvetica Neue', Helvetica, Arial, san
 
 // Grid settings
 $grid-gutter: $half-spacing-unit !default;
-$grid-screen-sizes: ("xsmall", "small", "medium", "large", "xlarge") !default;
-$grid-total-columns: 12 !default;
-$grid-include-center-classes: true !default;
-$grid-include-pull-classes: true !default;
-$grid-include-push-classes: true !default;
-$grid-include-offset-classes: true !default;
+$grid-screen-sizes: ("xsmall", "small", "medium", "large", "xlarge") !default; // Only classes listed here will be generated. These classes should follow the breakpoints given below.
+$grid-total-columns: 12 !default; // If less than 12 columns are required, setting this lower will reduce the amount of column width classes generated.
+$grid-include-center-classes: true !default; // If set to false, column centring classes (e.g. '.small-centered') will not be generated.
+$grid-include-pull-classes: true !default; // If set to false, column pull classes (e.g. '.small-pull-2') will not be generated.
+$grid-include-push-classes: true !default; // If set to false, column push classes (e.g. '.small-push-2') will not be generated.
+$grid-include-offset-classes: true !default; // If set to false, column offset classes (e.g. '.small-offset-4') will not be generated.
 
 
 // Breakpoints
