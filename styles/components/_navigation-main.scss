@@ -38,20 +38,26 @@ Main navigation - Co-op Front-end Toolkit
         position: relative;
         display: inline-block;
 
-        &.active > a {
-          background: $offwhite;
+        &:before {
+          content: " ";
+          position: absolute;
+          z-index: 1;
+          left: 0;
+          top: 50%;
+          height: 24px;
+          margin-top: -12px;
+          border-left: 1px solid $coop-border-grey;
+          transition: all, .25s, ease-in-out;
+        }
 
+        &:first-child {
           &:before {
-            border-color: transparent;
+            content: none;
           }
         }
 
-        &.active + li,
-        &:hover + li,
-        &:first-child {
-          > a:before {
-            border-color: transparent;
-          }
+        &.active > a {
+          background: $offwhite;
         }
 
         &:hover ul {
@@ -65,31 +71,17 @@ Main navigation - Co-op Front-end Toolkit
     }
 
     a {
+      position: relative;
+      z-index: 2;
       display: block;
       padding: $quarter-spacing-unit;
       border-bottom: 0;
       color: $coop-blue;
-
-      &:before {
-        content: " ";
-        position: absolute;
-        left: 0;
-        height: 24px;
-        border-left: 1px solid $coop-border-grey;
-        transition: all, .25s, ease-in-out;
-      }
+      margin-right: -1px;
 
       &:hover,
       &:focus {
         background: $offwhite;
-
-        &:before {
-          border-color: transparent;
-        }
-      }
-
-      &:focus {
-        outline: 1px dotted $white;
       }
 
       .icon {
@@ -117,18 +109,20 @@ Main navigation - Co-op Front-end Toolkit
         position: absolute;
         z-index: 100;
         display: none;
-        width: 200%;
         margin-left: 0;
         border: 1px solid $coop-border-grey;
         border-top-width: 0;
 
         li {
           width: 100%;
+          white-space: nowrap;
+
+          &:before {
+            content: none;
+          }
 
           a {
-            &:before {
-              content: none;
-            }
+            margin-right: 0;
           }
         }
       }

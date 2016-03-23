@@ -32,6 +32,7 @@ textarea  {
 
 textarea {
   resize: vertical;
+  transition: border-color .3s ease-in-out;
 }
 
 select {

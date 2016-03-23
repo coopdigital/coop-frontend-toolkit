@@ -39,6 +39,7 @@ Tabs - Co-op Front-end Toolkit
         }
 
         &.active {
+          outline: none;
           z-index: 11;
           background: $white;
           color: $coop-blue;

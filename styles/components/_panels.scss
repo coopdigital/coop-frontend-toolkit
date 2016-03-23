@@ -15,12 +15,14 @@ Panels - Co-op Front-end Toolkit
   }
 }
 
+%boxed,
 .boxed {
   @extend %panel;
 
   border: 1px solid $coop-border-grey;
 }
 
+%panel-grey,
 .panel-grey {
   @extend %panel;
 
