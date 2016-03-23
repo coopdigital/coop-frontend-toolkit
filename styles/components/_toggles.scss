@@ -2,7 +2,7 @@
 Toggles - Co-op Front-end Toolkit
 ===============================================*/
 
-@import "../icons";
+@import "../mixins/icons";
 
 .toggle-trigger {
   display: block;
@@ -30,8 +30,9 @@ Toggles - Co-op Front-end Toolkit
 
     &:after {
       @extend %icon;
-      content: "\e630";
+      @extend %icon-down-arrow-button;
       float: right;
+      font-size: 1.5em;
       transition: all .15s linear;
     }
 

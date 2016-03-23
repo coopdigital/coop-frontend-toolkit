@@ -21,14 +21,16 @@ Logo mixins - Co-op Front-end Toolkit
     fill: $coop-blue;
   }
 
+  img {
+    display: block;
+    margin-bottom: -5.575%;
+  }
+
   .coop-logo-fallback {
     display: none;
   }
 
   @include ie() {
-    width: 72px;
-    height: 78px;
-
     .coop-logo-fallback {
       display: block;
       width: 100%;
