@@ -2,6 +2,8 @@
 
 The Co-op Front-end Toolkit contains all the core assets needed to build Co-op-branded digital content.
 
+For more information on all the available styles and modules, please refer to the [Single Site Styleguide](http://single-site-styleguide.herokuapp.com/).
+
 ## Installation
 
 Install the Toolkit by adding it as a [Bower](http://bower.io/) or NPM package to your project:
@@ -31,7 +33,7 @@ Alternatively, you can add the dependency to your project's `bower.json` or `pac
 
 ## Usage
 
-These assets should be compiled into production-ready versions (minified for CSS/JS, optimised for images), using a task runner or an asset pipeline.
+These assets should be compiled into production-ready versions (minified for CSS/JS, optimised for images), using a task runner or an asset pipeline. [An example using Gulp](https://github.com/coopdigital/single-site-styleguide/blob/master/gulpfile.js) can be found in the Single Site Styleguide repository.
 
 This repository will eventually contains a set of best practices and recommendations for serving fast, optimised web pages to the users.
 
@@ -41,7 +43,7 @@ This Toolkit contains SASS stylesheets, JavaScripts and static assets (fonts and
 
 ### Stylesheets
 
-The core styles are available as SASS stylesheets; most are available as mixins only, so you can choose to apply the styles to your own classnames without generating a lot of class names your project will not make use of. The main stylesheet [_coop-toolkit.scss](styles/_coop-toolkit.scss) contains the complete collection of available core styles and components and is a good starting point for building your project's final stylesheet.
+The [core styles](styles) are available as SASS stylesheets. Most are available as [mixins](styles/mixins), so you can choose to apply the styles using your own class names. The main stylesheet [_coop-toolkit.scss](styles/_coop-toolkit.scss) contains the complete collection of available core styles and components and is a good starting point for building your project's final stylesheet.
 
 #### IE-specific styles
 
@@ -49,24 +51,27 @@ Some stylesheets may need to contain Internet Explorer-specific styles, to cater
 
 ```html
 <!-- This stylesheet will be served to IE less than or equal to version 8: -->
-<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/css/ie.css"><![endif]-->
+<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/css/ie-lte8.css"><![endif]-->
+
+<!-- This stylesheet will be served to IE 9: -->
+<!--[if IE 9]><link rel="stylesheet" type="text/css" href="/css/ie-9.css"><![endif]-->
 
 <!-- This stylesheet will be served to all other browsers: -->
-<!--[if gt IE 8]><!--><link rel="stylesheet" type="text/css" href="/css/main.css"><!--<![endif]-->
+<!--[if gt IE 9]><!--><link rel="stylesheet" type="text/css" href="/css/main.css"><!--<![endif]-->
 ```
 
 ### Scripts
 
-The scripts are currently a very basic jQuery implementation, all contained within [coop-toolkit.js](scripts/coop-toolkit.js). These will in time be moved to a modular approach, including tests.
+The toolkit scripts are based on [modules](scripts/modules), all loaded by calling the `init` method from the main [coop-toolkit.js](scripts/coop-toolkit.js) script. Typically, you should only have to load the scripts for the modules your application will require; for an example, refer to the [Single Site Styleguide implementation](https://github.com/coopdigital/single-site-styleguide/blob/master/src/_js/main.js).
 
 ### Static assets
 
-The static assets contain the necessary fonts (Avenir, Coopicons) used by the styles, as well as PNG versions of the Co-op logo. These should be copied over to your project's assets folder by whichever task runner or asset pipeline you are using.
+The static assets contain the necessary fonts (Avenir, Coopicons) used by the styles, as well as SVG and PNG versions of the Co-op logo. These should be copied over to your project's assets directory by whichever task runner or asset pipeline you are using.
 
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md)
+See [CONTRIBUTING.md](CONTRIBUTING.md) guidelines.
 
 ## Changelog
 
