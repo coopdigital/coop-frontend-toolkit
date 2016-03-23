@@ -21,7 +21,7 @@ Search field - Co-op Front-end Toolkit
     bottom: 0;
     right: 0;
     height: 100%;
-    padding: 10px 15px;
+    padding: 0 15px;
     margin-bottom: 0;
     background: $coop-grey;
     border: 0;
@@ -30,17 +30,13 @@ Search field - Co-op Front-end Toolkit
 
     &:hover,
     &:focus {
-      background: $coop-blue-highlighted;
+      background: $coop-blue-highlighted !important;
     }
 
     .icon {
       position: relative;
-      top: -3px;
+      top: -.125em;
       color: $white;
-
-      &:before {
-        font-size: 1.5em;
-      }
     }
 
   }
