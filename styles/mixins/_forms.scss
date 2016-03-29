@@ -11,6 +11,12 @@ Forms mixins - Co-op Front-end Toolkit
   margin-bottom: $quarter-spacing-unit;
 }
 
+%form-label {
+  display: block;
+  margin: 0 0 $quarter-spacing-unit / 2;
+  font-size: em-calc(16);
+}
+
 @mixin form-field($include-sizes: true) {
   display: block;
   width: 100%;
@@ -111,10 +117,15 @@ Forms mixins - Co-op Front-end Toolkit
   }
 
 
-  &.input-inline {
+  &.input-inline,
+  &.input-prefix,
+  &.input-suffix {
     display: inline-block;
     float: left;
     width: auto;
+  }
+
+  &.input-inline {
     margin-right: .25em;
   }
 }
@@ -152,16 +163,6 @@ Forms mixins - Co-op Front-end Toolkit
   }
 }
 
-%form-invalid {
-  border: 2px solid $saleerror-red !important;
-}
-
-%form-label {
-  display: block;
-  margin: 0 0 $quarter-spacing-unit / 2;
-  font-size: em-calc(16);
-}
-
 @mixin form-check-field($type) {
   position: absolute;
   left: -9999px;
@@ -187,9 +188,8 @@ Forms mixins - Co-op Front-end Toolkit
       content: " ";
       display: inline-block;
       margin-right: .5em;
-      margin-top: -.125em;
       border: 2px solid $coop-grey;
-      vertical-align: middle;
+      vertical-align: top;
       text-align: center;
       font-size: 1.25em;
       line-height: 1.25;
@@ -229,7 +229,8 @@ Forms mixins - Co-op Front-end Toolkit
         &:after {
           content: " ";
           position: absolute;
-          margin: -1.225em 0 0 .325em;
+          top: .3125em;
+          left: .3125em;
           display: block;
           width: .9375em;
           height:.9375em;
@@ -313,8 +314,8 @@ Forms mixins - Co-op Front-end Toolkit
 
 @mixin form-presuffix {
   display: block;
-  width: 100%;
-  padding: $quarter-spacing-unit / 2;
+  float: left;
+  padding: $quarter-spacing-unit / 2 $quarter-spacing-unit;
   border: 2px solid $coop-grey;
   border-radius: $border-radius;
   background: $offwhite;
@@ -323,15 +324,19 @@ Forms mixins - Co-op Front-end Toolkit
   text-align: center;
 
   &.input-small  {
-    padding: $quarter-spacing-unit / 3;
+    padding: $quarter-spacing-unit / 3 $quarter-spacing-unit;
   }
 
   &.input-medium  {
-    padding: $quarter-spacing-unit / 3 * 2;
+    padding: $quarter-spacing-unit / 3 * 2 $quarter-spacing-unit;
   }
 
   &.input-large {
-    padding: $quarter-spacing-unit;
+    padding: $quarter-spacing-unit $quarter-spacing-unit;
+  }
+
+  &.input-full {
+    width: 100%;
   }
 }
 
@@ -347,4 +352,23 @@ Forms mixins - Co-op Front-end Toolkit
   border-left: 0;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+}
+
+%form-invalid {
+  border: 2px solid $saleerror-red !important;
+}
+
+%form-error {
+  position: relative;
+  margin: .5em 0;
+  padding-left: 2em;
+  color: $saleerror-red;
+
+  &:before {
+    @extend %icon;
+    @extend %icon-alert;
+    position: absolute;
+    left: 0;
+    font-size: 1.5em;
+  }
 }
