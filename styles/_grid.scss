@@ -18,16 +18,13 @@ Grid layout - Co-op Front-end Toolkit
   @include column($collapse-class: 'collapse');
 }
 
+// Standard columns
+@include grid-columns('all');
+
 @each $size in $grid-screen-sizes {
-  // Standard columns
   @if index($grid-screen-sizes, $size) {
-    @if $size == first($grid-screen-sizes) {
+    @include media($size) {
       @include grid-columns($size);
-    }
-    @else {
-      @include media($size) {
-        @include grid-columns($size);
-      }
     }
   }
 }

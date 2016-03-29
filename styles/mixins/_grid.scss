@@ -106,7 +106,7 @@ Grid layout mixins - Co-op Front-end Toolkit
 
   @if $grid-include-center-classes == true {
     .#{$size}-centered {
-      float: none !important;
+      float: none;
       margin-left: auto;
       margin-right: auto;
     }
