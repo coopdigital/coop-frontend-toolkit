@@ -2,9 +2,9 @@
 Panels - Co-op Front-end Toolkit
 ===============================================*/
 
-%panel,
-.panel {
+%panel {
   padding: $quarter-spacing-unit;
+  margin-bottom: 1em;
 
   > :first-child {
     margin-top: 0;
