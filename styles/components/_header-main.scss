@@ -68,6 +68,7 @@ Main header - Co-op Front-end Toolkit
   margin-right: -5px;
   border-bottom: 0;
   color: $coop-blue;
+  line-height: 1;
 
   @include media(medium) {
     display: none;
