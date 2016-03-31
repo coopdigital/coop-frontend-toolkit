@@ -35,12 +35,12 @@ Grid layout mixins - Co-op Front-end Toolkit
     margin-right: -$grid-gutter /2;
   }
 
-  @if $collapse-class != '' {
-    &.#{$collapse-class} {
-      margin-left: 0;
-      margin-right: 0;
-    }
-  }
+  // @if $collapse-class != '' {
+  //   &.#{$collapse-class} {
+  //     margin-left: 0;
+  //     margin-right: 0;
+  //   }
+  // }
 }
 
 @mixin column($collapse-class: '') {

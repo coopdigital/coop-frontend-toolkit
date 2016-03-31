@@ -82,6 +82,7 @@ Main navigation - Co-op Front-end Toolkit
       &:hover,
       &:focus {
         background: $offwhite;
+        z-index: 3;
       }
 
       .icon {
@@ -109,7 +110,8 @@ Main navigation - Co-op Front-end Toolkit
         position: absolute;
         z-index: 100;
         display: none;
-        margin-left: 0;
+        margin-left: -1px;
+        margin-right: -2px;
         border: 1px solid $coop-border-grey;
         border-top-width: 0;
 
