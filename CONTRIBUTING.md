@@ -25,13 +25,13 @@ Once you have committed all your code to this branch, you can then push this bra
 git push -u origin new-branch
 ```
 
-You can then open a Pull Request on this repository. Provide information about why the Pull Request is necessary (possibly referencing an issue listed in the issue tracker), list a summary of the changes introduced and any other information that may be relevant.
+You can then open a Pull Request for the branch on this repository. Provide information about why the Pull Request is necessary (possibly referencing an issue listed in the issue tracker), list a summary of the changes introduced and any other information that may be relevant.
 
 If necessary, CC the relevant users by adding `cc @username` at the end of the overview.
 
 ## Working with the Style Guide locally
 
-The Style Guide uses this repository as a Bower dependency (you may also have other local projects using this package, maybe as NPM). In order to preview changes made to this repository directly within the local project you are working on, you first need to link the Toolkit Bower or NPM package locally.
+The Co-op Style Guide uses this repository as an NPM dependency (you may also have other local projects using this package, maybe as a Bower dependency). In order to preview changes made to this repository directly within the local project you are working on, you first need to link the Toolkit Bower or NPM package locally.
 
 First, if you haven't already done so, clone this repository:
 
