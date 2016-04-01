@@ -17,21 +17,21 @@ Forms mixins - Co-op Front-end Toolkit
   font-size: em-calc(16);
 }
 
-@mixin form-field($include-sizes: true) {
+@mixin form-field($include-presuffix: true) {
   display: block;
   width: 100%;
-  height: auto;
   padding: $quarter-spacing-unit / 2;
   background: $white;
   border: 2px solid $coop-grey;
   border-radius: $border-radius;
   color: $coop-grey;
-  line-height: 1.6;
   outline: 0;
   transition: all 0.3s ease-in-out;
+  font-size: em-calc(16);
+  line-height: 1.6;
 
-  &[type="search"] {
-    box-sizing: border-box;
+  @include ie(9) {
+    padding-bottom: 14px;
   }
 
   &:hover,
@@ -49,18 +49,12 @@ Forms mixins - Co-op Front-end Toolkit
     opacity: 0;
   }
 
-  @if $include-sizes == true {
-    &.input-small {
-      padding: $quarter-spacing-unit / 3;
-      font-size: em-calc(16px);
-    }
-
-    &.input-medium {
-      padding: $quarter-spacing-unit / 3 * 2;
-    }
-
-    &.input-large {
-      padding: $quarter-spacing-unit;
+  @if $include-presuffix == true {
+    &.input-prefix,
+    &.input-suffix {
+      display: inline-block;
+      float: left;
+      width: auto;
     }
 
     &.input-prefix {
@@ -74,93 +68,20 @@ Forms mixins - Co-op Front-end Toolkit
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }
-
-    &.input-width_small {
-      width: 5.5em;
-
-      @include media(medium) {
-        width: 8em;
-      }
-    }
-
-    &.input-width_smallest {
-      width: 4.5em;
-
-      @include media(medium) {
-        width: 8em;
-      }
-    }
-
-    &.input-width_medium {
-      width: 50%;
-
-      @include media(medium) {
-        width: 45%;
-      }
-
-      @include media(large) {
-        width: 45%;
-      }
-    }
-
-    &.input-width_large {
-      width: 85%;
-
-      @include media(medium) {
-        width: 80%;
-      }
-
-      @include media(large) {
-        width: 60%;
-      }
-    }
-  }
-
-
-  &.input-inline,
-  &.input-prefix,
-  &.input-suffix {
-    display: inline-block;
-    float: left;
-    width: auto;
   }
 
   &.input-inline {
-    margin-right: .25em;
+    display: inline-block;;
+    width: auto;
   }
 }
 
 @mixin form-select {
-  @include form-field($include-sizes: false);
+  @include form-field($include-presuffix: false);
   -webkit-appearance: menulist !important;
   -moz-appearance: menulist !important;
-  text-indent: 0.25em;
-  height: $base-spacing-unit;
+  height: 2.8175em;
   cursor: pointer;
-
-  &.input-small {
-    font-size: .875em;
-    height: $half-spacing-unit;
-
-    @include ie(9) {
-      height: $half-spacing-unit * 1.25;
-    }
-  }
-
-  &.input-medium {
-    height: $half-spacing-unit * 1.5;
-  }
-
-  &.input-large {
-    height: $base-spacing-unit * 1.5;
-  }
-
-  &.select-inline {
-    display: inline-block;
-    float: left;
-    width: auto;
-    margin-right: .25em;
-  }
 }
 
 @mixin form-check-field($type) {
@@ -258,9 +179,8 @@ Forms mixins - Co-op Front-end Toolkit
   & + label {
     display: inline-block;
     cursor: pointer;
-    min-width: 70px;
     text-align: center;
-    padding: $quarter-spacing-unit * 1.5;
+    padding: 1em 1.5em;
     margin: 0 1em 1em 0;
     border: 2px solid $coop-grey;
     border-radius: $border-radius;
@@ -274,22 +194,7 @@ Forms mixins - Co-op Front-end Toolkit
     }
 
     &:hover {
-      // background-color: $coop-blue;
-      // color: $white;
       border-color: $coop-blue;
-    }
-
-    &.tap-tile-small {
-      font-size: .875em;
-      padding: $quarter-spacing-unit / 2;
-    }
-
-    &.tap-tile-medium {
-      padding: $quarter-spacing-unit * 1.5;
-    }
-
-    &.tap-tile-large {
-      padding: $half-spacing-unit;
     }
   }
 
@@ -320,24 +225,8 @@ Forms mixins - Co-op Front-end Toolkit
   border-radius: $border-radius;
   background: $offwhite;
   font-size: em-calc(16);
-  line-height: 1.6;
   text-align: center;
-
-  &.input-small  {
-    padding: $quarter-spacing-unit / 3 $quarter-spacing-unit;
-  }
-
-  &.input-medium  {
-    padding: $quarter-spacing-unit / 3 * 2 $quarter-spacing-unit;
-  }
-
-  &.input-large {
-    padding: $quarter-spacing-unit $quarter-spacing-unit;
-  }
-
-  &.input-full {
-    width: 100%;
-  }
+  line-height: 1.6;
 }
 
 @mixin form-prefix {
