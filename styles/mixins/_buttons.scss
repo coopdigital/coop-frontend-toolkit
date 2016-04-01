@@ -103,6 +103,14 @@ Buttons mixins - Co-op Front-end Toolkit
     margin-left: 10px;
     vertical-align: middle;
     transition: color 0s;
+
+    @include ie(9) {
+      content: "...";
+      border-width: 0;
+      width: auto;
+      height: auto;
+      margin: 0;
+    }
   }
 }
 
