@@ -2,7 +2,7 @@
 
 The Co-op Front-end Toolkit contains all the core assets needed to build Co-op-branded digital content.
 
-For more information on all the available styles and modules, please refer to the [Single Site Styleguide](http://single-site-styleguide.herokuapp.com/).
+For more information on all the available styles and modules, please refer to the [Co-op Style Guide](http://single-site-styleguide.herokuapp.com/front-end-elements/).
 
 ## Installation
 
@@ -33,7 +33,7 @@ Alternatively, you can add the dependency to your project's `bower.json` or `pac
 
 ## Usage
 
-These assets should be compiled into production-ready versions (minified for CSS/JS, optimised for images), using a task runner or an asset pipeline. [An example using Gulp](https://github.com/coopdigital/single-site-styleguide/blob/master/gulpfile.js) can be found in the Single Site Styleguide repository.
+These assets should be compiled into production-ready versions (minified for CSS/JS, optimised for images), using a task runner or an asset pipeline. [An example using Gulp](https://github.com/coopdigital/single-site-styleguide/blob/master/gulpfile.js) can be found in the Co-op Style Guide repository.
 
 This repository will eventually contains a set of best practices and recommendations for serving fast, optimised web pages to the users.
 
@@ -75,6 +75,8 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) guidelines.
 
 ## Changelog
 
+###### 1.0.0
+'Public' release
 ###### 0.1.5
 Added JS modules
 ###### 0.1.4
