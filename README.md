@@ -31,6 +31,28 @@ Alternatively, you can add the dependency to your project's `bower.json` or `pac
 }
 ```
 
+### Installing it in a Rails app
+
+You can use `bower` or `npm` if you'd like (as documented above), but if
+you'd rather use the Rails asset-pipeline it's fairly straightforward to
+setup.
+
+You need to:
+
+1. Put the Sass files in a location where Rails can find them, and
+2. Teach Rails how to serve the assets (fonts and images).
+
+It's easy to keep the design up to date if we pull the Sass files in as
+a Git submodule. From the top level of your Rails project, type:
+
+    $ git submodule install git@github.com:coopdigital/coop-frontend-toolkit.git lib/coop-frontend-toolkit
+
+Rails won't find the Sass files in `lib/coop-frontend-toolkit/styles`,
+but that's easily fixed with a symlink:
+
+    $ cd lib/assets
+    $ ln -s ../coop-frontend-toolkit/styles coop-frontend-toolkit
+
 ## Usage
 
 These assets should be compiled into production-ready versions (minified for CSS/JS, optimised for images), using a task runner or an asset pipeline. [An example using Gulp](https://github.com/coopdigital/single-site-styleguide/blob/master/gulpfile.js) can be found in the Co-op Style Guide repository.
