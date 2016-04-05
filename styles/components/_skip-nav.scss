@@ -6,43 +6,31 @@ Skip navigation link - Co-op Front-end Toolkit
 
 .skip-nav {
   position: absolute;
-  top: -9999px;
+  top: 0;
   left: 0;
   z-index: 999;
 
-  li {
-    width: 300px;
+  ul {
+    list-style: none;
+  }
 
-    a {
-      position: absolute;
-      top: 0;
-      font-size: em-calc(18px);
-      padding: $quarter-spacing-unit / 2 $quarter-spacing-unit;
-      color: $white;
-      background: $coop-blue;
+  a {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    font-size: em-calc(18);
+    padding: $quarter-spacing-unit / 2 $quarter-spacing-unit;
+    color: $white;
+    background: $coop-blue;
+    white-space: nowrap;
 
-      &:focus {
-        text-decoration: underline;
-      }
-
+    &:after {
+      content: ' [' attr(accesskey) '] ';
     }
 
+    &:focus,
+    &:active {
+      left: $quarter-spacing-unit;
+    }
   }
-}
-
-.skip-nav a:active,
-.skip-nav a:focus {
-  top: 9999px;
-  color: $white;
-}
-
-.skip-nav li a:hover:after,
-.skip-nav li a:focus:after {
-  content: ' [' attr(accesskey) '] ';
-}
-
-.main:focus,
-.nav--primary:focus,
-.nav--secondary:focus {
-  outline: none;
 }
