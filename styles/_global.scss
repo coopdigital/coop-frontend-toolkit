@@ -11,11 +11,11 @@ Global - Co-op Front-end Toolkit
 html,
 body {
   font-size: $base-font-size;
+  overflow-x: hidden;
 }
 
 body {
   position: relative;
-  overflow-x: hidden;
   margin: 0;
   padding: 0;
   line-height: $base-line-height;
