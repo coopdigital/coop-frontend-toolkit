@@ -29,19 +29,27 @@ Helpers mixins - Co-op Front-end Toolkit
 
 /**
  * Wraps the content into a media query. Requires $breakpoints map to be set.
- * @param  {string} $size Breakpoint key
+ * For IE version less than or equal to 8 (which do not support media
+ * queries), the output is simply rendered directly.
+ * @param  {string} $size Breakpoint key or explicit freeform media query
  */
 @mixin media($size) {
-  @if map-has-key($breakpoints, $size) {
-    @media (min-width: #{map-get($breakpoints, $size)}) {
-      @content;
-    }
+  @if $ie <= 8 {
     @include ie() {
       @content;
     }
   }
   @else {
-    @warn "No breakpoint found for `#{$breakpoint}`.";
+    @if map-has-key($breakpoints, $size) {
+      @media (min-width: #{map-get($breakpoints, $size)}) {
+        @content;
+      }
+    }
+    @else {
+      @media ($size) {
+        @content;
+      }
+    }
   }
 }
 
