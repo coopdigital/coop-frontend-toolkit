@@ -35,9 +35,7 @@ Helpers mixins - Co-op Front-end Toolkit
  */
 @mixin media($size) {
   @if $ie <= 8 {
-    @include ie() {
-      @content;
-    }
+    @content;
   }
   @else {
     @if map-has-key($breakpoints, $size) {
