@@ -13,16 +13,17 @@ Buttons mixins - Co-op Front-end Toolkit
   text-align: center;
   color: $coop-link-blue;
   background-color: $offwhite;
+  border: 1px solid $offwhite;
   font-size: em-calc(18);
   line-height: 1.5;
-  box-shadow: 0 4px darken($offwhite, 8%);
+  box-shadow: 0 3px darken($offwhite, 8%);
   transition: background-color 0.15s linear;
   outline: none;
 
   &:hover,
   &:focus {
-    border: none;
     background-color: darken($offwhite, 5%);
+    border-color: darken($offwhite, 5%);
     color: $coop-link-blue;
   }
 
@@ -40,18 +41,23 @@ Buttons mixins - Co-op Front-end Toolkit
 }
 
 @mixin button-colour($text-colour: $coop-link-blue,
+                     $hover-text-colour: $coop-link-blue,
                      $bg-colour: $offwhite,
+                     $border-colour: $offwhite,
+                     $hover-border-colour: $offwhite,
                      $shadow-colour: darken($offwhite, 8%),
                      $hover-bg-colour: darken($offwhite, 5%)) {
 
   color: $text-colour;
   background-color: $bg-colour;
-  box-shadow: 0 4px $shadow-colour;
+  border: 1px solid $border-colour;
+  box-shadow: 0 3px $shadow-colour;
 
   &:hover,
   &:focus {
     background-color: $hover-bg-colour;
-    color: $text-colour;
+    border-color: $hover-border-colour;
+    color: $hover-text-colour;
   }
 
   &:disabled,
