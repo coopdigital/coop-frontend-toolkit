@@ -30,6 +30,7 @@ Main navigation - Co-op Front-end Toolkit
   ul {
     @include list-bare;
     margin: 0 0 $quarter-spacing-unit;
+    font-size: em-calc(16);
 
     @include media(medium) {
       margin: 0;

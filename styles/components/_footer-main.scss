@@ -29,12 +29,15 @@ Main footer - Co-op Front-end Toolkit
     border-top: 1px solid $coop-border-grey;
 
     h4 {
+      margin-bottom: $quarter-spacing-unit;
       color: $coop-blue;
+      font-size: em-calc(16);
     }
 
     ul {
       @include list-bare;
       margin-bottom: $half-spacing-unit;
+      font-size: em-calc(16);
 
       li {
         margin-bottom: $quarter-spacing-unit;
@@ -67,6 +70,7 @@ Main footer - Co-op Front-end Toolkit
     ul {
       @include list-inline;
       margin-bottom: 0;
+      font-size: em-calc(16);
     }
 
     a {
@@ -92,6 +96,7 @@ Main footer - Co-op Front-end Toolkit
     padding-top: $quarter-spacing-unit;
     padding-bottom: $quarter-spacing-unit;
     text-align: center;
+    color: $coop-grey;
 
     p {
       margin: 0;
