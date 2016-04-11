@@ -12,6 +12,10 @@ html,
 body {
   font-size: $base-font-size;
   overflow-x: hidden;
+
+  @include ie(8) {
+    overflow-x: auto;
+  }
 }
 
 body {
@@ -24,9 +28,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  @include ie() {
+  @include ie(8) {
     min-width: 960px;
-    overflow-x: auto;
 
     article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
     audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
