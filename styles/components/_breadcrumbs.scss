@@ -11,6 +11,7 @@ Breadcrumbs - Co-op Front-end Toolkit
   color: $coop-grey;
   margin-top: -$half-spacing-unit;
   margin-bottom: $half-spacing-unit;
+  font-size: em-calc(14);
 
   @include media(medium) {
     background: $offwhite;
@@ -21,7 +22,6 @@ Breadcrumbs - Co-op Front-end Toolkit
   li {
     display: inline;
     list-style: none;
-    font-size: em-calc(14);
 
     &:after {
       @extend %icon;
