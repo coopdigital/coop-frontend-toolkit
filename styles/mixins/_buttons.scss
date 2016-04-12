@@ -16,8 +16,7 @@ Buttons mixins - Co-op Front-end Toolkit
   border: 1px solid $offwhite;
   font-size: em-calc(18);
   line-height: 1.5;
-  box-shadow: 0 3px darken($offwhite, 8%);
-  transition: background-color 0.15s linear;
+  transition: all 0.15s linear;
   outline: none;
 
   &:hover,
