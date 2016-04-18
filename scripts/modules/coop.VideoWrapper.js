@@ -32,9 +32,9 @@
       $('[data-video-play]', this.$wrapper)
         .off('click.videoWrapper')
         .on('click.videoWrapper', function(e) {
-          e.preventDefault();
-
-          self.loadVideo($(this).attr('href'));
+          if (self.loadVideo($(this).attr('href')) === true) {
+            e.preventDefault();
+          }
         });
     },
     getVideoDetails: function(url) {
@@ -76,16 +76,18 @@
       videoDetails = this.getVideoDetails(url);
 
       if (videoDetails === false) {
-        return;
+        return false;
       }
 
       embedCode = this.getVideoEmbedCode(videoDetails);
 
       if (embedCode === false) {
-        return;
+        return false;
       }
 
       this.$wrapper.html('<div class="video-wrap">' + embedCode + '</div>');
+
+      return true;
     }
   };
 
