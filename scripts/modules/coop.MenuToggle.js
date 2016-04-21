@@ -1,3 +1,7 @@
+if (window.console) {
+  console.log("The MenuToggle Toolkit module is deprecated. Please use the Toggles module instead.");
+}
+
 (function() {
   'use strict';
 
