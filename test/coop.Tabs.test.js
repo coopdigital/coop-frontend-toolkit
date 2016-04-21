@@ -20,6 +20,10 @@ describe('Coop Tabs module', function() {
     Coop.init();
   });
 
+  after(function() {
+    $('.fixture').remove();
+  });
+
   it('should be an object added to the Coop Modules', function() {
     expect(Coop.Modules.Tabs).to.be.an('object');
   });
@@ -35,45 +39,45 @@ describe('Coop Tabs module', function() {
   });
 
   it('should add an aria-polite attribute to the tab panels', function() {
-    expect($('#tab1', $fixture).attr('aria-live')).to.equal('polite');
-    expect($('#tab2', $fixture).attr('aria-live')).to.equal('polite');
-    expect($('#tab3', $fixture).attr('aria-live')).to.equal('polite');
+    expect($('#tab1').attr('aria-live')).to.equal('polite');
+    expect($('#tab2').attr('aria-live')).to.equal('polite');
+    expect($('#tab3').attr('aria-live')).to.equal('polite');
   });
 
   it('should set the first nav item as active', function() {
-    expect($('.tabs-nav li:first a', $fixture).hasClass('active')).to.equal(true);
+    expect($('.tabs-nav li:first a').hasClass('active')).to.equal(true);
   });
 
   it('should set the first tab as active', function() {
-    expect($('.tabs-content .tab-panel:first', $fixture).hasClass('active')).to.equal(true);
+    expect($('.tabs-content .tab-panel:first').hasClass('active')).to.equal(true);
   });
 
   describe('when interacting', function() {
     before(function() {
-      $('[href="#tab3"]', $fixture).trigger('click');
+      $('[href="#tab3"]').trigger('click');
     });
 
     it('should set only the correct nav item as active', function() {
-      expect($('[href="#tab1"]', $fixture).hasClass('active')).to.equal(false);
-      expect($('[href="#tab2"]', $fixture).hasClass('active')).to.equal(false);
-      expect($('[href="#tab3"]', $fixture).hasClass('active')).to.equal(true);
+      expect($('[href="#tab1"]').hasClass('active')).to.equal(false);
+      expect($('[href="#tab2"]').hasClass('active')).to.equal(false);
+      expect($('[href="#tab3"]').hasClass('active')).to.equal(true);
     });
 
     it('should set only the correct tab as active', function() {
-      expect($('#tab1', $fixture).hasClass('active')).to.equal(false);
-      expect($('#tab2', $fixture).hasClass('active')).to.equal(false);
-      expect($('#tab3', $fixture).hasClass('active')).to.equal(true);
+      expect($('#tab1').hasClass('active')).to.equal(false);
+      expect($('#tab2').hasClass('active')).to.equal(false);
+      expect($('#tab3').hasClass('active')).to.equal(true);
     });
 
     it('should update the aria attributes of all the tabs', function() {
-      expect($('#tab1', $fixture).attr('aria-hidden')).to.equal('true');
-      expect($('#tab1', $fixture).attr('hidden')).to.equal('hidden');
+      expect($('#tab1').attr('aria-hidden')).to.equal('true');
+      expect($('#tab1').attr('hidden')).to.equal('hidden');
 
-      expect($('#tab2', $fixture).attr('aria-hidden')).to.equal('true');
-      expect($('#tab2', $fixture).attr('hidden')).to.equal('hidden');
+      expect($('#tab2').attr('aria-hidden')).to.equal('true');
+      expect($('#tab2').attr('hidden')).to.equal('hidden');
 
-      expect($('#tab3', $fixture).attr('aria-hidden')).to.equal(undefined);
-      expect($('#tab3', $fixture).attr('hidden')).to.equal(undefined);
+      expect($('#tab3').attr('aria-hidden')).to.equal(undefined);
+      expect($('#tab3').attr('hidden')).to.equal(undefined);
 
     });
   });
