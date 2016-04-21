@@ -20,12 +20,6 @@ Toggles - Co-op Front-end Toolkit
     border-bottom: 2px dotted $coop-grey;
   }
 
-  & + .toggle-content {
-    padding-left: $quarter-spacing-unit;
-    padding-right: $quarter-spacing-unit;
-    transition: all .5s ease-in-out;
-  }
-
   &.init {
 
     &:after {
@@ -36,24 +30,43 @@ Toggles - Co-op Front-end Toolkit
       transition: all .15s linear;
     }
 
-    & + .toggle-content {
-      // max-height: 0;
-      height: 0;
-      opacity: 0;
-      overflow: hidden;
-    }
-
     &.open {
       color: $coop-blue;
       &:after {
         transform: rotate(180deg);
       }
+    }
+  }
+}
 
-      & + .toggle-content {
-        // max-height: 500px;
-        height: auto;
-        opacity: 1;
-      }
+.toggle-content {
+  padding-left: $quarter-spacing-unit;
+  padding-right: $quarter-spacing-unit;
+  transition: all .5s ease-in-out;
+  outline: 0;
+
+  &.init {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    &.open {
+      height: auto;
+      opacity: 1;
+    }
+  }
+}
+
+.accordion {
+  border-bottom: 2px dotted $coop-grey;
+
+  .toggle-trigger {
+    margin-bottom: 0;
+    border-bottom-width: 0;
+
+    &.open {
+      margin-bottom: $quarter-spacing-unit;
+      border-bottom-width: 2px;
     }
   }
 }
