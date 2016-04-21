@@ -2,11 +2,12 @@
 Variables - Co-op Front-end Toolkit
 ===============================================*/
 
-// These default settings can be overriden if they are followed by the '!default'
-// declaration. To do so, declare them before thisfile is included, which will
+// These default settings can be overriden in your project's stylesheet.
+// To do so, declare them before this file is included, which will
 // replace the defaults given here.
 
-// Base URL for any linked assets.
+// Base URL for any linked assets. This should be the path to your assets
+// relative to the generated stylesheet.
 $base-asset-url: '../' !default;
 
 // Maximum IE version targetted by the generated stylesheet.
@@ -49,8 +50,8 @@ $breakpoints: (
   medium: 750px,
   large: 960px,
   xlarge: 1300px
-);
+) !default;
 
 // Viewport orientation
-$landscape: "only screen and (orientation: landscape)";
-$portrait: "only screen and (orientation: portrait)";
+$landscape: "only screen and (orientation: landscape)" !default;
+$portrait: "only screen and (orientation: portrait)" !default;
