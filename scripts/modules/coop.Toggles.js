@@ -1,3 +1,19 @@
+/**
+ * Toggles module
+ *
+ * Progressive content reveal.
+ *
+ * Usage:
+<a href="#target" data-toggle>Trigger</a>
+<div id="target">Target content</div>
+ *
+ * Options:
+<a href="#target" data-toggle data-toggle-text-selector=".text" data-toggle-text-open="Close">
+  <span class="text">Open</span>
+</a>
+<div id="target">Target content</div>
+ */
+
 (function() {
   'use strict';
 
