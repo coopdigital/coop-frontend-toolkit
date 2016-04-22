@@ -1,16 +1,18 @@
 describe('Coop Video Wrapper Module', function() {
-  var $fixture;
+  var $fixture =  $('<div class="fixture">' +
+                      '<div data-video>' +
+                        '<a href="https://www.youtube.com/watch?v=LiLpISO4CgM" data-video-play>Play</a>' +
+                      '</div>' +
+                    '</div>');
 
   before(function() {
-    $fixture =  $('<div class="fixture">' +
-                    '<div data-video>' +
-                      '<a href="https://www.youtube.com/watch?v=LiLpISO4CgM" data-video-play>Play</a>' +
-                    '</div>' +
-                  '</div>');
-
     $fixture.appendTo('body');
 
     Coop.init();
+  });
+
+  after(function() {
+    $('.fixture').remove();
   });
 
   it('should be an object added to the Coop Modules', function() {
@@ -28,13 +30,14 @@ describe('Coop Video Wrapper Module', function() {
   });
 
   describe('when using other video providers', function() {
+    var $fixture =  $('<div class="fixture">' +
+                        '<div id="video" data-video>' +
+                          '<a href="https://vimeo.com/52385456" data-video-play>Play</a>' +
+                        '</div>' +
+                      '</div>');
+
     before(function() {
       $('.fixture').remove();
-      $fixture =  $('<div class="fixture">' +
-                      '<div id="video" data-video>' +
-                        '<a href="https://vimeo.com/52385456" data-video-play>Play</a>' +
-                      '</div>' +
-                    '</div>');
       $fixture.appendTo('body');
 
       Coop.init();
@@ -48,9 +51,7 @@ describe('Coop Video Wrapper Module', function() {
   });
 
   describe('when using multiple instances', function() {
-    before(function() {
-      $('.fixture').remove();
-      $fixture =  $('<div class="fixture">' +
+    var $fixture =  $('<div class="fixture">' +
                       '<div id="video-1" data-video>' +
                         '<a href="https://www.youtube.com/watch?v=LiLpISO4CgM" data-video-play>Play</a>' +
                       '</div>' +
@@ -59,6 +60,8 @@ describe('Coop Video Wrapper Module', function() {
                       '</div>' +
                     '</div>');
 
+    before(function() {
+      $('.fixture').remove();
       $fixture.appendTo('body');
 
       Coop.init();
