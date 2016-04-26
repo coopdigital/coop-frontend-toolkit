@@ -52,3 +52,14 @@ Functions - Co-op Front-end Toolkit
     @return $default;
   }
 }
+
+
+/**
+ * Returns a value from a deeply-nested map
+ */
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}

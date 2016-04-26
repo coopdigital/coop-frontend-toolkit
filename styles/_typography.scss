@@ -18,6 +18,12 @@ address {
   margin-top: 0;
 }
 
+p,
+ul,
+ol {
+  @include body;
+}
+
 h1, .h1, .alpha {
   @include heading-h1;
 }

@@ -27,6 +27,24 @@ $border-radius: 5px !default;
 $base-font-size: 16px !default;
 $base-line-height: 1.5 !default;
 
+$typographic-scale: (
+  base: (
+    body: 19px,
+    h1: 30px,
+    h2: 24px,
+    h3: 19px,
+    h4: 16px,
+    h5: 13px,
+    h6: 11px,
+    blockquote: 18px,
+    small: 11px
+  ),
+  medium: (
+    h1: 36px,
+    small: 13px
+  )
+) !default;
+
 $regular: 'AvenirNextLTW01-Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
 $regular-italic: 'AvenirNextLTW01-Italic', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
 $bold: 'AvenirNextLTW01-Demi', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
