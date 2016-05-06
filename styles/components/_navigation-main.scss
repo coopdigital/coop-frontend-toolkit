@@ -106,6 +106,7 @@ Main navigation - Co-op Front-end Toolkit
       margin-left: $quarter-spacing-unit;
       border-left: 2px solid $coop-blue;
       background: $white;
+      font-size: 1em;
 
       @include media(medium) {
         position: absolute;
