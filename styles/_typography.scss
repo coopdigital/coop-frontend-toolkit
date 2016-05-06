@@ -71,12 +71,14 @@ hr {
   @include regular;
 }
 
-.regular-italic,
+.italic,
+.em,
 em {
   @include regular-italic;
 }
 
 .bold,
+.strong,
 strong {
   @include bold;
 }
