@@ -5,7 +5,9 @@ cache:
     - node_modules
 
 install:
+  - npm install --dev
   - gem install sass
 
 script:
+  - npm test
   - sass -Istyles styles/_coop-toolkit.scss > /dev/null
