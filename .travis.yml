@@ -1,0 +1,11 @@
+language: node
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - gem install sass
+
+script:
+  - sass -Istyles styles/_coop-toolkit.scss > /dev/null
