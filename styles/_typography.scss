@@ -21,7 +21,7 @@ address {
 p,
 ul,
 ol {
-  @include body;
+  font-size: 1em;
 }
 
 h1, .h1, .alpha {
@@ -48,17 +48,9 @@ h6, .h6, .zeta {
   @include heading-h6;
 }
 
-p {
-  margin-bottom: $half-spacing-unit;
-}
-
 small,
 .smallprint {
   @include small;
-}
-
-em {
-  font-family: $regular-italic;
 }
 
 hr {
@@ -106,12 +98,12 @@ del,
   @include line-through;
 }
 
-.byline {
-  color: $coop-grey;
-}
-
 address {
   @include regular;
+}
+
+.byline {
+  color: $coop-grey;
 }
 
 .intro-text {

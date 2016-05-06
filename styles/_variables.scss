@@ -24,9 +24,6 @@ $sixth-spacing-unit: $base-spacing-unit / 6 !default; // 10px
 $border-radius: 5px !default;
 
 // Fonts
-$base-font-size: 16px !default;
-$base-line-height: 1.5 !default;
-
 $typographic-scale: (
   base: (
     body: 19px,
@@ -44,6 +41,8 @@ $typographic-scale: (
     small: 13px
   )
 ) !default;
+
+$base-line-height: 1.5 !default;
 
 $regular: 'AvenirNextLTW01-Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
 $regular-italic: 'AvenirNextLTW01-Italic', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
