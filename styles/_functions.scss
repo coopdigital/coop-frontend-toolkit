@@ -32,6 +32,7 @@ Functions - Co-op Front-end Toolkit
  * @return {Number}        The value converted to em
  */
 @function em-calc($value) {
+  $base-font-size: map-deep-get($typographic-scale, "base", "body");
   @return (strip-unit($value) / strip-unit($base-font-size)) * 1em;
 }
 
@@ -51,4 +52,15 @@ Functions - Co-op Front-end Toolkit
   @else {
     @return $default;
   }
+}
+
+
+/**
+ * Returns a value from a deeply-nested map
+ */
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
 }

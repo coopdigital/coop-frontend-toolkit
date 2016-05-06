@@ -70,7 +70,11 @@ Main footer - Co-op Front-end Toolkit
     ul {
       @include list-inline;
       margin-bottom: 0;
-      font-size: em-calc(16);
+      font-size: em-calc(12);
+
+      @include media(medium) {
+        font-size: em-calc(16);
+      }
     }
 
     a {
@@ -78,7 +82,6 @@ Main footer - Co-op Front-end Toolkit
       padding: $quarter-spacing-unit /2 $quarter-spacing-unit;
       border-width: 0;
       color: $white;
-      font-size: em-calc(12);
 
       &:hover,
       &:focus {
@@ -87,7 +90,6 @@ Main footer - Co-op Front-end Toolkit
 
       @include media(medium) {
         padding: $quarter-spacing-unit;
-        font-size: em-calc(16);
       }
     }
   }
