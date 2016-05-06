@@ -29,6 +29,7 @@ describe('Coop Toggles module', function() {
     expect($('[data-toggle]').attr('aria-controls')).to.equal('toggle');
     expect($('[data-toggle]').attr('aria-expanded')).to.equal('false');
     expect($('#toggle').attr('aria-hidden')).to.equal('true');
+    expect($('#toggle').attr('aria-live')).to.equal('polite');
   });
 
   describe('with default options', function() {
@@ -42,10 +43,6 @@ describe('Coop Toggles module', function() {
     it('should update the ARIA attributes to the trigger and target', function() {
       expect($('[data-toggle]').attr('aria-expanded')).to.equal('true');
       expect($('#toggle').attr('aria-hidden')).to.equal('false');
-    });
-
-    it('should add focus to the target element', function() {
-      expect($('#toggle').get(0) === document.activeElement).to.equal(true);
     });
 
     it('should remove the class `open` from the toggle trigger when clicked again', function() {
