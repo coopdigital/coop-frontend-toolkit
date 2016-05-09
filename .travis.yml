@@ -8,8 +8,10 @@ cache:
 
 install:
   - npm install --dev
+  - npm install node-sass -g
   - gem install sass
 
 script:
   - npm test
-  - sass -Istyles styles/_coop-toolkit.scss > /dev/null
+  - node-sass --include-path styles styles/_coop-toolkit.scss > /dev/null
+  - sass styles/_coop-toolkit.scss > /dev/null
