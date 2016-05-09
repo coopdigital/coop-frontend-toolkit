@@ -57,7 +57,8 @@
 
       this.$target
         .attr('aria-hidden', 'true')
-        .attr('tabindex', '-1');
+        .attr('tabindex', '-1')
+        .attr('aria-live', 'polite');
     },
     bindEvents: function() {
       var self = this;
@@ -86,7 +87,7 @@
       this.$trigger.add(this.$target).addClass('open');
 
       this.$trigger.attr('aria-expanded', 'true');
-      this.$target.attr('aria-hidden', 'false').focus();
+      this.$target.attr('aria-hidden', 'false');
 
       if (this.$trigger.data('toggle-text-open')) {
         this.$textContainer.text(this.$trigger.data('toggle-text-open'));
