@@ -7,7 +7,7 @@ cache:
     - node_modules
 
 before_install:
-  - rvm use 2
+  - rvm install ruby-2.2.0
   - gem install sass
 
 install:
