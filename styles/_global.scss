@@ -10,7 +10,7 @@ Global - Co-op Front-end Toolkit
 
 html,
 body {
-  font-size: $base-font-size;
+  font-size: map-deep-get($typographic-scale, "base", "body");
   overflow-x: hidden;
 
   @include ie(8) {
