@@ -21,3 +21,8 @@
   // expose the Coop object globally
   window.Coop = Coop;
 })();
+
+$(function() {
+  // Initialise all modules
+  Coop.init();
+});
