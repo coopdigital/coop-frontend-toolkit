@@ -83,6 +83,10 @@ Helpers - Co-op Front-end Toolkit
   text-align: right;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .visuallyhidden {
   @include visuallyhidden;
 }
