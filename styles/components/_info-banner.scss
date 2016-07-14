@@ -1,6 +1,6 @@
 .info-banner {
   background: $offwhite;
-  padding: $quarter-spacing-unit;
+  padding: $quarter-spacing-unit 0;
 
   .label {
     display: inline-block;
@@ -27,7 +27,7 @@
       margin-left: .5em;
       display: inline-block;
     }
-    
+
   }
 
 }
