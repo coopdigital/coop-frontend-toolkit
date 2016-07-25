@@ -4,7 +4,9 @@ Tables - Co-op Front-end Toolkit
 
 table {
   width: 100%;
+  table-layout: fixed;
   margin-bottom: $half-spacing-unit;
+  border: 1px solid $coop-border-grey;
 
   th, td {
     padding: $quarter-spacing-unit $half-spacing-unit;
@@ -12,18 +14,17 @@ table {
   }
 
   thead {
-    background-color: $coop-blue;
-    color: $white;
+    background-color: $offwhite;
+    border-bottom: 1px solid $coop-border-grey;
   }
 
   tbody {
     td {
-      border-bottom: 1px solid $coop-grey;
-      word-break: break-all;
+      border-bottom: 1px solid $coop-border-grey;
     }
     th {
       background-color: $offwhite;
-      border-bottom: 1px solid $coop-grey;
+      border-bottom: 1px solid $coop-border-grey;
     }
   }
 
@@ -34,15 +35,18 @@ table {
       font-weight: bold;
       background-color: $offwhite;
     }
+
   }
+
 }
 
 // Zebra striping for large data tables
-
 .zebra {
+
   tr:nth-child(even) {
     background-color: $offwhite;
   }
+
 }
 
 // Simple responsive tables. Wrap a div round your table and apply the class.
@@ -54,4 +58,5 @@ table {
   table {
     margin-bottom: 0;
   }
+
 }
