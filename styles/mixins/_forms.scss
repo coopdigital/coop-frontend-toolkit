@@ -22,9 +22,9 @@ Forms mixins - Co-op Front-end Toolkit
   width: 100%;
   padding: $quarter-spacing-unit / 2;
   background: $white;
-  border: 2px solid $coop-grey;
-  border-radius: $border-radius;
-  color: $coop-grey;
+  border: 1px solid;
+  border-color: $coop-grey;
+  color: $body-copy;
   outline: 0;
   transition: all 0.3s ease-in-out;
   font-size: em-calc(16);
@@ -34,10 +34,9 @@ Forms mixins - Co-op Front-end Toolkit
     padding-bottom: 14px;
   }
 
-  &:hover,
   &:focus {
     background: $white;
-    border: 2px solid $coop-blue;
+    border-color: $coop-blue;
   }
 
   &:hover::-webkit-input-placeholder {
@@ -104,12 +103,13 @@ Forms mixins - Co-op Front-end Toolkit
     display: inline-block;
     position: relative;
     cursor: pointer;
+    line-height: 1.75;
 
     &:before {
       content: " ";
       display: inline-block;
       margin-right: .5em;
-      border: 2px solid $coop-grey;
+      border: 1px solid $coop-grey;
       vertical-align: top;
       text-align: center;
       font-size: 1.25em;
@@ -124,7 +124,6 @@ Forms mixins - Co-op Front-end Toolkit
       @if $type == "checkbox" {
         width: 1.375em;
         height: 1.375em;
-        border-radius: $border-radius;
       }
 
       @include ie(8) {
@@ -182,9 +181,8 @@ Forms mixins - Co-op Front-end Toolkit
     text-align: center;
     padding: 1em 1.5em;
     margin: 0 1em 1em 0;
-    border: 2px solid $coop-grey;
-    border-radius: $border-radius;
-    color: $coop-grey;
+    border: 1px solid $coop-grey;
+    color: $body-copy;
     background-color: $white;
     transition: all 0.1s linear;
 
@@ -195,6 +193,7 @@ Forms mixins - Co-op Front-end Toolkit
 
     &:hover {
       border-color: $coop-blue;
+      background-color: $offwhite;
     }
   }
 
@@ -221,8 +220,7 @@ Forms mixins - Co-op Front-end Toolkit
   display: block;
   float: left;
   padding: $quarter-spacing-unit / 2 $quarter-spacing-unit;
-  border: 2px solid $coop-grey;
-  border-radius: $border-radius;
+  border: 1px solid $coop-grey;
   background: $offwhite;
   font-size: em-calc(16);
   text-align: center;
@@ -244,7 +242,7 @@ Forms mixins - Co-op Front-end Toolkit
 }
 
 %form-invalid {
-  border: 2px solid $saleerror-red !important;
+  border: 1px solid $saleerror-red !important;
 }
 
 %form-error {
