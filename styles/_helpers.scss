@@ -5,6 +5,8 @@ Helpers - Co-op Front-end Toolkit
 @import "mixins/helpers";
 
 // Colour helpers
+.coop-brand-blue { color: $coop-brand-blue; }
+.coop-brand-blue-bg { background: $coop-brand-blue; }  
 .coop-blue { color: $coop-blue; }
 .coop-blue-bg { background: $coop-blue; }
 .coop-blue-highlighted-bg { background: $coop-blue-highlighted; }
@@ -31,6 +33,7 @@ Helpers - Co-op Front-end Toolkit
 .body-copy { color: $body-copy; }
 .body-copy-bg { background: $body-copy; }
 .coop-border-grey { border: 1px solid $coop-border-grey; }
+.coop-border-grey-bg { background: $coop-border-grey; }
 .offwhite { color: $offwhite; }
 .offwhite-bg { background: $offwhite; }
 .offwhite-highlighted-bg { background: $offwhite-highlighted-bg; }
