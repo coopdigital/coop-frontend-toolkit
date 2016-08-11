@@ -21,6 +21,7 @@ Helpers - Co-op Front-end Toolkit
 .coop-link-blue-bg { background: $coop-link-blue; }
 .coop-link-blue-hover { color: $coop-blue-highlighted; }
 .coop-link-blue-hover-bg { background: $coop-blue-highlighted; }
+.coop-link-blue-focused { outline: 4px solid $coop-blue-highlighted; }
 .coop-link-visited { color: $coop-link-visited; }
 .coop-link-visited-bg { background: $coop-link-visited; }
 .added-to-page-bg { background: $added-to-page; }
