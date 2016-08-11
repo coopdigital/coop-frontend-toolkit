@@ -13,6 +13,11 @@ a {
     border-bottom: 1px solid $coop-blue-highlighted;
   }
 
+  &:active {
+    color: $coop-blue-highlighted;
+    border-bottom: 1px solid $coop-blue-highlighted;
+  }
+
   &:focus {
     transition: none;
     outline: 4px solid $coop-blue-highlighted;
