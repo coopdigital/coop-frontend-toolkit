@@ -1,46 +1,33 @@
 /*===============================================
 Colour variables - Co-op Front-end Toolkit
 ===============================================*/
-
-/**
- * Co-op primary colour variables are still in testing
- *
- * 1. Grey used for body text and headings
- *
- * 2. Off white used for background grey and other box decorational styles
- *
- * 3. Standout UI colours for errors, dialogues etc
- *
- * 4. Colour states - used for interaction. Hovers etc.
- */
  
 $coop-brand-blue: #00B1E7;
-$coop-blue: #00a1cc !default;
 
-/* [1] */
-$coop-grey: #6e6e6e;
-$body-copy: #282828; 
-$coop-border-grey: #dddddd;
+$body-copy: #282828;
+$coop-blue: #00a1cc;
 
-/* [2] */
-$offwhite: #f3f3f3;
-$offwhite-highlighted-bg: #e6e6e6;
-
-/* [3] */
-$button-green: #00a318;
-$info-orange: #dc7d00;
-$saleerror-red: #d0091c;
-
-/* [4] */
 $coop-link-blue: #00729a;
 $coop-blue-highlighted: #00bbe3;
 $coop-link-visited: #551a8b;
-$coop-grey-unselected: #949494;
-$button-green-highlighted: #00c81a;
-$added-to-page: #fff6bf;
 
 $white: #ffffff;
+$offwhite: #f3f3f3;
+$coop-border-grey: #c4c4c4;
+$coop-grey: #6e6e6e;
+
+$button-green: #239F85;
+$button-green-highlighted: #2ABB9D;
+$button-secondary-grey: #3E464C;
+
+$info-orange: #dc7d00;
+$saleerror-red: #d0091c;
+$added-to-page: #fff6bf;
+
 $black: #000000;
 $light-grey: #dddddd;
 $dark-grey: #cccccc;
 $darker-grey: #333333;
+
+$offwhite-highlighted-bg: #e6e6e6;
+$coop-grey-unselected: #949494;
