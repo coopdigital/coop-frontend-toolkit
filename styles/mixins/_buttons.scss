@@ -43,14 +43,13 @@ Buttons mixins - Co-op Front-end Toolkit
                      $hover-text-colour: $coop-link-blue,
                      $bg-colour: $offwhite,
                      $border-colour: $offwhite,
-                     $hover-border-colour: $offwhite,
+                     $hover-border-colour: $hover-border-colour,
                      $shadow-colour: darken($offwhite, 8%),
                      $hover-bg-colour: darken($offwhite, 5%)) {
 
   color: $text-colour;
   background-color: $bg-colour;
   border: 1px solid $border-colour;
-  box-shadow: 0 3px $shadow-colour;
 
   &:hover,
   &:focus {
