@@ -26,14 +26,17 @@ Typography mixins - Co-op Front-end Toolkit
 // Headings
 @mixin heading-h1 {
   @include font-size('h1', 1.2);
+  font-family: $bold;
 }
 
 @mixin heading-h2 {
   @include font-size('h2');
+  font-family: $bold;
 }
 
 @mixin heading-h3 {
   @include font-size('h3');
+  font-family: $bold;
 }
 
 @mixin heading-h4 {
@@ -58,7 +61,7 @@ Typography mixins - Co-op Front-end Toolkit
 }
 
 @mixin small {
-  @include font-size('small', 1.25);
+  @include font-size('small', 1.25); 
 }
 
 @mixin intro-text {
@@ -90,6 +93,10 @@ Typography mixins - Co-op Front-end Toolkit
 
 @mixin regular-italic {
   font-family: $regular-italic;
+}
+
+@mixin medium {
+  font-family: $bold;
 }
 
 @mixin bold {
