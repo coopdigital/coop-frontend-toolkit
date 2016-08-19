@@ -9,20 +9,23 @@ Forms - Co-op Front-end Toolkit
   @extend %form-row;
 }
 
+.form-section {
+  margin-bottom: $half-spacing-unit;
+}
+
+legend {
+  @extend %form-legend;
+}
+
+label {
+  @extend %form-label;
+}
+
 fieldset {
   border: none;
   padding: 0;
   margin: 0;
   width: 100%;
-}
-
-.form-section {
-  margin-bottom: $half-spacing-unit;
-}
-
-label,
-legend {
-  @extend %form-label;
 }
 
 input,
@@ -39,15 +42,11 @@ select {
   @include form-select;
 }
 
-input[type=checkbox] {
-  @include form-check-field("checkbox");
-}
-input[type=radio] {
-  @include form-check-field("radio");
+.block-label {
+   @include tap-check;
 }
 
-.tap-input,
-input[type=radio].tap-input {
+.tap-input {
   @include form-tap-tile;
 }
 
@@ -84,6 +83,10 @@ input[type='range'] {
       background: $dark-grey;
     }
   }
+}
+
+.indented {
+  @include indented;
 }
 
 span.prefix {
