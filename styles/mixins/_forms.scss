@@ -319,8 +319,7 @@ Forms mixins - Co-op Front-end Toolkit
   text-align: center;
   line-height: 1.6;
   &.input-strong {
-    border: 2px solid;
-    border-color: $coop-grey;
+    border: 2px solid $coop-grey;
   }
 }
 
@@ -329,6 +328,9 @@ Forms mixins - Co-op Front-end Toolkit
   border-right: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  &.input-strong {
+    border-right: 0;
+  }
 }
 
 @mixin form-suffix {
@@ -336,6 +338,9 @@ Forms mixins - Co-op Front-end Toolkit
   border-left: 0;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  &.input-strong {
+    border-left: 0;
+  }
 }
 
 %form-invalid {
