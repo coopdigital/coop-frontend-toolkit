@@ -41,6 +41,11 @@ Forms mixins - Co-op Front-end Toolkit
     padding-bottom: 14px;
   }
 
+  &.input-strong {
+    border: 2px solid;
+    border-color: $coop-grey;
+  }
+
   &:focus {
     background: $white;
     border-color: $coop-blue;
@@ -74,6 +79,7 @@ Forms mixins - Co-op Front-end Toolkit
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
     }
+
   }
 
   &.input-inline {
@@ -312,6 +318,10 @@ Forms mixins - Co-op Front-end Toolkit
   font-size: em-calc(20);
   text-align: center;
   line-height: 1.6;
+  &.input-strong {
+    border: 2px solid;
+    border-color: $coop-grey;
+  }
 }
 
 @mixin form-prefix {
