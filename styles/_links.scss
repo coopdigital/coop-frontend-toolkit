@@ -4,18 +4,17 @@ Links - Co-op Front-end Toolkit
 
 a {
   color: $coop-link-blue;
-  border-bottom: 1px dotted $coop-link-blue;
+  border-bottom: .075em solid $coop-link-blue;
   text-decoration: none;
-  transition: all 0.25s ease;
 
   &:hover {
-    color: $coop-blue-highlighted;
-    border-bottom: 1px solid $coop-blue-highlighted;
+    color: $coop-link-blue;
+    border-bottom: 0;
   }
 
   &:active {
     color: $coop-blue-highlighted;
-    border-bottom: 1px solid $coop-blue-highlighted;
+    border-bottom: 0;
   }
 
   &:focus {
