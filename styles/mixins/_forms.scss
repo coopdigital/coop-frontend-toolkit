@@ -216,6 +216,11 @@ Forms mixins - Co-op Front-end Toolkit
     border-color: $coop-blue;
   }
 
+  &.input-strong + label {
+    border: 2px solid;
+    border-color: $coop-grey;
+  }
+
   @include ie(8) {
     position: relative;
     left: 0;
