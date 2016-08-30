@@ -99,7 +99,7 @@ Buttons mixins - Co-op Front-end Toolkit
   &:after {
     content: "";
     animation: three-quarters-loader 1250ms infinite linear;
-    border: 3px solid;
+    border: 2px solid;
     border-right-color: transparent !important;
     border-radius: 50%;
     display: inline-block;

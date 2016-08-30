@@ -8,7 +8,7 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: $coop-link-blue;
+    color: $coop-blue-highlighted;
     border-bottom: 0;
   }
 
@@ -26,4 +26,54 @@ a {
   //   color: $coop-link-visited;
   //   border-bottom: 1px dotted $coop-link-visited;
   // }
+}
+
+@mixin link-black {
+  color: $body-copy;
+  border-bottom: .075em solid $body-copy;
+  text-decoration: none;
+
+  &:hover {
+    color: $body-copy;
+    border-bottom: 0;
+  }
+
+  &:active {
+    color: $body-copy;
+    border-bottom: 0;
+  }
+
+  &:focus {
+    transition: none;
+    outline: 4px solid $coop-blue-highlighted;
+  }
+}
+
+@mixin link-white {
+  color: $white;
+  border-bottom: .075em solid $white;
+  text-decoration: none;
+
+  &:hover {
+    color: $white;
+    border-bottom: 0;
+  }
+
+  &:active {
+    color: $white;
+    border-bottom: 0;
+  }
+  
+  &:focus {
+    transition: none;
+    outline: 4px solid $coop-blue-highlighted;
+  }
+}
+
+.link-white {
+  @include link-white;
+}
+
+.link-black {
+  @include link-black;
 }
