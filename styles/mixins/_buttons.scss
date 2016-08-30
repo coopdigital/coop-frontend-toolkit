@@ -23,7 +23,7 @@ Buttons mixins - Co-op Front-end Toolkit
   &:hover,
   &:focus {
     background-color: darken($offwhite, 5%);
-    border-color: darken($offwhite, 5%);
+    border: 1px solid darken($offwhite, 5%);
     color: $coop-link-blue;
   }
 

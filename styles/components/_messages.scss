@@ -29,13 +29,13 @@ Messages/alerts - Co-op Front-end Toolkit
   color: $saleerror-red;
 
   &:before {
-    @extend %icon-alert;
+    @extend %icon-alert;  
   }
 }
 
 .message-success {
-  border-color: $button-green;
-  color: $button-green;
+  border-color: $success-green;
+  color: $success-green;
 
   &:before {
     @extend %icon-tick;
