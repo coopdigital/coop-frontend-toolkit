@@ -103,6 +103,41 @@ button,
   outline: 4px solid $coop-blue;
 }
 
+.test-button-green {
+  background: $success-green; 
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.4);
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.4);
+  border-radius: 3px;
+  border: 0;
+  display: inline-block;
+  color: $white;
+  text-decoration: none;
+  font-size: em-calc(20px);
+}
+
+.test-button-green:hover {
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.4);
+  box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.4);
+  background: lighten($success-green, 5%);
+  border: 0;
+  color: #fff;
+}
+
+.test-button-green:focus,
+.test-button-green:active{
+  background: lighten($success-green, 5%);
+  border: 0;
+  color: #fff;
+}
+
+.test-button-green:focus {
+  outline: 4px solid $coop-blue;
+}
+
 .test-secondary-button {
   background: $white;
   -moz-border-radius: 3px;
@@ -134,7 +169,38 @@ button,
   color: $coop-blue-highlighted;
 }
 
-.test-secondary-button-dark:focus {
+.test-secondary-button-blue {
+  background: #333366;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -webkit-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.4);
+  box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.4); 
+  border-radius: 3px;
+  border: 0; 
+  color: $white;
+  text-decoration: none;
+  font-size: em-calc(20px);
+}
+
+.test-secondary-button-blue:hover {
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.4);
+  -moz-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.4);
+  box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.4);
+  background: lighten(#333366, 5%);
+  border: 0;
+  color: $white;
+}
+
+
+.test-secondary-button-blue:focus,
+.test-secondary-button-blue:active {  
+  // background: darken(#e2e2e2, 5%);
+  border: 0;
+  color: $white;
+}
+
+.test-secondary-button-blue:focus {
   outline: 4px solid $coop-blue;
 }
 
