@@ -164,9 +164,13 @@ button,
 
 .test-secondary-button:focus,
 .test-secondary-button:active {  
-  // background: darken(#e2e2e2, 5%);
+  background: $white;
   border: 0;
   color: $coop-blue-highlighted;
+}
+
+.test-secondary-button:focus {
+  outline: 4px solid $coop-blue;
 }
 
 .test-secondary-button-blue {
@@ -195,7 +199,7 @@ button,
 
 .test-secondary-button-blue:focus,
 .test-secondary-button-blue:active {  
-  // background: darken(#e2e2e2, 5%);
+  background: lighten(#333366, 5%);
   border: 0;
   color: $white;
 }
@@ -236,9 +240,9 @@ button,
 
 .test-secondary-button-dark:focus,
 .test-secondary-button-dark:active {  
-  background: darken(#e2e2e2, 5%);
+  background: lighten(#282828, 5%);
   border: 0;
-  color: #282828;
+  color: white;
 }
 
 .test-secondary-button-dark:focus {
@@ -273,7 +277,7 @@ button,
 .test-secondary-button-light:active {  
   background: darken(#e2e2e2, 5%);
   border: 0;
-  color: #282828;
+  color: #282828; 
 }
 
 .test-secondary-button-light:focus {
