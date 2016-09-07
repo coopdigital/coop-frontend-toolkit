@@ -87,7 +87,7 @@ button,
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.4);
   -moz-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.4);
   box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.4);
-  background: #23A78D;
+  background: lighten(#239F85, 8%);
   border: 0;
   color: #fff;
 }
@@ -191,7 +191,7 @@ button,
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.4);
   -moz-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.4);
   box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.4);
-  background: lighten(#333366, 5%);
+  background: lighten(#333366, 10%);
   border: 0;
   color: $white;
 }
@@ -199,7 +199,7 @@ button,
 
 .test-secondary-button-blue:focus,
 .test-secondary-button-blue:active {  
-  background: lighten(#333366, 5%);
+  background: lighten(#333366, 10%);
   border: 0;
   color: $white;
 }
@@ -232,15 +232,15 @@ button,
   -webkit-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.4);
   -moz-box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.4);
   box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.4);
-  background: lighten(#282828, 5%);
+  background: lighten(#282828, 10%);
   border: 0;
   color: white;
 }
 
-
+ 
 .test-secondary-button-dark:focus,
 .test-secondary-button-dark:active {  
-  background: lighten(#282828, 5%);
+  background: lighten(#282828, 10%);
   border: 0;
   color: white;
 }
@@ -275,7 +275,7 @@ button,
 
 .test-secondary-button-light:focus,
 .test-secondary-button-light:active {  
-  background: darken(#e2e2e2, 5%);
+  background: darken(#e2e2e2, 10%);
   border: 0;
   color: #282828; 
 }
