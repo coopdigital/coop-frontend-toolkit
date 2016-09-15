@@ -27,6 +27,7 @@ $border-radius: 3px !default;
 $typographic-scale: (
   base: (
     body: 20px,
+    h-mega: 60px,
     h1: 60px,
     h2: 45px,
     h3: 35px,
@@ -34,6 +35,7 @@ $typographic-scale: (
     h5: 20px,
     h6: 12px,
     blockquote: 35px,
+    lead: 26px, 
     small: 13px
   ),
   medium: (
@@ -42,7 +44,7 @@ $typographic-scale: (
   )
 ) !default;
 
-$base-line-height: 1.5 !default;
+$base-line-height: 1.7 !default;
 
 $regular: 'AvenirNextLTW01-Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
 $medium: 'AvenirNextLTW01-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;

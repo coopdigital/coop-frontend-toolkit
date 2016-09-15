@@ -18,7 +18,7 @@ button,
                          $hover-bg-colour: $button-green-highlighted);
 }
 
-.btn-secondary {
+.btn-primary-dark {
   @include button-colour($text-colour: $coop-link-blue,
                          $hover-text-colour: $coop-blue-highlighted,
                          $bg-colour: transparent,
@@ -102,7 +102,7 @@ button,
   background: $white;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26), #6e6e6e 0px 0px 1px inset;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.3), #6e6e6e 0px 0px 1px inset;
   border-radius: 3px;
   border: 0;
   color: $coop-link-blue;
