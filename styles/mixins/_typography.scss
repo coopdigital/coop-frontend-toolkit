@@ -24,6 +24,11 @@ Typography mixins - Co-op Front-end Toolkit
 }
 
 // Headings
+@mixin heading-mega {
+  @include font-size('h-mega', 1.2);
+  font-family: $bold;
+}
+
 @mixin heading-h1 {
   @include font-size('h1', 1.2);
   font-family: $bold;
@@ -63,8 +68,8 @@ Typography mixins - Co-op Front-end Toolkit
   @include font-size('small', 1.25);
 }
 
-@mixin intro-text {
-  @include font-size('h2', 1.4);
+@mixin intro-text { 
+  @include font-size('lead', 1.7);
 }
 
 // Other typographic elements

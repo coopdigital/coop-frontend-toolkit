@@ -1,7 +1,7 @@
 /*===============================================
 Colour variables - Co-op Front-end Toolkit
 ===============================================*/
- 
+
 $coop-brand-blue: #00B1E7;
 
 $body-copy: #282828;
@@ -16,8 +16,11 @@ $offwhite: #f3f3f3;
 $coop-border-grey: #c4c4c4;
 $coop-grey: #6e6e6e;
 
-$button-green: #239F85;
-$button-green-highlighted: #2ABB9D;
+$button-green: #098570;
+$button-green-highlighted: lighten($button-green, 10%);
+// $button-green: #098570;
+// $button-green-highlighted: lighten($button-green, 10%);
+
 $button-secondary-grey: #3E464C;
 
 $success-green: #00a318;
