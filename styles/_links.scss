@@ -8,13 +8,11 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: $coop-blue-highlighted;
-    border-bottom: 0;
+    color: $coop-link-blue;
   }
 
   &:active {
-    color: $coop-blue-highlighted;
-    border-bottom: 0;
+    color: $coop-link-blue;
   }
 
   &:focus {
@@ -35,12 +33,10 @@ a {
 
   &:hover {
     color: $body-copy;
-    border-bottom: 0;
   }
 
   &:active {
     color: $body-copy;
-    border-bottom: 0;
   }
 
   &:focus {
@@ -52,18 +48,15 @@ a {
 @mixin link-white {
   color: $white;
   border-bottom: .075em solid $white;
-  text-decoration: none;
 
   &:hover {
     color: $white;
-    border-bottom: 0;
   }
 
   &:active {
     color: $white;
-    border-bottom: 0;
   }
-  
+
   &:focus {
     transition: none;
     outline: 4px solid $coop-blue-highlighted;
