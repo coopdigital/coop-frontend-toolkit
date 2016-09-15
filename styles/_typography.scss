@@ -83,6 +83,10 @@ strong {
   @include bold;
 }
 
+.medium {
+  @include medium;
+}
+
 .bold-italic {
   @include bold-italic;
 }
@@ -104,17 +108,12 @@ address {
   @include regular;
 }
 
-.byline {
-  color: $coop-grey;
-}
-
 .intro-text {
   @include intro-text;
 }
 
 dt {
   margin-bottom: $quarter-spacing-unit;
-  color: $coop-blue;
 }
 
 dd {
