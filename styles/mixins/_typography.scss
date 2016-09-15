@@ -52,7 +52,6 @@ Typography mixins - Co-op Front-end Toolkit
 @mixin heading-h6 {
   @include font-size('h6');
   font-family: $bold;
-  text-transform: uppercase;
 }
 
 // Base size (paragraphs, lists)
@@ -61,7 +60,7 @@ Typography mixins - Co-op Front-end Toolkit
 }
 
 @mixin small {
-  @include font-size('small', 1.25); 
+  @include font-size('small', 1.25);
 }
 
 @mixin intro-text {
@@ -74,15 +73,20 @@ Typography mixins - Co-op Front-end Toolkit
   margin: 0 0 $half-spacing-unit;
   padding: $quarter-spacing-unit;
   background-color: $offwhite;
+
+  p {
+    margin-bottom: $quarter-spacing-unit;
+  }
+
 }
 
 @mixin cite {
   display: block;
-  margin-top: $quarter-spacing-unit;
-  font-style: normal;
+  font-family: $regular-italic;
+  font-size: 0.75em;
 
   &:before {
-    content: '-- ';
+    content: '';
   }
 }
 

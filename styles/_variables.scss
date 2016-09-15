@@ -21,23 +21,23 @@ $quarter-spacing-unit: $half-spacing-unit / 2 !default; // 15px
 $sixth-spacing-unit: $base-spacing-unit / 6 !default; // 10px
 
 // Border radius
-$border-radius: 2px !default;
+$border-radius: 3px !default;
 
 // Fonts
 $typographic-scale: (
   base: (
-    body: 16px,
-    h1: 30px,
-    h2: 24px,
-    h3: 19px,
-    h4: 16px,
-    h5: 13px,
-    h6: 11px,
-    blockquote: 18px,
-    small: 11px
+    body: 20px,
+    h1: 60px,
+    h2: 45px,
+    h3: 35px,
+    h4: 25px,
+    h5: 20px,
+    h6: 12px,
+    blockquote: 35px,
+    small: 13px
   ),
   medium: (
-    h1: 36px,
+    h1: 60px,
     small: 13px
   )
 ) !default;
@@ -64,9 +64,9 @@ $grid-include-offset-classes: true !default; // If set to false, column offset c
 // Breakpoints
 $breakpoints: (
   xsmall: 320px,
-  small: 480px,
+  small:  480px,
   medium: 750px,
-  large: 960px,
+  large:  960px,
   xlarge: 1300px
 ) !default;
 
