@@ -34,34 +34,42 @@ Typography mixins - Co-op Front-end Toolkit
   @include font-size('h1', 1.26);
   font-family: $bold;
   padding-top: .15em;
-  margin-bottom: .7em;
+  margin-bottom: .525em;
 }
 
 @mixin heading-h2 {
   @include font-size('h2', 1.15);
   font-family: $bold;
   padding-top: .7em;
-  margin-bottom: .8em;
+  margin-bottom: .37em;
 }
 
 @mixin heading-h3 {
   @include font-size('h3');
   font-family: $bold;
+  padding-top: .7em;
+  margin-bottom: .37em;
 }
 
 @mixin heading-h4 {
   @include font-size('h4');
   font-family: $bold;
+  padding-top: .7em;
+  margin-bottom: .37em;
 }
 
 @mixin heading-h5 {
   @include font-size('h5');
   font-family: $bold;
+  padding-top: .7em;
+  margin-bottom: .37em;
 }
 
 @mixin heading-h6 {
   @include font-size('h6');
   font-family: $bold;
+  padding-top: .7em;
+  margin-bottom: .37em;
 }
 
 // Base size (paragraphs, lists)
@@ -74,9 +82,8 @@ Typography mixins - Co-op Front-end Toolkit
 }
 
 @mixin intro-text {
-  @include font-size('lead', 1.15);
-  padding-top: .7em;
-  margin-bottom: .8em;
+  @include font-size('lead');
+    margin-bottom: .55em;
 }
 
 // Other typographic elements
@@ -87,7 +94,7 @@ Typography mixins - Co-op Front-end Toolkit
   background-color: $offwhite;
 
   p {
-    margin-bottom: .45em;
+    margin-bottom: .4em;
   }
 
 }

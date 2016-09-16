@@ -14,7 +14,7 @@ $base-asset-url: '../' !default;
 $ie: 999 !default;
 
 // Vertical rhythm
-$base-spacing-unit: 60px !default;
+$base-spacing-unit: 68px !default;
 $three-quarter-spacing-unit: $base-spacing-unit / 4 * 3 !default; // 45px
 $half-spacing-unit: $base-spacing-unit / 2 !default; // 30px
 $quarter-spacing-unit: $half-spacing-unit / 2 !default; // 15px
@@ -30,8 +30,8 @@ $typographic-scale: (
     h-mega: 52px,
     h1: 46px,
     h2: 26px,
-    h3: 25px,
-    h4: 25px,
+    h3: 22px,
+    h4: 20px,
     h5: 20px,
     h6: 12px,
     blockquote: 35px,
