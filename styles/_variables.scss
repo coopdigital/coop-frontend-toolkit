@@ -27,19 +27,20 @@ $border-radius: 3px !default;
 $typographic-scale: (
   base: (
     body: 20px,
-    h-mega: 60px,
-    h1: 60px,
-    h2: 45px,
-    h3: 35px,
+    h-mega: 52px,
+    h1: 46px,
+    h2: 26px,
+    h3: 25px,
     h4: 25px,
     h5: 20px,
     h6: 12px,
     blockquote: 35px,
-    lead: 26px, 
+    lead: 26px,
     small: 13px
   ),
   medium: (
-    h1: 60px,
+    h-mega: 60px,
+    h1: 46px,
     small: 13px
   )
 ) !default;

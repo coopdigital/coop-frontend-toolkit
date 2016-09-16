@@ -22,6 +22,10 @@ p,
 ul,
 ol {
   font-size: 1em;
+}   
+
+.h-mega {
+  @include heading-mega;
 }
 
 h1, .h1, .alpha {

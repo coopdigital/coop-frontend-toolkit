@@ -68,7 +68,7 @@ Typography mixins - Co-op Front-end Toolkit
   @include font-size('small', 1.25);
 }
 
-@mixin intro-text { 
+@mixin intro-text {
   @include font-size('lead', 1.7);
 }
 
