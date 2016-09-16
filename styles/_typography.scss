@@ -22,7 +22,8 @@ p,
 ul,
 ol {
   font-size: 1em;
-}   
+  margin-bottom: .85em;
+}
 
 .h-mega {
   @include heading-mega;
