@@ -25,11 +25,6 @@ ol {
   margin-bottom: $half-spacing-unit;
 }
 
-ul,
-ol {
-  padding-top: .1em;
-}
-
 .h-mega {
   @include heading-mega;
 }

@@ -24,20 +24,18 @@ Typography mixins - Co-op Front-end Toolkit
   }
 }
 
-// Headings - a bit hard coded now...
+// Headings
 @mixin heading-mega {
   @include font-size('h-mega', 1.22);
   font-family: $bold;
   padding-top: $half-spacing-unit;
   margin-bottom: $half-spacing-unit;
-  // margin-bottom: .65em;
 }
 
 @mixin heading-h1 {
   @include font-size('h1', 1.4);
   font-family: $bold;
   margin-bottom: $half-spacing-unit;
-  // margin-bottom: .6em;
 }
 
 @mixin heading-h2 {
@@ -45,8 +43,6 @@ Typography mixins - Co-op Front-end Toolkit
   font-family: $bold;
   padding-top: $half-spacing-unit;
   margin-bottom: $quarter-spacing-unit/2;
-  // margin-bottom: .22em;
-  // line-height: 40px;
 }
 
 
