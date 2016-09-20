@@ -27,21 +27,23 @@ Typography mixins - Co-op Front-end Toolkit
 @mixin heading-mega {
   @include font-size('h-mega', 1.22);
   font-family: $bold;
+  margin-bottom: .65em;
 }
 
 @mixin heading-h1 {
   @include font-size('h1', 1.4);
   font-family: $bold;
-  margin-bottom: .6em;
+  margin-bottom: .58em;
 }
 
 @mixin heading-h2 {
   @include font-size('h2', 1.6);
   font-family: $bold;
   padding-top: .65em;
-  margin-bottom: .3em;
+  margin-bottom: .22em;
   line-height: 40px;
 }
+
 
 @mixin heading-h3 {
   @include font-size('h3');
@@ -55,24 +57,24 @@ Typography mixins - Co-op Front-end Toolkit
   @include font-size('h4');
   font-family: $bold;
   padding-top: .5em;
-  margin-bottom: .5em;
+  margin-bottom: .45em;
   line-height: 28px;
 }
 
 @mixin heading-h5 {
   @include font-size('h5');
   font-family: $bold;
-  padding-top: .3em;
-  margin-bottom: .3em;
+  padding-top: .75em;
+  margin-bottom: .7em;
   line-height: 20px;
 }
 
 @mixin heading-h6 {
   @include font-size('h6');
   font-family: $bold;
-  padding-top: .8em;
+  padding-top: .55em;
   margin-bottom: 0em;
-  line-height: 16px;
+  line-height: .8em;
 }
 
 // Base size (paragraphs, lists)
