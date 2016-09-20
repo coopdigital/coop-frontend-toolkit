@@ -5,6 +5,7 @@ Typography mixins - Co-op Front-end Toolkit
 @import "../functions";
 @import "helpers";
 
+
 @mixin font-size($element: 'body', $line-height: $base-line-height) {
   font-size: em-calc(map-deep-get($typographic-scale, "base", $element));
 
@@ -23,58 +24,61 @@ Typography mixins - Co-op Front-end Toolkit
   }
 }
 
-// Headings
+// Headings - a bit hard coded now...
 @mixin heading-mega {
   @include font-size('h-mega', 1.22);
   font-family: $bold;
-  margin-bottom: .65em;
+  padding-top: $half-spacing-unit;
+  margin-bottom: $half-spacing-unit;
+  // margin-bottom: .65em;
 }
 
 @mixin heading-h1 {
   @include font-size('h1', 1.4);
   font-family: $bold;
-  margin-bottom: .58em;
+  margin-bottom: $half-spacing-unit;
+  // margin-bottom: .6em;
 }
 
 @mixin heading-h2 {
-  @include font-size('h2', 1.6);
+  @include font-size('h2', 1.65);
   font-family: $bold;
-  padding-top: .65em;
-  margin-bottom: .22em;
-  line-height: 40px;
+  padding-top: $half-spacing-unit;
+  margin-bottom: $quarter-spacing-unit/2;
+  // margin-bottom: .22em;
+  // line-height: 40px;
 }
 
 
 @mixin heading-h3 {
-  @include font-size('h3');
+  @include font-size('h3', 1.6);
   font-family: $bold;
-  padding-top: .75em;
-  margin-bottom: .35em;
-  line-height: 32px;
+  padding-top: $quarter-spacing-unit;
+  margin-bottom: $quarter-spacing-unit/2;
+
 }
 
 @mixin heading-h4 {
-  @include font-size('h4');
+  @include font-size('h4', 1.6);
   font-family: $bold;
-  padding-top: .5em;
-  margin-bottom: .45em;
-  line-height: 28px;
+  padding-top: $quarter-spacing-unit;
+  margin-bottom: $quarter-spacing-unit/2;
+
 }
 
 @mixin heading-h5 {
-  @include font-size('h5');
+  @include font-size('h5', 1.6);
   font-family: $bold;
-  padding-top: .75em;
-  margin-bottom: .7em;
-  line-height: 20px;
+  padding-top: $quarter-spacing-unit;
+  margin-bottom: $quarter-spacing-unit/2;
+
 }
 
 @mixin heading-h6 {
-  @include font-size('h6');
+  @include font-size('h6', 1);
   font-family: $bold;
-  padding-top: .55em;
-  margin-bottom: 0em;
-  line-height: .8em;
+  padding-top: $quarter-spacing-unit;
+  margin-bottom: $quarter-spacing-unit/2;
 }
 
 // Base size (paragraphs, lists)
