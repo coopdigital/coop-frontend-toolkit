@@ -10,18 +10,10 @@ Variables - Co-op Front-end Toolkit
 // relative to the generated stylesheet.
 $base-asset-url: '../' !default;
 
+
 // Maximum IE version targetted by the generated stylesheet.
 $ie: 999 !default;
 
-// Vertical rhythm
-$base-spacing-unit: 64px !default;
-$three-quarter-spacing-unit: $base-spacing-unit / 4 * 3 !default; // 45px
-$half-spacing-unit: $base-spacing-unit / 2 !default; // 30px
-$quarter-spacing-unit: $half-spacing-unit / 2 !default; // 15px
-$sixth-spacing-unit: $base-spacing-unit / 6 !default; // 10px
-
-// Border radius
-$border-radius: 3px !default;
 
 // Fonts
 $typographic-scale: (
@@ -46,7 +38,19 @@ $typographic-scale: (
 ) !default;
 
 
-$base-line-height: 1.6 !default;
+// Vertical rhythm
+$base-line-height: 1.6 !default; // 32px
+$base-spacing-unit: 64px !default;
+$three-quarter-spacing-unit: $base-spacing-unit / 4 * 3 !default; // 45px
+$half-spacing-unit: $base-spacing-unit / 2 !default; // 32px
+$quarter-spacing-unit: $half-spacing-unit / 2 !default; // 16px
+$sixth-spacing-unit: $base-spacing-unit / 6 !default; // 10.66666667px
+$eighth-spacing-unit: $base-spacing-unit / 8 !default; // 8px
+
+
+// Border radius
+$border-radius: 3px !default;
+
 
 $regular: 'AvenirNextLTW01-Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
 $medium: 'AvenirNextLTW01-Medium', 'Helvetica Neue', Helvetica, Arial, sans-serif !default;
@@ -73,6 +77,7 @@ $breakpoints: (
   large:  960px,
   xlarge: 1300px
 ) !default;
+
 
 // Viewport orientation
 $landscape: "only screen and (orientation: landscape)" !default;
