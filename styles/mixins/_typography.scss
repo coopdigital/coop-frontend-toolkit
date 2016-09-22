@@ -1,13 +1,13 @@
-/*===============================================
-Typography mixins - Co-op Front-end Toolkit
-===============================================*/
+/*==============================================================
+Typography amd Vertical Rhythm mixins - Co-op Front-end Toolkit
+===============================================================*/
 
 @import "../functions";
 @import "helpers";
 
-
 @mixin font-size($element: 'body', $line-height: $base-line-height) {
   font-size: em-calc(map-deep-get($typographic-scale, "base", $element));
+  font-family: $bold;
 
   @if $line-height != $base-line-height {
     line-height: $line-height;
@@ -24,6 +24,167 @@ Typography mixins - Co-op Front-end Toolkit
   }
 }
 
+@mixin line-height($line-height: 'base-line-height')  {
+  line-height: (map-deep-get($typographic-scale, "base", $line-height));
+
+  @each $screen-size in map-keys($typographic-scale) {
+    @if $screen-size != 'base' {
+      @if map-deep-get($typographic-scale, $screen-size, $line-height) {
+        @include media($screen-size) {
+          line-height: (map-deep-get($typographic-scale, $screen-size, $line-height));
+        }
+      }
+    }
+  }
+}
+
+
+@mixin base-margin-bottom($spacing-unit: 'base-spacing-unit') {
+  margin-bottom: (map-deep-get($typographic-scale, "base", $spacing-unit));
+
+  @each $screen-size in map-keys($typographic-scale) {
+    @if $screen-size != 'base' {
+      @if map-deep-get($typographic-scale, $screen-size, $spacing-unit) {
+        @include media($screen-size) {
+          margin-bottom: (map-deep-get($typographic-scale, $screen-size, $spacing-unit));
+        }
+      }
+    }
+  }
+}
+
+
+@mixin half-margin-bottom($spacing-unit: 'half-spacing-unit')  {
+margin-bottom: (map-deep-get($typographic-scale, "base", $spacing-unit));
+
+  @each $screen-size in map-keys($typographic-scale) {
+    @if $screen-size != 'base' {
+      @if map-deep-get($typographic-scale, $screen-size, $spacing-unit) {
+        @include media($screen-size) {
+          margin-bottom: (map-deep-get($typographic-scale, $screen-size, $spacing-unit));
+        }
+      }
+    }
+  }
+}
+
+@mixin quarter-margin-bottom($spacing-unit: 'quarter-spacing-unit')  {
+margin-bottom: (map-deep-get($typographic-scale, "base", $spacing-unit));
+
+  @each $screen-size in map-keys($typographic-scale) {
+    @if $screen-size != 'base' {
+      @if map-deep-get($typographic-scale, $screen-size, $spacing-unit) {
+        @include media($screen-size) {
+          margin-bottom: (map-deep-get($typographic-scale, $screen-size, $spacing-unit));
+        }
+      }
+    }
+  }
+}
+
+@mixin eighth-margin-bottom($spacing-unit: 'eighth-spacing-unit')  {
+margin-bottom: (map-deep-get($typographic-scale, "base", $spacing-unit));
+
+  @each $screen-size in map-keys($typographic-scale) {
+    @if $screen-size != 'base' {
+      @if map-deep-get($typographic-scale, $screen-size, $spacing-unit) {
+        @include media($screen-size) {
+          margin-bottom: (map-deep-get($typographic-scale, $screen-size, $spacing-unit));
+        }
+      }
+    }
+  }
+}
+
+@mixin sixteenth-margin-bottom($spacing-unit: 'sixteenth-spacing-unit')  {
+margin-bottom: (map-deep-get($typographic-scale, "base", $spacing-unit));
+
+  @each $screen-size in map-keys($typographic-scale) {
+    @if $screen-size != 'base' {
+      @if map-deep-get($typographic-scale, $screen-size, $spacing-unit) {
+        @include media($screen-size) {
+          margin-bottom: (map-deep-get($typographic-scale, $screen-size, $spacing-unit));
+        }
+      }
+    }
+  }
+}
+
+
+@mixin base-padding-top($spacing-unit: 'base-spacing-unit') {
+  padding-top: (map-deep-get($typographic-scale, "base", $spacing-unit));
+
+  @each $screen-size in map-keys($typographic-scale) {
+    @if $screen-size != 'base' {
+      @if map-deep-get($typographic-scale, $screen-size, $spacing-unit) {
+        @include media($screen-size) {
+          padding-top: (map-deep-get($typographic-scale, $screen-size, $spacing-unit));
+        }
+      }
+    }
+  }
+}
+
+@mixin half-padding-top($spacing-unit: 'half-spacing-unit')  {
+padding-top: (map-deep-get($typographic-scale, "base", $spacing-unit));
+
+  @each $screen-size in map-keys($typographic-scale) {
+    @if $screen-size != 'base' {
+      @if map-deep-get($typographic-scale, $screen-size, $spacing-unit) {
+        @include media($screen-size) {
+          padding-top: (map-deep-get($typographic-scale, $screen-size, $spacing-unit));
+        }
+      }
+    }
+  }
+}
+
+
+@mixin quarter-padding-top($spacing-unit: 'quarter-padding-top')  {
+padding-top: (map-deep-get($typographic-scale, "base", $spacing-unit));
+
+  @each $screen-size in map-keys($typographic-scale) {
+    @if $screen-size != 'base' {
+      @if map-deep-get($typographic-scale, $screen-size, $spacing-unit) {
+        @include media($screen-size) {
+          padding-top: (map-deep-get($typographic-scale, $screen-size, $spacing-unit));
+        }
+      }
+    }
+  }
+}
+
+
+@mixin eighth-padding-top($spacing-unit: 'eighth-spacing-unit')  {
+padding-top: (map-deep-get($typographic-scale, "base", $spacing-unit));
+
+  @each $screen-size in map-keys($typographic-scale) {
+    @if $screen-size != 'base' {
+      @if map-deep-get($typographic-scale, $screen-size, $spacing-unit) {
+        @include media($screen-size) {
+          padding-top: (map-deep-get($typographic-scale, $screen-size, $spacing-unit));
+        }
+      }
+    }
+  }
+}
+
+
+@mixin sixteenth-padding-top($spacing-unit: 'sixteenth-spacing-unit')  {
+padding-top: (map-deep-get($typographic-scale, "base", $spacing-unit));
+
+  @each $screen-size in map-keys($typographic-scale) {
+    @if $screen-size != 'base' {
+      @if map-deep-get($typographic-scale, $screen-size, $spacing-unit) {
+        @include media($screen-size) {
+          padding-top: (map-deep-get($typographic-scale, $screen-size, $spacing-unit));
+        }
+      }
+    }
+  }
+}
+
+
 @mixin body {
   @include font-size('body');
 }
@@ -31,99 +192,66 @@ Typography mixins - Co-op Front-end Toolkit
 // Headings
 @mixin heading-mega {
   @include font-size('h-mega', 1.22);
-  font-family: $bold;
-  padding-top: $half-spacing-unit/2;
-  margin-bottom: $half-spacing-unit/2;
-  @include media(medium) {
-    padding-top: $half-spacing-unit;
-    margin-bottom: $half-spacing-unit;
-  }
+  @include half-margin-bottom;
+  @include half-padding-top;
 }
 
 @mixin heading-h1 {
   @include font-size('h1', 1.4);
-  font-family: $bold;
-  margin-bottom: $half-spacing-unit/2;
-  @include media(medium) {
-    margin-bottom: $half-spacing-unit;
-  }
+  @include half-margin-bottom;
 }
 
 @mixin heading-h2 {
   @include font-size('h2', 1.5);
-  font-family: $bold;
-  padding-top: $half-spacing-unit/2;
-  margin-bottom: $quarter-spacing-unit/4;
-  @include media(medium) {
-    padding-top: $half-spacing-unit;
-    margin-bottom: $quarter-spacing-unit/2;
-  }
+  @include half-padding-top;
+  @include eighth-margin-bottom;
 }
 
 @mixin heading-h3 {
   @include font-size('h3', 1.5);
-  font-family: $bold;
-  padding-top: $quarter-spacing-unit/2;
-  margin-bottom: $quarter-spacing-unit/4;
-  @include media(medium) {
-    padding-top: $quarter-spacing-unit;
-    margin-bottom: $quarter-spacing-unit/2;
-  }
+  @include eighth-margin-bottom;
+  @include eighth-padding-top;
 }
 
 @mixin heading-h4 {
   @include font-size('h4', 1.5);
-  font-family: $bold;
-  padding-top: $quarter-spacing-unit/2;
-  margin-bottom: $quarter-spacing-unit/4;
-  @include media(medium) {
-    padding-top: $quarter-spacing-unit;
-    margin-bottom: $quarter-spacing-unit/2;
-  }
+  @include eighth-margin-bottom;
+  @include eighth-padding-top;
 }
 
 @mixin heading-h5 {
   @include font-size('h5', 1.5);
-  font-family: $bold;
-  padding-top: $quarter-spacing-unit/2;
-  margin-bottom: $quarter-spacing-unit/4;
-  @include media(medium) {
-    padding-top: $quarter-spacing-unit;
-    margin-bottom: $quarter-spacing-unit/2;
-  }
+  @include eighth-margin-bottom;
+  @include eighth-padding-top;
 }
 
 @mixin heading-h6 {
   @include font-size('h6', 1.2);
-  font-family: $bold;
-  padding-top: $quarter-spacing-unit/4;
-  margin-bottom: $quarter-spacing-unit/8;
-  @include media(medium) {
-    padding-top: $quarter-spacing-unit;
-    margin-bottom: $quarter-spacing-unit/4;
-  }
+  @include sixteenth-margin-bottom;
+  @include quarter-padding-top;
 }
 
 @mixin intro-text {
   @include font-size('lead', 1.6);
-  margin-bottom: $quarter-spacing-unit/2;
-  @include media(medium) {
-    margin-bottom: $quarter-spacing-unit;
-  }
+  @include quarter-margin-bottom;
+  font-family: $regular;
 }
 
 @mixin small {
   @include font-size('small', 1.25);
+  @include sixteenth-margin-bottom;
+  @include quarter-padding-top;
+  font-family: $regular;
 }
-
 
 
 // Other typographic elements
 @mixin blockquote {
   @include font-size('blockquote');
-  margin: 0 0 $half-spacing-unit;
+  @include half-margin-bottom;
   padding: $quarter-spacing-unit;
   background-color: $offwhite;
+  font-family: $regular;
 
   cite {
     margin-top: $quarter-spacing-unit;
@@ -133,7 +261,7 @@ Typography mixins - Co-op Front-end Toolkit
 
 @mixin cite {
   display: block;
-  font-family: $regular-italic;
+  font-family: $regular;
   font-size: 0.75em;
 
   &:before {
