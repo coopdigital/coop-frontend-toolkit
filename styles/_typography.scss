@@ -22,10 +22,8 @@ p,
 ul,
 ol {
   @include body;
-  margin-bottom: $half-spacing-unit/2;
-  @include media(medium) {
-    margin-bottom: $half-spacing-unit;
-  }
+  @include half-margin-bottom;
+  font-family: $regular;
 }
 
 .h-mega {

@@ -8,16 +8,19 @@
 // _variables.scss for more information.
 @import "colours";
 @import "variables";
-
-// Core styles
+// Reset
 @import "normalize";
+// Core styles
+// @import "typesettings";
 @import "helpers";
 @import "fonts";
+@import "typography";
 @import "global";
 @import "logo";
 @import "grid";
 @import "links";
-@import "typography";
+
+
 @import "lists";
 @import "icons";
 @import "tables";
