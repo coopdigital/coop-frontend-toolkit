@@ -21,8 +21,11 @@ address {
 p,
 ul,
 ol {
-  font-size: 1em;
-  margin-bottom: $half-spacing-unit;
+  @include body;
+  margin-bottom: $half-spacing-unit/2;
+  @include media(medium) {
+    margin-bottom: $half-spacing-unit;
+  }
 }
 
 .h-mega {

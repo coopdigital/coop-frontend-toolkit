@@ -18,21 +18,29 @@ $ie: 999 !default;
 // Fonts
 $typographic-scale: (
   base: (
+    body: 16px,
+    h-mega: 46px,
+    h1: 30px,
+    h2: 20px,
+    h3: 18px,
+    h4: 18px,
+    h5: 18px,
+    h6: 13px,
+    blockquote: 18px,
+    lead: 20px,
+    small: 13px
+  ),
+  medium: (
     body: 20px,
     h-mega: 52px,
     h1: 46px,
     h2: 26px,
-    h3: 20px,
-    h4: 20px,
-    h5: 20px,
+    h3: 22px,
+    h4: 22px,
+    h5: 22px,
     h6: 16px,
-    blockquote: 35px,
+    blockquote: 22px,
     lead: 26px,
-    small: 13px
-  ),
-  medium: (
-    h-mega: 60px,
-    h1: 46px,
     small: 13px
   )
 ) !default;
@@ -44,7 +52,7 @@ $base-spacing-unit: 64px !default;
 $three-quarter-spacing-unit: $base-spacing-unit / 4 * 3 !default; // 45px
 $half-spacing-unit: $base-spacing-unit / 2 !default; // 32px
 $quarter-spacing-unit: $half-spacing-unit / 2 !default; // 16px
-$sixth-spacing-unit: $base-spacing-unit / 6 !default; // 10.66666667px
+$sixth-spacing-unit: $base-spacing-unit / 6 !default; // 10.66666667px (legacy)
 $eighth-spacing-unit: $base-spacing-unit / 8 !default; // 8px
 
 
