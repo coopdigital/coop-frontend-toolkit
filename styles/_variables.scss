@@ -14,6 +14,14 @@ $base-asset-url: '../' !default;
 // Maximum IE version targetted by the generated stylesheet.
 $ie: 999 !default;
 
+$base-line-height: 1.6 !default; // 32px
+$base-spacing-unit: 64px !default;
+$three-quarter-spacing-unit: $base-spacing-unit / 4 * 3 !default; // 45px
+$half-spacing-unit: $base-spacing-unit / 2 !default; // 32px
+$quarter-spacing-unit: $half-spacing-unit / 2 !default; // 16px
+$sixth-spacing-unit: $base-spacing-unit / 6 !default; // 10.66666667px (legacy)
+$eighth-spacing-unit: $base-spacing-unit / 8 !default; // 8px
+
 
 $typographic-scale: (
   base: (
@@ -30,10 +38,6 @@ $typographic-scale: (
     small: 13px,
     base-line-height: 1.7,
     base-spacing-unit: 32px,
-    half-spacing-unit: 16px,
-    quarter-spacing-unit: 8px,
-    eighth-spacing-unit: 4px,
-    sixteenth-spacing-unit: 4px
   ),
   medium: (
     body: 20px,
@@ -49,21 +53,8 @@ $typographic-scale: (
     small: 13px,
     base-line-height: 1.6,
     base-spacing-unit: 64px,
-    half-spacing-unit: 32px,
-    quarter-spacing-unit: 16px,
-    eighth-spacing-unit: 8px,
-    sixteenth-spacing-unit: 4px
   )
 ) !default;
-
-
-$base-line-height: 1.6 !default; // 32px
-$base-spacing-unit: 64px !default;
-$three-quarter-spacing-unit: $base-spacing-unit / 4 * 3 !default; // 45px
-$half-spacing-unit: $base-spacing-unit / 2 !default; // 32px
-$quarter-spacing-unit: $half-spacing-unit / 2 !default; // 16px
-$sixth-spacing-unit: $base-spacing-unit / 6 !default; // 10.66666667px (legacy)
-$eighth-spacing-unit: $base-spacing-unit / 8 !default; // 8px
 
 
 // Border radius
