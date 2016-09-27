@@ -38,152 +38,102 @@ Typography amd Vertical Rhythm mixins - Co-op Front-end Toolkit
   }
 }
 
+$spacing-type: 'margin', 'padding';
+$spacing-direction: 'top', 'left', 'bottom', 'right', 'all';
+$spacing-rhythm: 'base', 'half', 'quarter', 'eighth', 'sixteenth';
 
-@mixin base-margin-bottom($spacing-unit: 'base-spacing-unit') {
-  margin-bottom: (map-deep-get($typographic-scale, "base", $spacing-unit));
+@mixin spacing($spacing-type, $spacing-direction, $spacing-rhythm, $spacing-unit: 'base-spacing-unit', $hyphen: '-' ) {
+
+  @if $spacing-rhythm == 'base' {
+    @if $spacing-direction == 'all' {
+      #{$spacing-type}: (map-deep-get($typographic-scale, 'base', $spacing-unit));
+    }
+    @else {
+      #{$spacing-type}#{$hyphen}#{$spacing-direction}: (map-deep-get($typographic-scale, 'base', $spacing-unit));
+    }
+  }
+  @if $spacing-rhythm == 'half' {
+      @if $spacing-direction == 'all' {
+        #{$spacing-type}: ((map-deep-get($typographic-scale, 'base', $spacing-unit)) / 2);
+      }
+      @else {
+        #{$spacing-type}#{$hyphen}#{$spacing-direction}: ((map-deep-get($typographic-scale, 'base', $spacing-unit)) / 2);
+      }
+  }
+  @if $spacing-rhythm == 'quarter' {
+      @if $spacing-direction == 'all' {
+        #{$spacing-type}: ((map-deep-get($typographic-scale, 'base', $spacing-unit)) / 4);
+      }
+      @else {
+        #{$spacing-type}#{$hyphen}#{$spacing-direction}: ((map-deep-get($typographic-scale, 'base', $spacing-unit)) / 4);
+      }
+  }
+  @if $spacing-rhythm == 'eighth' {
+      @if $spacing-direction == 'all' {
+        #{$spacing-type}: ((map-deep-get($typographic-scale, 'base', $spacing-unit)) / 8);
+      }
+      @else {
+        #{$spacing-type}#{$hyphen}#{$spacing-direction}: ((map-deep-get($typographic-scale, 'base', $spacing-unit)) / 8);
+      }
+  }
+  @if $spacing-rhythm == 'sixteenth' {
+      @if $spacing-direction == 'all' {
+        #{$spacing-type}: ((map-deep-get($typographic-scale, 'base', $spacing-unit)) / 16);
+      }
+      @else {
+        #{$spacing-type}#{$hyphen}#{$spacing-direction}: ((map-deep-get($typographic-scale, 'base', $spacing-unit)) / 16);
+      }
+  }
 
   @each $screen-size in map-keys($typographic-scale) {
     @if $screen-size != 'base' {
       @if map-deep-get($typographic-scale, $screen-size, $spacing-unit) {
         @include media($screen-size) {
-          margin-bottom: (map-deep-get($typographic-scale, $screen-size, $spacing-unit));
+          @if $spacing-rhythm == 'base' {
+            @if $spacing-direction == 'all' {
+              #{$spacing-type}: (map-deep-get($typographic-scale, 'base', $spacing-unit));
+            }
+            @else {
+              #{$spacing-type}#{$hyphen}#{$spacing-direction}: (map-deep-get($typographic-scale, $screen-size, $spacing-unit));
+            }
+          }
+          @if $spacing-rhythm == 'half' {
+            @if $spacing-direction == 'all' {
+              #{$spacing-type}: ((map-deep-get($typographic-scale, $screen-size, $spacing-unit)) / 2);
+            }
+            @else {
+              #{$spacing-type}#{$hyphen}#{$spacing-direction}: ((map-deep-get($typographic-scale, $screen-size, $spacing-unit)) / 2);
+            }
+          }
+          @if $spacing-rhythm == 'quarter' {
+            @if $spacing-direction == 'all' {
+              #{$spacing-type}: ((map-deep-get($typographic-scale, 'base', $spacing-unit)) / 4);
+            }
+            @else {
+              #{$spacing-type}#{$hyphen}#{$spacing-direction}: ((map-deep-get($typographic-scale, $screen-size, $spacing-unit)) / 4);
+            }
+          }
+          @if $spacing-rhythm == 'eighth' {
+            @if $spacing-direction == 'all' {
+              #{$spacing-type}: ((map-deep-get($typographic-scale, 'base', $spacing-unit)) / 8);
+            }
+            @else {
+              #{$spacing-type}#{$hyphen}#{$spacing-direction}: ((map-deep-get($typographic-scale, $screen-size, $spacing-unit)) / 8);
+            }
+          }
+          @if $spacing-rhythm == 'sixteenth' {
+            @if $spacing-direction == 'all' {
+              #{$spacing-type}: ((map-deep-get($typographic-scale, 'base', $spacing-unit)) / 16);
+            }
+            @else {
+              #{$spacing-type}#{$hyphen}#{$spacing-direction}: ((map-deep-get($typographic-scale, $screen-size, $spacing-unit)) / 16);
+            }
+          }
         }
       }
     }
   }
 }
-
-
-@mixin half-margin-bottom($spacing-unit: 'half-spacing-unit')  {
-margin-bottom: (map-deep-get($typographic-scale, "base", $spacing-unit));
-
-  @each $screen-size in map-keys($typographic-scale) {
-    @if $screen-size != 'base' {
-      @if map-deep-get($typographic-scale, $screen-size, $spacing-unit) {
-        @include media($screen-size) {
-          margin-bottom: (map-deep-get($typographic-scale, $screen-size, $spacing-unit));
-        }
-      }
-    }
-  }
-}
-
-@mixin quarter-margin-bottom($spacing-unit: 'quarter-spacing-unit')  {
-margin-bottom: (map-deep-get($typographic-scale, "base", $spacing-unit));
-
-  @each $screen-size in map-keys($typographic-scale) {
-    @if $screen-size != 'base' {
-      @if map-deep-get($typographic-scale, $screen-size, $spacing-unit) {
-        @include media($screen-size) {
-          margin-bottom: (map-deep-get($typographic-scale, $screen-size, $spacing-unit));
-        }
-      }
-    }
-  }
-}
-
-@mixin eighth-margin-bottom($spacing-unit: 'eighth-spacing-unit')  {
-margin-bottom: (map-deep-get($typographic-scale, "base", $spacing-unit));
-
-  @each $screen-size in map-keys($typographic-scale) {
-    @if $screen-size != 'base' {
-      @if map-deep-get($typographic-scale, $screen-size, $spacing-unit) {
-        @include media($screen-size) {
-          margin-bottom: (map-deep-get($typographic-scale, $screen-size, $spacing-unit));
-        }
-      }
-    }
-  }
-}
-
-@mixin sixteenth-margin-bottom($spacing-unit: 'sixteenth-spacing-unit')  {
-margin-bottom: (map-deep-get($typographic-scale, "base", $spacing-unit));
-
-  @each $screen-size in map-keys($typographic-scale) {
-    @if $screen-size != 'base' {
-      @if map-deep-get($typographic-scale, $screen-size, $spacing-unit) {
-        @include media($screen-size) {
-          margin-bottom: (map-deep-get($typographic-scale, $screen-size, $spacing-unit));
-        }
-      }
-    }
-  }
-}
-
-
-@mixin base-padding-top($spacing-unit: 'base-spacing-unit') {
-  padding-top: (map-deep-get($typographic-scale, "base", $spacing-unit));
-
-  @each $screen-size in map-keys($typographic-scale) {
-    @if $screen-size != 'base' {
-      @if map-deep-get($typographic-scale, $screen-size, $spacing-unit) {
-        @include media($screen-size) {
-          padding-top: (map-deep-get($typographic-scale, $screen-size, $spacing-unit));
-        }
-      }
-    }
-  }
-}
-
-@mixin half-padding-top($spacing-unit: 'half-spacing-unit')  {
-padding-top: (map-deep-get($typographic-scale, "base", $spacing-unit));
-
-  @each $screen-size in map-keys($typographic-scale) {
-    @if $screen-size != 'base' {
-      @if map-deep-get($typographic-scale, $screen-size, $spacing-unit) {
-        @include media($screen-size) {
-          padding-top: (map-deep-get($typographic-scale, $screen-size, $spacing-unit));
-        }
-      }
-    }
-  }
-}
-
-
-@mixin quarter-padding-top($spacing-unit: 'quarter-padding-top')  {
-padding-top: (map-deep-get($typographic-scale, "base", $spacing-unit));
-
-  @each $screen-size in map-keys($typographic-scale) {
-    @if $screen-size != 'base' {
-      @if map-deep-get($typographic-scale, $screen-size, $spacing-unit) {
-        @include media($screen-size) {
-          padding-top: (map-deep-get($typographic-scale, $screen-size, $spacing-unit));
-        }
-      }
-    }
-  }
-}
-
-
-@mixin eighth-padding-top($spacing-unit: 'eighth-spacing-unit')  {
-padding-top: (map-deep-get($typographic-scale, "base", $spacing-unit));
-
-  @each $screen-size in map-keys($typographic-scale) {
-    @if $screen-size != 'base' {
-      @if map-deep-get($typographic-scale, $screen-size, $spacing-unit) {
-        @include media($screen-size) {
-          padding-top: (map-deep-get($typographic-scale, $screen-size, $spacing-unit));
-        }
-      }
-    }
-  }
-}
-
-
-@mixin sixteenth-padding-top($spacing-unit: 'sixteenth-spacing-unit')  {
-padding-top: (map-deep-get($typographic-scale, "base", $spacing-unit));
-
-  @each $screen-size in map-keys($typographic-scale) {
-    @if $screen-size != 'base' {
-      @if map-deep-get($typographic-scale, $screen-size, $spacing-unit) {
-        @include media($screen-size) {
-          padding-top: (map-deep-get($typographic-scale, $screen-size, $spacing-unit));
-        }
-      }
-    }
-  }
-}
-
 
 @mixin body {
   @include font-size('body');
@@ -192,55 +142,55 @@ padding-top: (map-deep-get($typographic-scale, "base", $spacing-unit));
 // Headings
 @mixin heading-mega {
   @include font-size('h-mega', 1.22);
-  @include half-margin-bottom;
-  @include half-padding-top;
+  @include spacing('margin', 'bottom', 'half');
+  @include spacing('padding', 'top', 'half');
 }
 
 @mixin heading-h1 {
   @include font-size('h1', 1.4);
-  @include half-margin-bottom;
+  @include spacing('margin', 'bottom', 'half');
 }
 
 @mixin heading-h2 {
   @include font-size('h2', 1.5);
-  @include half-padding-top;
-  @include eighth-margin-bottom;
+  @include spacing('padding', 'top', 'half');
+  @include spacing('margin', 'bottom', 'eighth');
 }
 
 @mixin heading-h3 {
   @include font-size('h3', 1.5);
-  @include eighth-margin-bottom;
-  @include eighth-padding-top;
+  @include spacing('padding', 'top', 'eighth');
+  @include spacing('margin', 'bottom', 'eighth');
 }
 
 @mixin heading-h4 {
   @include font-size('h4', 1.5);
-  @include eighth-margin-bottom;
-  @include eighth-padding-top;
+  @include spacing('padding', 'top', 'eighth');
+  @include spacing('margin', 'bottom', 'eighth');
 }
 
 @mixin heading-h5 {
   @include font-size('h5', 1.5);
-  @include eighth-margin-bottom;
-  @include eighth-padding-top;
+  @include spacing('padding', 'top', 'eighth');
+  @include spacing('margin', 'bottom', 'eighth');
 }
 
 @mixin heading-h6 {
   @include font-size('h6', 1.2);
-  @include sixteenth-margin-bottom;
-  @include quarter-padding-top;
+  @include spacing('padding', 'top', 'quarter');
+  @include spacing('margin', 'bottom', 'sixteenth');
 }
 
 @mixin intro-text {
   @include font-size('lead', 1.6);
-  @include quarter-margin-bottom;
+  @include spacing('margin', 'bottom', 'eighth');
   font-family: $regular;
 }
 
 @mixin small {
   @include font-size('small', 1.25);
-  @include sixteenth-margin-bottom;
-  @include quarter-padding-top;
+  @include spacing('padding', 'top', 'quarter');
+  @include spacing('margin', 'bottom', 'sixteenth');
   font-family: $regular;
 }
 
@@ -248,13 +198,15 @@ padding-top: (map-deep-get($typographic-scale, "base", $spacing-unit));
 // Other typographic elements
 @mixin blockquote {
   @include font-size('blockquote');
-  @include half-margin-bottom;
-  padding: $quarter-spacing-unit;
+  @include spacing('margin', 'bottom', 'half');
+  @include spacing('padding', 'all', 'half');
+  margin-left: 0;
+  margin-right: 0;
   background-color: $offwhite;
   font-family: $regular;
 
   cite {
-    margin-top: $quarter-spacing-unit;
+    @include spacing('margin', 'top', 'quarter');
   }
 
 }
