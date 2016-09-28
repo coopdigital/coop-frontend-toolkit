@@ -7,24 +7,27 @@ Buttons mixins - Co-op Front-end Toolkit
 
 %button-base {
   display: inline-block;
-  border: 0;
-  border-radius: $border-radius;
   padding: $quarter-spacing-unit $half-spacing-unit * 1.25;
-  text-align: center;
   color: $coop-link-blue;
-  background-color: $offwhite;
-  border: 1px solid $offwhite;
   font-family: $medium;
-  font-size: em-calc(18);
-  line-height: 1.5;
+  // font-size: em-calc(20px);
+  text-align: center;
+  border: 0;
+  background-color: $white;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.4), #6e6e6e 0px 0px 1px inset;
   transition: all 0.15s linear;
   outline: none;
 
   &:hover,
   &:focus {
-    background-color: darken($offwhite, 5%);
-    border: 1px solid darken($offwhite, 5%);
-    color: $coop-link-blue;
+    background: $offwhite;
+    border: 0;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5), #505050 0px 0px 1px inset;
+  }
+
+  &:focus {
+    outline: 4px solid $coop-blue;
   }
 
   &:disabled,
@@ -32,30 +35,21 @@ Buttons mixins - Co-op Front-end Toolkit
     opacity: .75;
     cursor: not-allowed;
     box-shadow: none;
-
-    &:hover,
-    &:focus {
-      background-color: $offwhite;
-    }
   }
+
 }
 
 @mixin button-colour($text-colour: $coop-link-blue,
                      $hover-text-colour: $coop-blue-highlighted,
                      $bg-colour: $white,
-                     $border-colour: $coop-grey,
-                     $hover-border-colour: $hover-border-colour,
-                     $shadow-colour: darken($offwhite, 8%),
-                     $hover-bg-colour: darken($offwhite, 5%)) {
+                     $hover-bg-colour: #fafafa) {
 
   color: $text-colour;
   background-color: $bg-colour;
-  border: 1px solid $border-colour;
 
   &:hover,
   &:focus {
     background-color: $hover-bg-colour;
-    border-color: $hover-border-colour;
     color: $hover-text-colour;
   }
 
@@ -93,6 +87,29 @@ Buttons mixins - Co-op Front-end Toolkit
 %btn-pill {
   margin: .25em .25em .25em 0;
   box-shadow: none !important;
+  border: 1px solid $coop-border-grey;
+
+  &:hover {
+    border: 1px solid $coop-border-grey;
+  }
+
+  &.btn-primary {
+    border: 1px solid $button-green;
+  }
+
+  &.btn-primary-dark {
+    border: 1px solid $button-grey;
+  }
+
+  &.btn-secondary {
+    border: 1px solid $coop-border-grey;
+
+    &:hover {
+      border: 1px solid $coop-border-grey;
+    }
+
+  }
+
 }
 
 %btn-loading {
