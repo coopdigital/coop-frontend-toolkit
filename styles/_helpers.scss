@@ -13,9 +13,9 @@ Helpers - Co-op Front-end Toolkit
 .button-green { color: $button-green; }
 .button-green-bg { background: $button-green; }
 .button-green-highlighted-bg { background: $button-green-highlighted; }
-// .button-secondary-grey { color: $button-secondary-grey }
-// .button-secondary-grey-bg { background: $button-secondary-grey }
-// .button-secondary-grey-border { border: 1px solid $button-secondary-grey; }
+.button-primary-dark { color: $button-grey; }
+.button-primary-dark-bg { background: $button-grey; }
+.button-primary-dark-highlighted-bg { background: lighten($button-grey, 10%); }
 .success-green { color: $success-green; }
 .success-green-bg { background: $success-green; }
 .info-orange { color: $info-orange; }
