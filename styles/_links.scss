@@ -27,6 +27,7 @@ a {
 }
 
 @mixin link-black {
+  
   color: $body-copy;
   border-bottom: .075em solid $body-copy;
   text-decoration: none;
@@ -46,6 +47,7 @@ a {
 }
 
 @mixin link-white {
+
   color: $white;
   border-bottom: .075em solid $white;
 

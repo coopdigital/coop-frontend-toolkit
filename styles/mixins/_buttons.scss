@@ -6,11 +6,11 @@ Buttons mixins - Co-op Front-end Toolkit
 @import "../mixins/icons";
 
 %button-base {
+  @include body;
   display: inline-block;
   padding: $quarter-spacing-unit $half-spacing-unit * 1.25;
   color: $coop-link-blue;
   font-family: $medium;
-  // font-size: em-calc(20px);
   text-align: center;
   border: 0;
   background-color: $white;
