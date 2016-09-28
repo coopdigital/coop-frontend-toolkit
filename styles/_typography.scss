@@ -21,6 +21,7 @@ address {
 p,
 ul,
 ol{
+  @include body;
   @include spacing('margin', 'bottom', 'half');
   font-family: $regular;
 }
