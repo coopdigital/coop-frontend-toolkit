@@ -8,8 +8,8 @@ Toggles - Co-op Front-end Toolkit
   display: block;
   padding: $quarter-spacing-unit;
   margin-bottom: $quarter-spacing-unit;
-  border: 2px dotted $coop-grey;
-  border-width: 2px 0;
+  border: 1px solid $coop-grey;
+  border-width: 1px 0;
   color: $coop-grey;
   transition: all .3s linear;
 
@@ -17,7 +17,7 @@ Toggles - Co-op Front-end Toolkit
   &:focus {
     background: $offwhite;
     color: $coop-blue;
-    border-bottom: 2px dotted $coop-grey;
+    border-bottom: 1px solid $coop-grey;
   }
 
   &.init {
@@ -27,6 +27,7 @@ Toggles - Co-op Front-end Toolkit
       @extend %icon-down-arrow-button;
       float: right;
       transition: all .15s linear;
+      font-size: em-calc(20px);
     }
 
     &.open {
@@ -57,7 +58,7 @@ Toggles - Co-op Front-end Toolkit
 }
 
 .accordion {
-  border-bottom: 2px dotted $coop-grey;
+  border-bottom: 1px solid $coop-grey;
 
   .toggle-trigger {
     margin-bottom: 0;
@@ -65,7 +66,7 @@ Toggles - Co-op Front-end Toolkit
 
     &.open {
       margin-bottom: $quarter-spacing-unit;
-      border-bottom-width: 2px;
+      border-bottom-width: 1px;
     }
   }
 }

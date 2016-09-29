@@ -6,13 +6,13 @@ Messages/alerts mixins - Co-op Front-end Toolkit
 @import "../mixins/icons";
 
 %message {
+  @include spacing('margin', 'bottom', 'half');
   position: relative;
   padding: $quarter-spacing-unit $quarter-spacing-unit $quarter-spacing-unit $base-spacing-unit;
-  margin-bottom: $half-spacing-unit;
   border: 1px solid $coop-blue;
   background: $white;
   color: $coop-blue;
-  font-size: em-calc(18);
+  font-size: em-calc(16px);
 
   p,
   ul,
