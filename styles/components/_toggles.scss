@@ -10,7 +10,8 @@ Toggles - Co-op Front-end Toolkit
   margin-bottom: $quarter-spacing-unit;
   border: 1px solid $coop-grey;
   border-width: 1px 0;
-  color: $coop-grey;
+  color: $body-copy;
+  font-size: em-calc(20px);
   transition: all .3s linear;
 
   &:hover,
@@ -27,7 +28,7 @@ Toggles - Co-op Front-end Toolkit
       @extend %icon-down-arrow-button;
       float: right;
       transition: all .15s linear;
-      font-size: em-calc(20px);
+      font-size: em-calc(24px);
     }
 
     &.open {

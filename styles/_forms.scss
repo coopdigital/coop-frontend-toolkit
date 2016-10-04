@@ -43,7 +43,7 @@ select {
 }
 
 .block-label {
-   @include tap-check;
+  @include tap-check;
 }
 
 .tap-input {
