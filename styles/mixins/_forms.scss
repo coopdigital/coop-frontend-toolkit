@@ -7,7 +7,6 @@ Forms mixins - Co-op Front-end Toolkit
 
 %form-row {
   @include clearfix;
-
   margin-bottom: $quarter-spacing-unit;
 }
 
@@ -21,7 +20,8 @@ Forms mixins - Co-op Front-end Toolkit
 %form-label {
   display: block;
   margin: 0 0 $quarter-spacing-unit / 2;
-  font-size: em-calc(20);
+  font-size: em-calc(24);
+  font-family: $medium;
 }
 
 @mixin form-field($include-presuffix: true) {
@@ -221,6 +221,10 @@ Forms mixins - Co-op Front-end Toolkit
     border-color: $coop-grey;
   }
 
+  &.input-strong:checked  + label {
+    border-color: $coop-blue;
+  }
+
   @include ie(8) {
     position: relative;
     left: 0;
@@ -235,10 +239,10 @@ Forms mixins - Co-op Front-end Toolkit
 }
 
 @mixin tap-check {
-  padding: calc(#{$quarter-spacing-unit} + .2em) calc(#{$half-spacing-unit} + 1.4em);
+  padding: calc(#{$quarter-spacing-unit} + .1em) calc(#{$half-spacing-unit} + 1.4em);
   background: $offwhite;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: em-calc(20);
   font-weight: $regular;
   border: 2px solid transparent;
   cursor: pointer;
@@ -269,9 +273,9 @@ Forms mixins - Co-op Front-end Toolkit
         box-shadow: none;
       }
     }
-  }  
+  }
 
-  input[type=radio], 
+  input[type=radio],
   input[type=checkbox] {
     position: absolute;
     width: auto;

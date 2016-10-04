@@ -205,6 +205,10 @@ $spacing-rhythm: 'base', 'half', 'quarter', 'eighth', 'sixteenth';
   background-color: $offwhite;
   font-family: $regular;
 
+  p {
+    margin-bottom: 0;
+  }
+
   cite {
     @include spacing('margin', 'top', 'quarter');
   }
