@@ -2,6 +2,30 @@
 Typography amd Vertical Rhythm mixins - Co-op Front-end Toolkit
 ===============================================================*/
 
+/*
+
+The typographic scale can be customised by overriding the default variable.
+To do so, set a new $typographic-scale variable with at least a base property
+containing all the default sizes. You can also pass optional extra breakpoints
+containing the sizes you want to modify as the screens get bigger.
+
+The typographic scale and vertical rhythm of all elements across all devices
+can be controlled using this variable. This means that by setting a scale and
+$base-spacing-unit you can maintain vertical rhythm by using our helper mixin.
+For instance by using @include spacing('margin', 'bottom', 'base') will set a
+margin-bottom to the element. 'Base', refers to the $base-spacing-unit set in
+the scale variable. At each break point the margin-bottom will be changed to
+reflect the value set. In this case the base (mobile) margin bottom will be
+32px and above the medium break point will be 64px.
+
+The mixin also allows you to pass other values that also fit to the scale (as
+they are derived by dividing the $base-spacing-unit by half each time).
+Therefore @include spacing('margin', 'bottom', 'quarter') would produce a
+margin-bottom: 16px above the medium breakpoint (in this example) and
+margin-bottom: 8px on mobile (or base break point).
+
+*/
+
 @import "../functions";
 @import "helpers";
 

@@ -28,6 +28,11 @@ button,
                          $hover-text-colour: $coop-link-blue,
                          $bg-colour: $white,
                          $hover-bg-colour: $offwhite);
+
+//                          $text-colour: $black,
+//                          $hover-text-colour: $black,
+//                          $bg-colour: #BDCCDB,
+//                          $hover-bg-colour: $offwhite);
  &:disabled,
  &.disabled {
    background-color: $offwhite;
