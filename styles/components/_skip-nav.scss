@@ -19,10 +19,10 @@ Skip navigation link - Co-op Front-end Toolkit
     position: absolute;
     left: -9999px;
     top: 0;
-    font-size: em-calc(18);
+    font-size: em-calc(20);
     padding: $quarter-spacing-unit / 2 $quarter-spacing-unit;
     color: $white;
-    background: $coop-blue;
+    background: $darker-grey;
     white-space: nowrap;
 
     &:after {
@@ -30,7 +30,7 @@ Skip navigation link - Co-op Front-end Toolkit
     }
 
     &:focus,
-    &:active {
+    &:active {  
       left: $quarter-spacing-unit;
     }
   }
