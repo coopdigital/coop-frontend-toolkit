@@ -75,6 +75,21 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) guidelines.
 
 ## Changelog
 
+###### 1.1.3
+Fix tables content copy colour
+Add `nowrap` helper
+###### 1.1.2
+Added info banner component
+###### 1.1.1
+Travis CI integration
+###### 1.1.0
+Customisable typographic scale
+Toggles modules
+More consistent JS test fixtures
+Darker default body text
+Video wrapper module
+Freeform media queries
+Several tweaks and fixes
 ###### 1.0.0
 'Public' release
 ###### 0.1.5
