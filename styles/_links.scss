@@ -11,10 +11,7 @@ a {
     color: $coop-link-blue;
   }
 
-  &:active {
-    color: $coop-link-blue;
-  }
-
+  &:active,
   &:focus {
     transition: none;
     outline: 4px solid $coop-blue-highlighted;
@@ -27,7 +24,7 @@ a {
 }
 
 @mixin link-black {
-  
+
   color: $body-copy;
   border-bottom: .075em solid $body-copy;
   text-decoration: none;
