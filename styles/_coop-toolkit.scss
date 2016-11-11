@@ -6,12 +6,13 @@
 // there is no overhead when including them.
 // The variables can be overridden by providing alternative defaults: refer to
 // _variables.scss for more information.
+
 @import "colours";
 @import "variables";
 // Reset
 @import "normalize";
+
 // Core styles
-// @import "typesettings";
 @import "helpers";
 @import "fonts";
 @import "typography";
@@ -19,8 +20,6 @@
 @import "logo";
 @import "grid";
 @import "links";
-
-
 @import "lists";
 @import "icons";
 @import "tables";
@@ -35,7 +34,7 @@
 @import "components/navigation-main";
 @import "components/footer-main";
 @import "components/skip-nav";
-@import "components/panels";
+@import "components/tiles";
 @import "components/messages";
 @import "components/pagination";
 @import "components/breadcrumbs";
