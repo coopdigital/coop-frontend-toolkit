@@ -1,0 +1,47 @@
+/*===============================================
+Tiles - Co-op Front-end Toolkit
+===============================================*/
+
+%panel,
+%tile,
+.panel,
+.tile {
+  @include spacing('padding', 'all', 'half');
+  @include spacing('margin', 'bottom', 'half');
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+%boxed,
+.boxed,
+%tile--key,
+.tile--key {
+  @extend %panel;
+
+  border: 1px solid $coop-border-grey;
+}
+
+%panel-grey,
+.panel-grey,
+%tile--grey,
+.tile--grey {
+  @extend %panel;
+
+  background: $offwhite;
+}
+
+%tile--rounded,
+.tile--rounded {
+  border-radius: $border-radius;
+}
+
+%tile--shadow,
+.tile--shadow {
+  box-shadow: 0 2px 3px 0 $offwhite-highlighted;
+}

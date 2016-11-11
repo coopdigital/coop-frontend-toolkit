@@ -21,6 +21,13 @@ label {
   @extend %form-label;
 }
 
+.label__hint {
+  display: block;
+  color: $coop-grey;
+  font-size: em-calc(14px);
+  font-family: $regular;
+}
+
 fieldset {
   border: none;
   padding: 0;
