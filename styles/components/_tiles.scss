@@ -9,7 +9,7 @@ Tiles - Co-op Front-end Toolkit
   @include spacing('padding', 'all', 'half');
   @include spacing('margin', 'bottom', 'half');
 
-  > :first-child {
+  > :first-child {  
     margin-top: 0;
   }
 
