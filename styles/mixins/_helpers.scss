@@ -100,3 +100,7 @@ Helpers mixins - Co-op Front-end Toolkit
 @mixin clear-none {
   clear: none;
 }
+
+.clearfix {
+  @include clearfix;
+}

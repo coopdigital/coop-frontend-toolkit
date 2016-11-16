@@ -11,7 +11,7 @@ Global - Co-op Front-end Toolkit
 html,
 body {
   font-size: em-calc(map-deep-get($typographic-scale, "base", "body"));
-  overflow-x: hidden;
+  // overflow-x: hidden;
 
   @include ie(8) {
     overflow-x: auto;
