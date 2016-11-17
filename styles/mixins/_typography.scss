@@ -198,33 +198,43 @@ $spacing-rhythm: 'base', 'half', 'quarter', 'eighth', 'sixteenth';
 
 // Other typographic elements
 @mixin blockquote {
-  @include font-size('blockquote');
   @include spacing('margin', 'bottom', 'half');
   @include spacing('padding', 'all', 'half');
   margin-left: 0;
   margin-right: 0;
-  background-color: $offwhite;
+  background-color: $white;
+  border-left: 5px solid $coop-brand-blue;
   font-family: $regular;
 
+  @include media(medium) {
+    margin-left: 60px;
+  }
+
+  .h1,
+  .alpha {
+    @include heading-h1;
+  }
+
+  .beta,
   p {
+    @include heading-h2;
+  }
+
+  .h1,
+  .alpha,
+  p,
+  .beta {
+    font-family: $regular;
     margin-bottom: 0;
   }
 
   cite {
+    @include body;
     @include spacing('margin', 'top', 'quarter');
+    font-family: $regular;
     font-style: normal;
   }
 
-}
-
-@mixin cite {
-  display: block;
-  font-family: $regular;
-  font-size: 0.75em;
-
-  &:before {
-    content: '';
-  }
 }
 
 // Text styles
