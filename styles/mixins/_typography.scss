@@ -237,6 +237,12 @@ $spacing-rhythm: 'base', 'half', 'quarter', 'eighth', 'sixteenth';
 
 }
 
+@mixin cite {
+  display: block;
+  font-family: $regular;
+  font-size: 0.75em;
+}
+
 // Text styles
 @mixin regular {
   font-family: $regular;
