@@ -10,7 +10,7 @@ Typography amd Vertical Rhythm mixins - Co-op Front-end Toolkit
   font-family: $bold;
 
   @if $line-height != $base-line-height {
-    line-height: $line-height;
+    line-height: $line-height;  
   }
 
   @each $screen-size in map-keys($typographic-scale) {
