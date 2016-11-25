@@ -9,7 +9,7 @@ Tiles - Co-op Front-end Toolkit
   @include spacing('padding', 'all', 'half');
   @include spacing('margin', 'bottom', 'half');
 
-  > :first-child {  
+  > :first-child {
     margin-top: 0;
   }
 
@@ -44,4 +44,41 @@ Tiles - Co-op Front-end Toolkit
 %tile--shadow,
 .tile--shadow {
   box-shadow: 0 2px 3px 0 $offwhite-highlighted;
+}
+
+%tile--signpost,
+.tile--signpost {
+  border-bottom: 2px solid #EAEAEA;
+}
+
+%tile--link,
+.tile--link {
+  display: block;
+  color: $body-copy;
+
+  h2,
+  h3 {
+    display: inline-block;
+    font-family: $regular; 
+    line-height: 1.1;
+    color: $coop-link-blue;
+    border-bottom: .075em solid $coop-link-blue;
+    @include spacing('margin', 'bottom', 'quarter');
+  }
+
+  p {
+    @include spacing('margin', 'bottom', 'half');
+  }
+
+  &:hover,
+  &:active {
+    color: $body-copy;
+  }
+
+  &.tile--signpost {
+
+    &:hover {
+      // border-bottom: 2px solid lighten(#EAEAEA, 5%);
+    }
+  }
 }
