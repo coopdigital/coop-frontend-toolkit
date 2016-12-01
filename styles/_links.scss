@@ -2,70 +2,16 @@
 Links - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "mixins/links";
+
 a {
-  color: $coop-link-blue;
-  border-bottom: .075em solid $coop-link-blue;
-  text-decoration: none;
-
-  &:hover {
-    color: $coop-link-blue;
-  }
-
-  &:active,
-  &:focus {
-    transition: none;
-    outline: 4px solid $coop-blue-highlighted;
-  }
-
-  // &:visited {
-  //   color: $coop-link-visited;
-  //   border-bottom: 1px dotted $coop-link-visited;
-  // }
-}
-
-@mixin link-black {
-
-  color: $body-copy;
-  border-bottom: .075em solid $body-copy;
-  text-decoration: none;
-
-  &:hover {
-    color: $body-copy;
-  }
-
-  &:active {
-    color: $body-copy;
-  }
-
-  &:focus {
-    transition: none;
-    outline: 4px solid $coop-blue-highlighted;
-  }
-}
-
-@mixin link-white {
-
-  color: $white;
-  border-bottom: .075em solid $white;
-
-  &:hover {
-    color: $white;
-  }
-
-  &:active {
-    color: $white;
-  }
-
-  &:focus {
-    transition: none;
-    outline: 4px solid $coop-blue-highlighted;
-  }
+  @include link;
 }
 
 .link-white {
-  @include link-white;
+  @include link($white);
 }
 
 .link-black {
-  @include link-black;
+  @include link($body-copy);
 }
