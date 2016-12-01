@@ -13,11 +13,8 @@ Forms - Co-op Front-end Toolkit
   margin-bottom: $half-spacing-unit;
 }
 
+label,
 legend {
-  @extend %form-legend;
-}
-
-label {
   @extend %form-label;
 }
 
@@ -42,7 +39,6 @@ textarea  {
 
 textarea {
   resize: vertical;
-  transition: border-color .3s ease-in-out;
 }
 
 select {

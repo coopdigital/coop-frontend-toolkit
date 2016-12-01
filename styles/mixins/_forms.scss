@@ -10,18 +10,11 @@ Forms mixins - Co-op Front-end Toolkit
   margin-bottom: $quarter-spacing-unit;
 }
 
-%form-legend {
-  font-family: $medium;
-  display: block;
-  margin: 0 0 $quarter-spacing-unit / 2;
-  font-size: em-calc(25);
-}
-
 %form-label {
+  font-family: $medium;
   display: block;
   margin: 0 0 $quarter-spacing-unit / 2;
   font-size: em-calc(24);
-  font-family: $medium;
 }
 
 @mixin form-field($include-presuffix: true) {
