@@ -60,3 +60,66 @@ table {
   }
 
 }
+
+.unstyled-table {
+  border: 0;
+  margin-bottom: 0;
+  font-size: em-calc(16px);
+
+  @include media(medium) {
+    font-size: em-calc(20px);
+  }
+
+  th, td {
+    padding: $eighth-spacing-unit 0;
+
+    @include media(medium) {
+      padding: $quarter-spacing-unit;
+    }
+
+  }
+
+  .tr-divider {
+    border-bottom: 1px solid $coop-border-grey;
+  }
+
+  tbody th,
+  tbody td{
+    background: $white;
+    border-bottom: 0;
+    font-family: $regular;
+    font-weight: normal;
+  }
+
+  .table__bold {
+     font-family: $bold;
+     font-size: em-calc(20);
+     @include media(medium) {
+       font-size: em-calc(26);
+     }
+  }
+}
+
+.border-bottom {
+  border-bottom: 2px solid $coop-border-grey;
+}
+
+.table-header {
+  padding: 16px 0px 0px 0px;
+  margin-bottom: 0;
+
+  @include media(medium) {
+    padding: 16px 8px 10px 8px;
+  }
+}
+
+.tight--divider {
+  font-size: em-calc(18px);
+  @include spacing('padding', 'bottom', 'quarter');
+  margin-bottom: 0;
+  border-bottom: 2px solid $coop-border-grey;
+
+  @include media(medium) {
+    font-size: em-calc(22px);
+  }
+}
