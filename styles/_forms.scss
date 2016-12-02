@@ -2,8 +2,10 @@
 Forms - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "colours";
 @import "functions";
 @import "mixins/forms";
+@import "mixins/icons";
 
 .form-row {
   @extend %form-row;
