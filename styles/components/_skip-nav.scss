@@ -25,10 +25,6 @@ Skip navigation link - Co-op Front-end Toolkit
     background: $darker-grey;
     white-space: nowrap;
 
-    // &:after {
-    //   content: ' [' attr(accesskey) '] ';
-    // }
-
     &:focus,
     &:active {
       left: $quarter-spacing-unit;
