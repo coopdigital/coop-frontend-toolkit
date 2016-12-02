@@ -344,7 +344,7 @@ Forms mixins - Co-op Front-end Toolkit
 }
 
 %form-invalid {
-  border: 1px solid $saleerror-red !important;
+  border-color: $saleerror-red !important;
 }
 
 %form-error {
