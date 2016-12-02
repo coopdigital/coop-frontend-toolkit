@@ -4,6 +4,7 @@ Messages/alerts mixins - Co-op Front-end Toolkit
 
 @import "../functions";
 @import "../mixins/icons";
+@import "../mixins/typography";
 
 %message {
   @include spacing('margin', 'bottom', 'half');

@@ -2,6 +2,8 @@
 Navigation in page - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "../mixins/typography";
+
 .in-page-nav {
   @include spacing('padding', 'left', 'half');
   @include spacing('margin', 'bottom', 'base');
