@@ -6,30 +6,26 @@ For more information on all the available styles and modules, please refer to th
 
 ## Installation
 
-Install the Toolkit by adding it as a [Bower](http://bower.io/) or NPM package to your project:
-
-```
-bower install git@github.com:coopdigital/coop-frontend-toolkit.git --save
-```
-
-_or_
+Install the Toolkit by adding it as a NPM package to your project:
 
 ```
 npm install coopdigital/coop-frontend-toolkit --save
 ```
 
-_Note: if you are installing via Bower, in order for the dependency to be saved in your project, you may first need to run `bower init` to create the `bower.json` file._
+_Note: you will need to be a member of the Co-op Digital organisation on Github and have proper permissions on the repository._
 
-Alternatively, you can add the dependency to your project's `bower.json` or `package.json` directly then run `bower install` or `npm install`:
+Alternatively, you can add the dependency to your project's `package.json` using the org's auth token then run `npm install`:
 
 ```json
 {
   "name": "project-name",
   "dependencies": {
-    "coop-frontend-toolkit": "git@github.com:coopdigital/coop-frontend-toolkit.git"
+    "coop-frontend-toolkit": "git+https://f3d43faa6796617a649d989f03d2318ed1018cae:x-oauth-basic@github.com/coopdigital/coop-frontend-toolkit"
   }
 }
 ```
+
+_**Note: do not share the token or add it to any public repository, or it will be invalidated and will stop working!**_
 
 ## Usage
 
