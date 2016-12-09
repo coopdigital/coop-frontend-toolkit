@@ -2,6 +2,7 @@
 Skip navigation link - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "../colours";
 @import "../functions";
 
 .skip-nav {
@@ -24,10 +25,6 @@ Skip navigation link - Co-op Front-end Toolkit
     color: $white;
     background: $darker-grey;
     white-space: nowrap;
-
-    // &:after {
-    //   content: ' [' attr(accesskey) '] ';
-    // }
 
     &:focus,
     &:active {

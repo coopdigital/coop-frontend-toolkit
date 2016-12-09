@@ -39,12 +39,10 @@ First, if you haven't already done so, clone this repository:
 git clone git@github.com:coopdigital/coop-frontend-toolkit.git
 ```
 
-Once this is done, you need to make a local link of this package available to other local projects on your machine. In the toolkit workspace, create a local Bower and/or NPM link for the package:
+Once this is done, you need to make a local link of this package available to other local projects on your machine. In the toolkit workspace, create a local NPM link for the package:
 
 ```
 cd coop-frontend-toolkit
-bower link
-# or:
 npm link
 ```
 
@@ -52,9 +50,7 @@ This will make the `coop-frontend-toolkit` Bower or NPM package available locall
 
 ```
 cd other-project-using-toolkit
-bower link coop-frontend-toolkit
-# or:
 npm link coop-frontend-toolkit
 ```
 
-From now on, this local project will use the local version of the Bower or NPM package rather than the one hosted on Github: any changes made to the local Toolkit will now be available immediately in the other project, allowing you to preview changes instantly.
+From now on, this local project will use the local version of the NPM package rather than the one hosted on Github: any changes made to the local Toolkit will now be available immediately in the other project, allowing you to preview changes instantly.

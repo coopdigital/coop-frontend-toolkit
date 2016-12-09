@@ -2,6 +2,10 @@
 Tiles - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "../variables";
+@import "../colours";
+@import "../mixins/typography";
+
 %panel,
 %tile,
 .panel,
@@ -59,7 +63,7 @@ Tiles - Co-op Front-end Toolkit
   h2,
   h3 {
     display: inline-block;
-    font-family: $regular; 
+    font-family: $regular;
     line-height: 1.1;
     color: $coop-link-blue;
     border-bottom: .075em solid $coop-link-blue;

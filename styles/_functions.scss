@@ -2,6 +2,8 @@
 Functions - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "variables";
+
 /**
  * Returns a full-formed url based on the $base-url setting.
  * @param  {string} $url the relative URL for the resource
