@@ -69,11 +69,6 @@ table {
 .unstyled-table {
   border: 0;
   margin-bottom: 0;
-  font-size: em-calc(16px);
-
-  @include media(medium) {
-    font-size: em-calc(20px);
-  }
 
   th, td {
     padding: $eighth-spacing-unit 0;
@@ -86,6 +81,10 @@ table {
 
   .tr-divider {
     border-bottom: 1px solid $coop-border-grey;
+  }
+
+  thead th {
+    background: $white;
   }
 
   tbody th,
