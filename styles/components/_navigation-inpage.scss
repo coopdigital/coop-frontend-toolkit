@@ -5,7 +5,7 @@ Navigation in page - Co-op Front-end Toolkit
 .in-page-nav {
   @include spacing('padding', 'left', 'half');
   @include spacing('margin', 'bottom', 'base');
-  border-left: 10px solid #E5E5E5;
+  border-left: 10px solid $mid-grey;
   margin-left: 2px;
 
   li,
