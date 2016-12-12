@@ -10,7 +10,7 @@ Typography amd Vertical Rhythm mixins - Co-op Front-end Toolkit
   font-family: $bold;
 
   @if $line-height != $base-line-height {
-    line-height: $line-height;  
+    line-height: $line-height;
   }
 
   @each $screen-size in map-keys($typographic-scale) {
@@ -199,33 +199,33 @@ $spacing-rhythm: 'base', 'half', 'quarter', 'eighth', 'sixteenth';
 // Other typographic elements
 @mixin blockquote {
   @include spacing('margin', 'bottom', 'half');
-  @include spacing('padding', 'all', 'half');
-  margin-left: 0;
-  margin-right: 0;
-  background-color: $white;
-  border-left: 5px solid $coop-brand-blue;
-  font-family: $regular;
+  @include spacing('margin', 'left', 'quarter');
+  padding-left: .5em;
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    width: 45px;
+    height: 6px;
+    margin: $quarter-spacing-unit 0 $quarter-spacing-unit -.5em;
+    background: $light-grey;
+  }
 
   @include media(medium) {
-    margin-left: 60px;
+    @include spacing('margin', 'left', 'half');
   }
 
-  .h1,
-  .alpha {
-    @include heading-h1;
-  }
-
-  .beta,
   p {
-    @include heading-h2;
-  }
+    @include spacing('margin', 'bottom', 'quarter');
+    @include medium;
+    font-style: normal;
+    text-indent: -.25em;
 
-  .h1,
-  .alpha,
-  p,
-  .beta {
-    font-family: $regular;
-    margin-bottom: 0;
+    &.alpha,
+    &.beta {
+      @include medium;
+    }
   }
 
   cite {
