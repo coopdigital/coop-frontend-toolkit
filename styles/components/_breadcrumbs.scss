@@ -23,7 +23,7 @@ Breadcrumbs - Co-op Front-end Toolkit
     &:after {
       @extend %icon;
       @extend %icon-forward-arrow;
-      color: $mid-grey;
+      color: $coop-border-grey;
       position: relative;
       top: -1px;
       padding: 5px 14px;
