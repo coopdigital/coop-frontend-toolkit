@@ -10,7 +10,11 @@ ul, ol {
 }
 
 p + ul {
-  margin-top: -$quarter-spacing-unit;
+  margin-top: -$eighth-spacing-unit;
+
+  @include media(medium) {
+     margin-top: -$quarter-spacing-unit;
+  }
 }
 
 .undecorated-list,
