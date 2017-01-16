@@ -29,9 +29,9 @@ You can then open a Pull Request for the branch on this repository. Provide info
 
 If necessary, CC the relevant users by adding `cc @username` at the end of the overview.
 
-## Working with the Style Guide locally
+## Working with the Design Manual locally
 
-The Co-op Style Guide uses this repository as an NPM dependency (you may also have other local projects using this package, maybe as a Bower dependency). In order to preview changes made to this repository directly within the local project you are working on, you first need to link the Toolkit Bower or NPM package locally.
+The [Co-op Design Manual](https://github.com/coopdigital/design-manual) uses this repository as an NPM dependency (you may also have other local projects using this package, maybe as a Bower dependency). In order to preview changes made to this repository directly within the local project you are working on, you first need to link the Toolkit NPM package locally.
 
 First, if you haven't already done so, clone this repository:
 
@@ -46,7 +46,7 @@ cd coop-frontend-toolkit
 npm link
 ```
 
-This will make the `coop-frontend-toolkit` Bower or NPM package available locally. Once this is done, navigate to the local project directory, then link the dependency to the local one you have just created:
+This will make the `coop-frontend-toolkit` NPM package available locally. Once this is done, navigate to the local project directory, then link the dependency to the local one you have just created:
 
 ```
 cd other-project-using-toolkit
