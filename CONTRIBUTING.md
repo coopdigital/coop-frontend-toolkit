@@ -31,7 +31,7 @@ If necessary, CC the relevant users by adding `cc @username` at the end of the o
 
 ## Working with the Design Manual locally
 
-The [Co-op Design Manual](https://github.com/coopdigital/design-manual) uses this repository as an NPM dependency (you may also have other local projects using this package, maybe as a Bower dependency). In order to preview changes made to this repository directly within the local project you are working on, you first need to link the Toolkit NPM package locally.
+The [Co-op Design Manual](https://github.com/coopdigital/design-manual) uses this repository as an NPM dependency (you may also have other local projects using this package). In order to preview changes made to this repository directly within the local project you are working on, you first need to link the Toolkit NPM package locally.
 
 First, if you haven't already done so, clone this repository:
 
