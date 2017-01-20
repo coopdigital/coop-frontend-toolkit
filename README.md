@@ -20,12 +20,10 @@ Alternatively, you can add the dependency to your project's `package.json` using
 {
   "name": "project-name",
   "dependencies": {
-    "coop-frontend-toolkit": "git+https://f3d43faa6796617a649d989f03d2318ed1018cae:x-oauth-basic@github.com/coopdigital/coop-frontend-toolkit"
+    "coop-frontend-toolkit": "coopdigital/coop-frontend-toolkit"
   }
 }
 ```
-
-_**Note: do not share the token or add it to any public repository, or it will be invalidated and will stop working!**_
 
 ---
 
@@ -39,7 +37,7 @@ If you need to carry on using the older styles, you need to make sure you are us
 {
   "name": "project-name",
   "dependencies": {
-    "coop-frontend-toolkit": "git+https://f3d43faa6796617a649d989f03d2318ed1018cae:x-oauth-basic@github.com/coopdigital/coop-frontend-toolkit#1.1.3"
+    "coop-frontend-toolkit": "coopdigital/coop-frontend-toolkit#1.1.3"
   }
 }
 ```
@@ -93,7 +91,7 @@ input[type="radio"] + label {
 
 ##### JavaScript modules
 
-The Javascript modules (Tabs and Toggles) have been removed from the Toolkit. If you wish to carry on using those, you will need to copy them over to your project manually, as well as the modules loader.
+The Javascript modules (Tabs and Toggles) have been removed from the Toolkit. If you wish to carry on using those, you will need to copy them over from version 1.1.3 to your project manually, as well as the modules loader.
 
 ---
 
@@ -138,6 +136,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) guidelines.
 ## Changelog
 
 ###### 2.0.0
+- Public release
 - Major update to styles
 - Removal of JavaScript modules
 
