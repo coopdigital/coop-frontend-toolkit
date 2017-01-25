@@ -60,6 +60,11 @@ Tiles - Co-op Front-end Toolkit
   display: block;
   color: $body-copy;
 
+  &:hover {
+    color: $body-copy;
+    border-bottom: 2px solid #EAEAEA;
+  }
+
   h2,
   h3 {
     display: inline-block;
@@ -68,6 +73,15 @@ Tiles - Co-op Front-end Toolkit
     color: $coop-link-blue;
     border-bottom: .075em solid $coop-link-blue;
     @include spacing('margin', 'bottom', 'quarter');
+  }
+
+  &:hover {
+    h2,
+    h3 {
+      color: lighten($coop-link-blue, 15%);
+      border-color: lighten($coop-link-blue, 15%);
+    }
+
   }
 
   p {

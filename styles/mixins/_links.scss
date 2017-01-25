@@ -8,7 +8,8 @@ Links mixins - Co-op Front-end Toolkit
   text-decoration: none;
 
   &:hover {
-    color: $color;
+    color: lighten($color, 15%);
+    border-color: lighten($color, 15%);
   }
 
   &:active,
