@@ -23,8 +23,12 @@ p,
 ul,
 ol{
   @include body;
-  @include spacing('margin', 'bottom', 'half');
+  @include spacing('margin', 'bottom', 'quarter');
   font-family: $regular;
+}
+
+p:last-child {
+  @include spacing('margin', 'bottom', 'half');
 }
 
 .h-mega {
