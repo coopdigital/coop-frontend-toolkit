@@ -195,7 +195,6 @@ $spacing-rhythm: 'base', 'half', 'quarter', 'eighth', 'sixteenth';
   font-family: $regular;
 }
 
-
 // Other typographic elements
 @mixin blockquote {
   @include spacing('margin', 'bottom', 'half');
