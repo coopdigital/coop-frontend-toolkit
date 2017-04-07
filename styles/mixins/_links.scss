@@ -8,9 +8,10 @@ Links mixins - Co-op Front-end Toolkit
   text-decoration: none;
 
   &:hover {
-    color: $color;
+    color: darken($color, 15%);
+    border-color: darken($color, 15%);
   }
-
+  
   &:active,
   &:focus {
     transition: none;
