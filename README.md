@@ -122,6 +122,15 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) guidelines.
 
 ## Changelog
 
+###### 2.0.2
+- Updated README
+
+###### 2.0.1
+- Added missing fonts
+- Link hover colour
+- Tweaked list spacing
+- Tiles hover states
+
 ###### 2.0.0
 - Public release
 - Major update to styles
