@@ -9,29 +9,16 @@ For more information on all the available styles and modules, please refer to th
 Install the Toolkit by adding it as a NPM package to your project:
 
 ```
-npm install coopdigital/coop-frontend-toolkit --save
-```
-
-_Note: you will need to be a member of the Co-op Digital organisation on Github and have proper permissions on the repository._
-
-Alternatively, you can add the dependency to your project's `package.json` using the org's auth token then run `npm install`:
-
-```json
-{
-  "name": "project-name",
-  "dependencies": {
-    "coop-frontend-toolkit": "coopdigital/coop-frontend-toolkit"
-  }
-}
+npm install coop-frontend-toolkit --save
 ```
 
 ---
 
 ### Older version of the Toolkit
 
-The base styles provided by the Toolkit changed quite a bit between version 1.1.3 and version >= 2.0.0, unfortunately resulting in a couple of breaking changes.
+The base styles provided by the Toolkit changed quite a bit between version 1.1.3 and version >= 2.0.0, unfortunately resulting in a couple of breaking changes. The older versions (up to 1.1.3) are available on the Co-op Digital organisation repository on Github.
 
-If you need to carry on using the older styles, you need to make sure you are using version 1.1.3 of the Toolkit. Simply append the version to the dependency:
+If you need to carry on using the older styles, you need to make sure you are using version 1.1.3 of the Toolkit. To do so use the full github URL, including the version number:
 
 ```json
 {
