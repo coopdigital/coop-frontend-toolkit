@@ -14,7 +14,7 @@ Global - Co-op Front-end Toolkit
 
 html,
 body {
-  font-size: em-calc(map-deep-get($typographic-scale, "base", "body"));
+  font-size: map-deep-get($typographic-scale, "base", "body");
 }
 
 body {
