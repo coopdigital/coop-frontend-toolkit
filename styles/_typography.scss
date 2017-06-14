@@ -19,10 +19,15 @@ address {
   margin-top: 0;
 }
 
-p,
-ul,
-ol{
+p {
   @include body;
+  @include spacing('margin', 'bottom', 'quarter');
+  font-family: $regular;
+}
+
+ul,
+ol {
+  font-size: 20px;
   @include spacing('margin', 'bottom', 'quarter');
   font-family: $regular;
 }

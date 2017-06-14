@@ -10,49 +10,66 @@ Tables - Co-op Front-end Toolkit
 table {
   width: 100%;
   table-layout: fixed;
-  margin-bottom: $half-spacing-unit;
-  border: 1px solid $coop-border-grey;
+  font-size: 20px;
+  @include spacing('margin', 'bottom', 'half');
 
-  th, td {
-    padding: $quarter-spacing-unit $half-spacing-unit;
+  caption {
     text-align: left;
   }
 
+  th, td {
+    padding: $quarter-spacing-unit $quarter-spacing-unit $quarter-spacing-unit 0;
+    text-align: left;
+    vertical-align: top;
+  }
+
   thead {
-    background-color: $offwhite;
-    border-bottom: 1px solid $coop-border-grey;
+    border-bottom: 2px solid $coop-border-grey;
+
+    th {
+      font-family: $regular;
+      font-size: 18px;
+      font-weight: 300;
+    }
+    .emphasise-th {
+      font-family: $bold;
+    }
   }
 
   tbody {
-    td {
-      border-bottom: 1px solid $coop-border-grey;
-    }
     th {
-      background-color: $offwhite;
+      position: relative;
+      font-family: $bold;
+      font-size: 18px;
+      line-height: 1.9;
+
+      &::after {
+        content: '';
+        position : absolute;
+        left: 0;
+        bottom: -1px;
+        height: 1px;
+        width: 80%;
+        border-bottom: 1px solid $coop-border-grey;
+      }
+    }
+    td {
       border-bottom: 1px solid $coop-border-grey;
     }
   }
 
   tfoot {
-    font-family: $regular;
 
     td {
-      font-weight: bold;
-      background-color: $offwhite;
+      font-family: $regular;
     }
-
   }
 
-}
-
-// Zebra striping for large data tables
-.zebra {
-
-  tr:nth-child(even) {
-    background-color: $offwhite;
+  ul {
+    margin-bottom: 0;
   }
-
 }
+
 
 // Simple responsive tables. Wrap a div round your table and apply the class.
 .table-overflow-x {
