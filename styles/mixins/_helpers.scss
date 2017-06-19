@@ -51,6 +51,24 @@ Helpers mixins - Co-op Front-end Toolkit
   }
 }
 
+@mixin mediaMax($size) {
+  @if $ie <= 8 {
+    @content;
+  }
+  @else {
+    @if map-has-key($breakpoints, $size) {
+      @media (max-width: #{map-get($breakpoints, $size)}) {
+        @content;
+      }
+    }
+    @else {
+      @media ($size) {
+        @content;
+      }
+    }
+  }
+}
+
 
 
 

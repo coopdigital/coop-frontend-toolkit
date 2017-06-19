@@ -17,7 +17,8 @@ table {
     text-align: left;
   }
 
-  th, td {
+  th,
+  td {
     padding: $quarter-spacing-unit $quarter-spacing-unit $quarter-spacing-unit 0;
     text-align: left;
     vertical-align: top;
@@ -43,7 +44,7 @@ table {
       font-size: 18px;
       line-height: 1.9;
 
-      &::after {
+      &:after {
         content: '';
         position : absolute;
         left: 0;
@@ -52,27 +53,101 @@ table {
         width: 80%;
         border-bottom: 1px solid $coop-border-grey;
       }
+
     }
+
     td {
       border-bottom: 1px solid $coop-border-grey;
     }
+
   }
 
   tfoot {
-
     td {
       font-family: $regular;
     }
+
   }
 
   ul {
     margin-bottom: 0;
   }
+
 }
 
+// Stacked columns basic responsive table solution
+.table-smallscreen--stacked {
+  // min-width: 320px;
+
+  // defaults to 480px
+  @include mediaMax(small) {
+
+    th,
+    td {
+      padding: $quarter-spacing-unit/4 0 $quarter-spacing-unit/2 0;
+    }
+
+    thead {
+      border-bottom: 0;
+
+      th {
+        @include visuallyhidden;
+      }
+
+    }
+
+    tbody {
+      th {
+        display: block;
+        font-size: 16px;
+        line-height: 1;
+        border-bottom: 1px solid $coop-border-grey;
+        margin-top: $quarter-spacing-unit;
+      }
+
+      .table-smallscreen--stacked_hidden {
+        display: none;
+      }
+
+      td {
+        display: block;
+        border-bottom: 0;
+        font-size: 16px;
+
+        &:before {
+          content: attr(data-th)"";
+          vertical-align: top;
+          font-family: $regular;
+          font-weight: normal;
+          font-size: 16px;
+          // Should be amended with a custom value...
+          width: 40%;
+          display: inline-block;
+        }
+
+      }
+      th:after {
+        border-bottom: 0;
+      }
+
+      ul {
+        display: inline-block;
+        font-size: 16px;
+        // This old chestnut https://css-tricks.com/fighting-the-space-between-inline-block-elements/
+        margin-left: -5px;
+      }
+      a {
+        margin-left: -5px;
+      }
+    }
+
+  }
+
+}
 
 // Simple responsive tables. Wrap a div round your table and apply the class.
 .table-overflow-x {
+  @warn "The table overflow-x responsive will be depricated in the next toolkit release. Please use the table-smallscreen--stacked solution or build a custom responsive table based on your needs";
   overflow-x: visible;
   overflow-y: hidden;
   margin-bottom: $half-spacing-unit;
