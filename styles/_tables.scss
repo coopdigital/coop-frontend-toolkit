@@ -17,6 +17,10 @@ table {
     text-align: left;
   }
 
+  th {
+    font-family: $bold;
+  }
+
   th,
   td {
     padding: $quarter-spacing-unit $quarter-spacing-unit $quarter-spacing-unit 0;
@@ -27,22 +31,14 @@ table {
   thead {
     border-bottom: 2px solid $coop-border-grey;
 
-    th {
+    .regular-th {
       font-family: $regular;
-      font-size: 18px;
-      font-weight: 300;
-    }
-    .emphasise-th {
-      font-family: $bold;
     }
   }
 
   tbody {
     th {
       position: relative;
-      font-family: $bold;
-      font-size: 18px;
-      line-height: 1.9;
 
       &:after {
         content: '';
@@ -77,10 +73,9 @@ table {
 
 // Stacked columns basic responsive table solution
 .table-smallscreen--stacked {
-  // min-width: 320px;
 
   // defaults to 480px
-  @include mediaMax(small) {
+  @include media("max-width: 480px") {
 
     th,
     td {
@@ -100,8 +95,7 @@ table {
       th {
         display: block;
         font-size: 16px;
-        line-height: 1;
-        border-bottom: 1px solid $coop-border-grey;
+        border-top: 2px solid $coop-border-grey;
         margin-top: $quarter-spacing-unit;
       }
 
