@@ -49,26 +49,22 @@ table {
         width: 80%;
         border-bottom: 1px solid $coop-border-grey;
       }
-
     }
 
     td {
       border-bottom: 1px solid $coop-border-grey;
     }
-
   }
 
   tfoot {
     td {
       font-family: $regular;
     }
-
   }
 
   ul {
     margin-bottom: 0;
   }
-
 }
 
 // Stacked columns basic responsive table solution
@@ -76,19 +72,19 @@ table {
 
   // defaults to 480px
   @include media("max-width: 480px") {
-
     th,
     td {
       padding: $quarter-spacing-unit/4 0 $quarter-spacing-unit/2 0;
+      text-align: left;
     }
 
-    thead {
+    thead,
+    tfoot {
       border-bottom: 0;
-
-      th {
+      th,
+      td {
         @include visuallyhidden;
       }
-
     }
 
     tbody {
@@ -118,7 +114,6 @@ table {
           width: 40%;
           display: inline-block;
         }
-
       }
       th:after {
         border-bottom: 0;
@@ -130,13 +125,12 @@ table {
         // This old chestnut https://css-tricks.com/fighting-the-space-between-inline-block-elements/
         margin-left: -5px;
       }
+
       a {
         margin-left: -5px;
       }
     }
-
   }
-
 }
 
 // Simple responsive tables. Wrap a div round your table and apply the class.
@@ -149,7 +143,6 @@ table {
   table {
     margin-bottom: 0;
   }
-
 }
 
 .unstyled-table {
@@ -162,7 +155,6 @@ table {
     @include media(medium) {
       padding: $quarter-spacing-unit;
     }
-
   }
 
   .tr-divider {
