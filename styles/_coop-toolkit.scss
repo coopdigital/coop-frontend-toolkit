@@ -14,7 +14,6 @@
 @import "normalize";
 
 // Core styles
-@import "helpers";
 @import "fonts";
 @import "typography";
 @import "global";
@@ -43,3 +42,6 @@
 @import "components/search";
 @import "components/tabs";
 @import "components/toggles";
+
+// Helpers / style trumps
+@import "helpers";

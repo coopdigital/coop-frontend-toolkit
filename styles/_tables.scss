@@ -10,52 +10,133 @@ Tables - Co-op Front-end Toolkit
 table {
   width: 100%;
   table-layout: fixed;
-  margin-bottom: $half-spacing-unit;
-  border: 1px solid $coop-border-grey;
+  font-size: 20px;
+  @include spacing('margin', 'bottom', 'half');
 
-  th, td {
-    padding: $quarter-spacing-unit $half-spacing-unit;
+  caption {
+    font-family: $bold;
     text-align: left;
   }
 
+  th {
+    font-family: $bold;
+  }
+
+  th,
+  td {
+    padding: $quarter-spacing-unit $quarter-spacing-unit $quarter-spacing-unit 0;
+    text-align: left;
+    vertical-align: top;
+  }
+
   thead {
-    background-color: $offwhite;
-    border-bottom: 1px solid $coop-border-grey;
+    border-bottom: 2px solid $coop-border-grey;
+
+    .regular-th {
+      font-family: $regular;
+    }
   }
 
   tbody {
-    td {
-      border-bottom: 1px solid $coop-border-grey;
-    }
     th {
-      background-color: $offwhite;
+      position: relative;
+
+      &:after {
+        content: '';
+        position : absolute;
+        left: 0;
+        bottom: -1px;
+        height: 1px;
+        width: 80%;
+        border-bottom: 1px solid $coop-border-grey;
+      }
+    }
+
+    td {
       border-bottom: 1px solid $coop-border-grey;
     }
   }
 
   tfoot {
-    font-family: $regular;
-
     td {
-      font-weight: bold;
-      background-color: $offwhite;
+      font-family: $regular;
     }
-
   }
 
+  ul {
+    margin-bottom: 0;
+  }
 }
 
-// Zebra striping for large data tables
-.zebra {
+// Stacked columns basic responsive table solution
+.table-smallscreen--stacked {
 
-  tr:nth-child(even) {
-    background-color: $offwhite;
+  // defaults to 480px
+  @include media("max-width: 480px") {
+    th,
+    td {
+      padding: $quarter-spacing-unit/4 0 $quarter-spacing-unit/2 0;
+      text-align: left;
+    }
+
+    thead,
+    tfoot {
+      border-bottom: 0;
+      th,
+      td {
+        @include visuallyhidden;
+      }
+    }
+
+    tbody {
+      th {
+        display: block;
+        font-size: 16px;
+        border-top: 2px solid $coop-border-grey;
+        margin-top: $quarter-spacing-unit;
+      }
+
+      .table-smallscreen--stacked_hidden {
+        display: none;
+      }
+
+      td {
+        display: block;
+        border-bottom: 0;
+        font-size: 16px;
+
+        &:before {
+          content: attr(data-th)"";
+          vertical-align: top;
+          font-family: $regular;
+          font-weight: normal;
+          font-size: 16px;
+          // Should be amended with a custom value...
+          width: 40%;
+          display: inline-block;
+        }
+      }
+      th:after {
+        border-bottom: 0;
+      }
+
+      ul {
+        display: inline-block;
+        font-size: 16px;
+        // This old chestnut https://css-tricks.com/fighting-the-space-between-inline-block-elements/
+        margin-left: -5px;
+      }
+
+      a {
+        margin-left: -5px;
+      }
+    }
   }
-
 }
 
 // Simple responsive tables. Wrap a div round your table and apply the class.
 .table-overflow-x {
+  @warn "The table overflow-x responsive will be depricated in the next toolkit release. Please use the table-smallscreen--stacked solution or build a custom responsive table based on your needs";
   overflow-x: visible;
   overflow-y: hidden;
   margin-bottom: $half-spacing-unit;
@@ -63,7 +144,6 @@ table {
   table {
     margin-bottom: 0;
   }
-
 }
 
 .unstyled-table {
@@ -76,7 +156,6 @@ table {
     @include media(medium) {
       padding: $quarter-spacing-unit;
     }
-
   }
 
   .tr-divider {
