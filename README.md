@@ -2,7 +2,7 @@
 
 The Co-op Front-end Toolkit contains all the core assets needed to build Co-op-branded digital content.
 
-For more information on all the available styles and modules, please refer to the [Co-op Style Guide](http://single-site-styleguide.herokuapp.com/front-end-elements/).
+For more information on all the available styles and modules, please refer to the [Co-op Style Guide](https://coop-design-manual.herokuapp.com/).
 
 ## Installation
 
