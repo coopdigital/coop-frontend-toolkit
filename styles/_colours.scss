@@ -2,36 +2,105 @@
 Colour variables - Co-op Front-end Toolkit
 ===============================================*/
 
-$coop-brand-blue: #00B1E7;
+// Transitioning to rational variable names
+// Where colours are attached to an element. They should be named as the element where possible
+// in case it changes colour in the future. EG: $link
 
-$body-copy: #282828;
-$coop-blue: #00a1cc;
+// Where the colour is an explicit part of the palette it should be named as: $colour-hue
 
-$coop-link-blue: #00729a;
-$coop-link-hover-blue: #00394e;
-$coop-blue-highlighted: #00a1cc;
-$coop-link-visited: #551a8b;
+// Brand
+$coop-brand-blue:           #00B1E7;
+$brand:                     $coop-brand-blue;
 
-$button-green: #118156;
-$button-green-highlighted: lighten($button-green, 5%);
+// Text
+$body-copy:                 #282828;
+$text:                      $body-copy;
 
-$button-grey: #374c63;
-$button-grey-highlighted: lighten($button-grey, 10%);
+// Page
+$white:                     #ffffff;
+$page:                      $white;
 
-$success-green: #00a318;
-$info-orange: #dc7d00;
-$saleerror-red: #d0091c;
-$added-to-page: #fff6bf;
+// Links
+$coop-link-blue:            #00729a;
+$coop-link-hover-blue:      #00394e;
+$coop-blue-highlighted:     #00a1cc;
+$coop-link-visited:         #551a8b;
 
-$white: #ffffff;
-$offwhite: #f3f3f3;
-$offwhite-highlighted: #e6e6e6;
-$light-grey: #dddddd;
-$coop-border-grey: #c4c4c4;
-$mid-grey: #E5E5E5;
-$dark-grey: #cccccc;
-$coop-grey: #6e6e6e;
-$coop-grey-unselected: #949494;
-$darker-grey: #333333;
-$bluey-dark-grey: #3E464C;
-$black: #000000;
+$link:                      $coop-link-blue;
+$link-hover:                $coop-link-hover-blue;
+$link-focus:                $coop-blue-highlighted;
+$link-visited:              $coop-link-visited;
+
+// Buttons
+$button-green:              #118156;
+$button-green-highlighted:  lighten($button-green, 5%);
+
+$button-primary:            $button-green;
+$button-primary-hover:      $button-green-highlighted;
+
+$button-grey:               #374c63;
+$button-grey-highlighted:   lighten($button-grey, 10%);
+
+$button-primary-dark:       $button-grey;
+$button-primary-dark-hover: $button-grey-highlighted;
+
+// Secondary colours
+$yellow-bright:             #FFFF00;
+$yellow-light:              #FFEC00;
+$yellow-mid:                #FFD308;
+
+$green-bright:              #EDFB3C;
+$green-light:               #BAD303;
+$green-mid:                 #4F820D;
+$green-dark:                #385C0A;
+
+$green-blue-bright:         #0AFBFB;
+$green-blue-light:          #72DCDB;
+$green-blue-mid:            #0F8482;
+$green-blue-dark:           #166D66;
+
+$blue-bright:               #418CFC;
+$blue-light:                #92D8FE;
+$blue-mid:                  #326BB7;
+$blue-dark:                 #334C89;
+
+$pink-bright:               #FC43D3;
+$pink-light:                #FF80D3;
+$purple-mid:                #AD208E;
+$purple-dark:               #61307D;
+
+$orange-mid:                #F8642C;
+$red-mid:                   #D63118;
+$red-dark:                  #9F2A00;
+
+// These old colours now fall into the secondary palette
+// and will later be removed
+$success-green:             $green-mid;
+$info-orange:               $orange-mid;
+$saleerror-red:             $red-mid;
+$added-to-page:             $yellow-light;
+
+// Greys
+// Reclassified as $grey-foo below
+$offwhite:                  #f3f3f3;
+$offwhite-highlighted:      #dddddd;
+$light-grey:                #dddddd;
+$mid-grey:                  $light-grey;
+$dark-grey:                 $light-grey;
+$coop-border-grey:          #c4c4c4;
+$coop-grey:                 #6e6e6e;
+
+// New grey vars
+$grey-bright:               $offwhite;
+$grey-light:                $light-grey;
+$grey-mid:                  $coop-border-grey;
+$grey-dark:                 $coop-grey;
+$black:                     #000000;
+
+// Escaped classification (for now)
+$bluey-dark-grey:           #3E464C;
+$coop-grey-unselected:      #949494;
+$darker-grey:               #333333;
+
+// The ugly duckling
+$coop-blue:                 #00a1cc;
