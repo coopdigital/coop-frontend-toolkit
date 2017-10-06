@@ -17,14 +17,14 @@ $body-copy:                 #282828;
 $text:                      $body-copy;
 
 // Page
-$white:                     #ffffff;
+$white:                     #FFFFFF;
 $page:                      $white;
 
 // Links
-$coop-link-blue:            #00729a;
-$coop-link-hover-blue:      #00394e;
-$coop-blue-highlighted:     #00a1cc;
-$coop-link-visited:         #551a8b;
+$coop-link-blue:            #00729A;
+$coop-link-hover-blue:      #00394E;
+$coop-blue-highlighted:     #00A1CC;
+$coop-link-visited:         #551A8B;
 
 $link:                      $coop-link-blue;
 $link-hover:                $coop-link-hover-blue;
@@ -38,7 +38,7 @@ $button-green-highlighted:  lighten($button-green, 5%);
 $button-primary:            $button-green;
 $button-primary-hover:      $button-green-highlighted;
 
-$button-grey:               #374c63;
+$button-grey:               #374C63;
 $button-grey-highlighted:   lighten($button-grey, 10%);
 
 $button-primary-dark:       $button-grey;
@@ -82,17 +82,16 @@ $added-to-page:             $yellow-light;
 
 // Greys
 // Reclassified as $grey-foo below
-$offwhite:                  #f3f3f3;
-$offwhite-highlighted:      #dddddd;
-$light-grey:                #dddddd;
+$offwhite:                  #F3F3F3;
+$offwhite-highlighted:      #C4C4C4;
+$light-grey:                #C4C4C4;
 $mid-grey:                  $light-grey;
 $dark-grey:                 $light-grey;
-$coop-border-grey:          #c4c4c4;
-$coop-grey:                 #6e6e6e;
+$coop-border-grey:          #C4C4C4;
+$coop-grey:                 #6E6E6E;
 
 // New grey vars
-$grey-bright:               $offwhite;
-$grey-light:                $light-grey;
+$grey-light:                $offwhite;
 $grey-mid:                  $coop-border-grey;
 $grey-dark:                 $coop-grey;
 $black:                     #000000;
@@ -103,4 +102,4 @@ $coop-grey-unselected:      #949494;
 $darker-grey:               #333333;
 
 // The ugly duckling
-$coop-blue:                 #00a1cc;
+$coop-blue:                 #00A1CC;
