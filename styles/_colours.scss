@@ -33,13 +33,13 @@ $link-visited:              $coop-link-visited;
 
 // Buttons
 $button-green:              #118156;
-$button-green-highlighted:  lighten($button-green, 5%);
+$button-green-highlighted:  #209767;
 
 $button-primary:            $button-green;
 $button-primary-hover:      $button-green-highlighted;
 
 $button-grey:               #374C63;
-$button-grey-highlighted:   lighten($button-grey, 10%);
+$button-grey-highlighted:   #4A6683;
 
 $button-primary-dark:       $button-grey;
 $button-primary-dark-hover: $button-grey-highlighted;

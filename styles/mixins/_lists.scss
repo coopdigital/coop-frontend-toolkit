@@ -18,3 +18,20 @@ Lists mixins - Co-op Front-end Toolkit
     display: inline-block;
   }
 }
+
+@mixin definition-list {
+  @include font-size('body');
+
+  margin-top: 0;
+  margin-bottom: $half-spacing-unit;
+
+  dt {
+    font-family: $regular;
+    margin-bottom: 0;
+  }
+
+  dd {
+    font-family: $bold;
+    margin: 0 0 $quarter-spacing-unit/2;
+  }
+}

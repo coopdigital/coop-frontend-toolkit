@@ -127,11 +127,3 @@ address {
 .intro-text {
   @include intro-text;
 }
-
-dt {
-  margin-bottom: $half-spacing-unit;
-}
-
-dd {
-  margin: 0 0 $half-spacing-unit;
-}

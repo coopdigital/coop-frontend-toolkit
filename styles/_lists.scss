@@ -18,6 +18,10 @@ p + ul {
   }
 }
 
+dl {
+  @include definition-list;
+}
+
 .undecorated-list,
 .list-bare {
   @include list-bare;
