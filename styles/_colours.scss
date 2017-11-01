@@ -2,36 +2,36 @@
 Colour variables - Co-op Front-end Toolkit
 ===============================================*/
 
-$coop-brand-blue: #00B1E7;
+$coop-brand-blue: #00b1e7 !default;
 
-$body-copy: #282828;
-$coop-blue: #00a1cc;
+$body-copy: #282828 !default;
+$coop-blue: #00a1cc !default;
 
-$coop-link-blue: #00729a;
-$coop-link-hover-blue: #00394e;
-$coop-blue-highlighted: #00a1cc;
-$coop-link-visited: #551a8b;
+$coop-link-blue: #00729a !default;
+$coop-link-hover-blue: #00394e !default;
+$coop-blue-highlighted: #00a1cc !default;
+$coop-link-visited: #551a8b !default;
 
-$button-green: #118156;
-$button-green-highlighted: lighten($button-green, 5%);
+$button-green: #118156 !default;
+$button-green-highlighted: lighten($button-green, 5%) !default;
 
-$button-grey: #374c63;
-$button-grey-highlighted: lighten($button-grey, 10%);
+$button-grey: #374c63 !default;
+$button-grey-highlighted: lighten($button-grey, 10%) !default;
 
-$success-green: #00a318;
-$info-orange: #dc7d00;
-$saleerror-red: #d0091c;
-$added-to-page: #fff6bf;
+$success-green: #00a318 !default;
+$info-orange: #dc7d00 !default;
+$saleerror-red: #d0091c !default;
+$added-to-page: #fff6bf !default;
 
-$white: #ffffff;
-$offwhite: #f3f3f3;
-$offwhite-highlighted: #e6e6e6;
-$light-grey: #dddddd;
-$coop-border-grey: #c4c4c4;
-$mid-grey: #E5E5E5;
-$dark-grey: #cccccc;
-$coop-grey: #6e6e6e;
-$coop-grey-unselected: #949494;
-$darker-grey: #333333;
-$bluey-dark-grey: #3E464C;
-$black: #000000;
+$white: #ffffff !default;
+$offwhite: #f3f3f3 !default;
+$offwhite-highlighted: #e6e6e6 !default;
+$light-grey: #dddddd !default;
+$coop-border-grey: #c4c4c4 !default;
+$mid-grey: #e5e5e5 !default;
+$dark-grey: #cccccc !default;
+$coop-grey: #6e6e6e !default;
+$coop-grey-unselected: #949494 !default;
+$darker-grey: #333333 !default;
+$bluey-dark-grey: #3e464c !default;
+$black: #000000 !default;
