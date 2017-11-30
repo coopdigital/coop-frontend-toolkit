@@ -27,9 +27,13 @@ p {
 
 ul,
 ol {
-  font-size: 20px;
+  font-size: 16px;
   @include spacing('margin', 'bottom', 'quarter');
   font-family: $regular;
+
+  @include media(medium) {
+     font-size: 20px;
+  }
 }
 
 p:last-child {

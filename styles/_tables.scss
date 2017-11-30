@@ -8,10 +8,10 @@ Tables - Co-op Front-end Toolkit
 @import "mixins/typography";
 
 table {
+  @include spacing('margin', 'bottom', 'half');
   width: 100%;
   table-layout: fixed;
   font-size: 20px;
-  @include spacing('margin', 'bottom', 'half');
 
   caption {
     font-family: $bold;
@@ -38,6 +38,7 @@ table {
   }
 
   tbody {
+
     th {
       position: relative;
 
@@ -57,7 +58,23 @@ table {
     }
   }
 
+  .table--numeral {
+    text-align: right;
+
+    td {
+      text-align: right;
+    }
+  }
+
+  .table--char-align {
+
+    td {
+      text-align: "." -webkit-center; // patchy support right now: https://drafts.csswg.org/css-text-4/#character-alignment
+    }
+  }
+
   tfoot {
+
     td {
       font-family: $regular;
     }
@@ -73,6 +90,7 @@ table {
 
   // defaults to 480px
   @include media("max-width: 480px") {
+
     th,
     td {
       padding: $quarter-spacing-unit/4 0 $quarter-spacing-unit/2 0;
@@ -82,6 +100,7 @@ table {
     thead,
     tfoot {
       border-bottom: 0;
+
       th,
       td {
         @include visuallyhidden;
@@ -89,6 +108,7 @@ table {
     }
 
     tbody {
+
       th {
         display: block;
         font-size: 16px;
@@ -111,11 +131,20 @@ table {
           font-family: $regular;
           font-weight: normal;
           font-size: 16px;
-          // Should be amended with a custom value...
+          // Should be overidden with a custom value...
           width: 40%;
           display: inline-block;
         }
       }
+
+      .table--numeral {
+        text-align: left;
+
+        td {
+          text-align: left;
+        }
+      }
+
       th:after {
         border-bottom: 0;
       }
@@ -174,13 +203,6 @@ table {
     font-weight: normal;
   }
 
-  .table__bold {
-     font-family: $bold;
-     font-size: em-calc(20);
-     @include media(medium) {
-       font-size: em-calc(26);
-     }
-  }
 }
 
 .border-bottom {
@@ -197,8 +219,8 @@ table {
 }
 
 .tight--divider {
-  font-size: em-calc(18px);
   @include spacing('padding', 'bottom', 'quarter');
+  font-size: em-calc(18px);
   margin-bottom: 0;
   border-bottom: 2px solid $coop-border-grey;
 
