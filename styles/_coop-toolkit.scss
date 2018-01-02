@@ -7,7 +7,6 @@
 // The variables can be overridden by providing alternative defaults: refer to
 // _variables.scss for more information.
 
-@import "colours";
 @import "variables";
 
 // Reset
@@ -44,4 +43,5 @@
 @import "components/toggles";
 
 // Helpers / style trumps
-@import "helpers";
+@import "helpers/layout";
+@import "helpers/colour";

@@ -91,3 +91,109 @@ $breakpoints: (
 // Viewport orientation
 $landscape: "only screen and (orientation: landscape)" !default;
 $portrait: "only screen and (orientation: portrait)" !default;
+
+/*
+Colour
+===============================================*/
+
+// Transitioning to rational variable names
+// Where colours are attached to an element. They should be named as the element where possible
+// in case it changes colour in the future. EG: $link
+
+// Where the colour is an explicit part of the palette it should be named as: $colour-hue
+
+// Brand
+$coop-brand-blue:           #00B1E7 !default;
+$brand:                     $coop-brand-blue;
+
+// Text
+$body-copy:                 #282828 !default;
+$text:                      $body-copy;
+
+// Page
+$white:                     #FFFFFF !default;
+$page:                      $white;
+
+// Links
+$coop-link-blue:            #00729A !default;
+$coop-link-hover-blue:      #00394E !default;
+$coop-blue-highlighted:     #00A1CC !default;
+$coop-link-visited:         #551A8B !default;
+
+$link:                      $coop-link-blue;
+$link-hover:                $coop-link-hover-blue;
+$link-focus:                $coop-blue-highlighted;
+$link-visited:              $coop-link-visited;
+
+// Buttons
+$button-green:              #118156 !default;
+$button-green-highlighted:  #209767 !default;
+
+$button-primary:            $button-green;
+$button-primary-hover:      $button-green-highlighted;
+
+$button-grey:               #374C63 !default;
+$button-grey-highlighted:   #4A6683 !default;
+
+$button-primary-dark:       $button-grey;
+$button-primary-dark-hover: $button-grey-highlighted;
+
+// Secondary colours
+$yellow-bright:             #FFFF00 !default;
+$yellow-light:              #FFEC00 !default;
+$yellow-mid:                #FFD308 !default;
+
+$green-bright:              #EDFB3C !default;
+$green-light:               #BAD303 !default;
+$green-mid:                 #4F820D !default;
+$green-dark:                #385C0A !default;
+
+$green-blue-bright:         #0AFBFB !default;
+$green-blue-light:          #72DCDB !default;
+$green-blue-mid:            #0F8482 !default;
+$green-blue-dark:           #166D66 !default;
+
+$blue-bright:               #418CFC !default;
+$blue-light:                #92D8FE !default;
+$blue-mid:                  #326BB7 !default;
+$blue-dark:                 #334C89 !default;
+
+$pink-bright:               #FC43D3 !default;
+$pink-light:                #FF80D3 !default;
+$purple-mid:                #AD208E !default;
+$purple-dark:               #61307D !default;
+
+$orange-mid:                #F8642C !default;
+$red-mid:                   #D63118 !default;
+$red-dark:                  #9F2A00 !default;
+
+// These legacy vars now fall into the secondary palette
+// and will later be removed
+$success-green:             $green-mid;
+$info-orange:               $orange-mid;
+$saleerror-red:             $red-mid;
+$added-to-page:             $yellow-light;
+
+// Greys
+// Reclassified as $foo-grey below
+$offwhite:                  #F3F3F3 !default;
+$offwhite-highlighted:      #C4C4C4 !default;
+$light-grey:                #C4C4C4 !default;
+$mid-grey:                  $light-grey;
+$dark-grey:                 $light-grey;
+$coop-border-grey:          #C4C4C4 !default;
+$coop-grey:                 #6E6E6E !default;
+
+// New grey vars
+$grey-light:                $offwhite;
+$grey-mid:                  $coop-border-grey;
+$grey-dark:                 $coop-grey;
+$black:                     #000000 !default;
+
+// Escaped classification (for now)
+$bluey-dark-grey:           #3E464C !default;
+$coop-grey-unselected:      #949494 !default;
+$darker-grey:               #333333 !default;
+
+// The ugly duckling
+$coop-blue:                 #00A1CC !default;

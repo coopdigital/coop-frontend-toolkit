@@ -1,0 +1,201 @@
+/*===============================================
+Helpers - Co-op Front-end Toolkit
+===============================================*/
+
+@import "../variables";
+@import "../mixins/helpers";
+
+//  helpers - for prototyping only
+
+.brand { color: $brand; }
+.brand-bg { background: $brand; }
+
+.text { color: $text; }
+.text-bg { background: $text; }
+
+.white { color: $white; }
+.white-bg { background: $white; }
+.black { color: $black; }
+.black-bg { background: $black; }
+
+.link-blue { color: $link; }
+.link-blue-bg { background: $link; }
+.link-hover-blue { color: $link-hover; }
+.link-hover-blue-bg { background: $link-hover; }
+.link-focus-blue { color: $link-focus; }
+.link-focus-blue-bg { background: $link-focus; }
+.link-blue-focused { outline: 4px solid $link-focus; }
+.link-visited { color: $link-visited; }
+.link-visited-bg { background: $link-visited; }
+
+.button-green { color: $button-primary; }
+.button-green-bg { background: $button-primary; }
+.button-green-hover-bg { background: $button-primary-hover; }
+.button-primary-dark { color: $button-primary-dark; }
+.button-primary-dark-bg { background: $button-primary-dark; }
+.button-primary-dark-hover-bg { background: $button-primary-dark-hover; }
+
+// Secondary colours
+.yellow-bright { color: $yellow-bright; }
+.yellow-bright-bg { background: $yellow-bright; }
+.yellow-light { color: $yellow-light; }
+.yellow-light-bg { background: $yellow-light; }
+.yellow-mid { color: $yellow-mid; }
+.yellow-mid-bg { background: $yellow-mid; }
+
+.green-bright { color: $green-bright; }
+.green-bright-bg { background: $green-bright; }
+.green-light { color: $green-light; }
+.green-light-bg { background: $green-light; }
+.green-mid { color: $green-mid; }
+.green-mid-bg { background: $green-mid; }
+.green-dark { color: $green-dark; }
+.green-dark-bg { background: $green-dark; }
+
+.green-blue-bright { color: $green-blue-bright; }
+.green-blue-bright-bg { background: $green-blue-bright; }
+.green-blue-light { color: $green-blue-light; }
+.green-blue-light-bg { background: $green-blue-light; }
+.green-blue-mid { color: $green-blue-mid; }
+.green-blue-mid-bg { background: $green-blue-mid; }
+.green-blue-dark { color: $green-blue-dark; }
+.green-blue-dark-bg { background: $green-blue-dark; }
+
+.blue-bright { color: $blue-bright; }
+.blue-bright-bg { background: $blue-bright; }
+.blue-light { color: $blue-light; }
+.blue-light-bg { background: $blue-light; }
+.blue-mid { color: $blue-mid; }
+.blue-mid-bg { background: $blue-mid; }
+.blue-dark { color: $blue-dark; }
+.blue-dark-bg { background: $blue-dark; }
+
+.pink-bright { color: $pink-bright; }
+.pink-bright-bg { background: $pink-bright; }
+.pink-light { color: $pink-light; }
+.pink-light-bg { background: $pink-light; }
+.purple-mid { color: $purple-mid; }
+.purple-mid-bg { background: $purple-mid; }
+.purple-dark { color: $purple-dark; }
+.purple-dark-bg { background: $purple-dark; }
+
+.orange-mid { color: $orange-mid; }
+.orange-mid-bg { background: $orange-mid; }
+.red-mid { color: $red-mid; }
+.red-mid-bg { background: $red-mid; }
+.red-dark { color: $red-dark; }
+.red-dark-bg { background: $red-dark; }
+
+.grey-light { color: $grey-light; }
+.grey-light-bg { background: $grey-light; }
+.grey-mid { color: $grey-mid; }
+.grey-mid-bg { background: $grey-mid; }
+.grey-dark { color: $grey-dark; }
+.grey-dark-bg { background: $grey-dark; }
+
+// Legacy remove later
+.success-green { color: $success-green; }
+.success-green-bg { background: $success-green; }
+.info-orange { color: $info-orange; }
+.info-orange-bg { background: $info-orange; }
+.saleerror-red { color: $saleerror-red; }
+.saleerror-red-bg { background: $saleerror-red; }
+.coop-grey { color: $coop-grey; }
+.coop-grey-bg { background: $coop-grey; }
+.body-copy { color: $body-copy; }
+.body-copy-bg { background: $body-copy; }
+.coop-border-grey { border: 1px solid $coop-border-grey; }
+.coop-border-grey-bg { background: $coop-border-grey; }
+.offwhite { color: $offwhite; }
+.offwhite-bg { background: $offwhite; }
+.offwhite-highlighted-bg { background: $offwhite-highlighted; }
+.light-grey { color: $light-grey; }
+.light-grey-bg { background: $light-grey; }
+.darker-grey { color: $darker-grey; }
+.darker-grey-bg { background: $darker-grey; }
+.dark-grey { color: $dark-grey; }
+.dark-grey-bg { background: $dark-grey; }
+.bluey-dark-grey { color: $bluey-dark-grey; }
+.bluey-dark-grey-bg { background: $bluey-dark-grey; }
+.added-to-page-bg { background: $added-to-page; }
+
+// Padding
+.padding-x { padding: 0 !important; }
+.padding-e { padding: $quarter-spacing-unit / 2; }
+.padding-q { padding: $quarter-spacing-unit; }
+.padding-h { padding: $half-spacing-unit; }
+.padding-b { padding: $base-spacing-unit; }
+
+// Padding-bottom
+.padding-bx { padding-bottom: 0 !important; }
+.padding-be { padding-bottom: $quarter-spacing-unit / 2; }
+.padding-bq { padding-bottom: $quarter-spacing-unit; }
+.padding-bh { padding-bottom: $half-spacing-unit; }
+.padding-bb { padding-bottom: $base-spacing-unit; }
+
+// Padding-top
+.padding-tx { padding-top: 0 !important; }
+.padding-te { padding-top: $quarter-spacing-unit / 2; }
+.padding-tq { padding-top: $quarter-spacing-unit; }
+.padding-th { padding-top: $half-spacing-unit; }
+.padding-tb { padding-top: $base-spacing-unit; }
+
+// Margin
+.margin-x { margin: 0 !important; }
+.margin-e { margin: $quarter-spacing-unit / 2; }
+.margin-q { margin: $quarter-spacing-unit; }
+.margin-h { margin: $half-spacing-unit; }
+.margin-b { margin: $base-spacing-unit; }
+
+// Margin-bottom
+.margin-bx { margin-bottom: 0 !important; }
+.margin-be { margin-bottom: $quarter-spacing-unit / 2; }
+.margin-bq { margin-bottom: $quarter-spacing-unit; }
+.margin-bh { margin-bottom: $half-spacing-unit; }
+.margin-bb { margin-bottom: $base-spacing-unit; }
+
+// Margin-top
+.margin-tx { margin-top: 0 !important; }
+.margin-te { margin-top: $quarter-spacing-unit / 2; }
+.margin-tq { margin-top: $quarter-spacing-unit; }
+.margin-th { margin-top: $half-spacing-unit; }
+.margin-tb { margin-top: $base-spacing-unit; }
+
+// Borders
+.border { border: 1px solid $coop-border-grey; }
+.border-t { border-top: 1px solid $coop-border-grey; }
+.border-r { border-right: 1px solid $coop-border-grey; }
+.border-b { border-bottom: 1px solid $coop-border-grey; }
+.border-l { border-left: 1px solid $coop-border-grey; }
+
+.text-centre {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.visuallyhidden {
+  @include visuallyhidden;
+}
+
+.visuallyshown {
+  @include visuallyshown;
+}
+
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
