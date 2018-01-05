@@ -2,7 +2,7 @@
 Typography - Co-op Front-end Toolkit
 ===============================================*/
 
-@import "colours";
+@import "variables";
 @import "mixins/typography";
 
 h1, .h1, .alpha,
@@ -17,6 +17,15 @@ p,
 address {
   font-weight: normal;
   margin-top: 0;
+}
+
+h1, .h1, .alpha,
+h2, .h2, .beta,
+h3, .h3, .gamma,
+h4, .h4, .delta,
+h5, .h5, .epsilon,
+h6, .h6, .zeta {
+  font-family: $bold;
 }
 
 p {
@@ -124,12 +133,4 @@ address {
 
 .intro-text {
   @include intro-text;
-}
-
-dt {
-  margin-bottom: $half-spacing-unit;
-}
-
-dd {
-  margin: 0 0 $half-spacing-unit;
 }
