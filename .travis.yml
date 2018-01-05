@@ -10,4 +10,7 @@ install:
   - npm install node-sass -g
 
 script:
-  - ./test_sass_build.sh
+  - npm run test
+
+notifications:
+  email: false
