@@ -17,12 +17,13 @@ npm install coop-frontend-toolkit --save
 Simply import the style components you require into your own stylesheet:
 
 ```scss
+/* my_styles.scss */
 @import 'node_modules/coop-frontend-toolkit/styles/fonts';
 @import 'node_modules/coop-frontend-toolkit/styles/forms';
 /* Import some more and add your own styles */
 ```
 
-You can override default colours by setting your own variables. Copy `/styles/_variables.scss` into your project and start modifying typographic scale, colours and other settings (you can omit the settings you want to keep as is), then import it before importing toolkit components:
+You can override default variables by setting your own. Copy `/styles/_variables.scss` into your project and start modifying typographic scale, colours and other settings (you can omit the settings you want to keep as is), then import it before importing toolkit components:
 
 ```scss
 /* _my_variables.scss */
@@ -42,7 +43,7 @@ You will need to copy the static assets found in `/static/` to your project as r
 
 The default path for those assets is set by the variable `$base-asset-url`, which you can update as required. For instance, if your assets will be served at `/assets/static/`, set `$base-asset-url: '/assets/static/';`.
 
-Any asset referenced in your CSS using the [`asset-url` mixin](https://github.com/coopdigital/coop-frontend-toolkit/blob/master/styles/_functions.scss) will then resolve to the set path automatically:
+Any asset referenced in your CSS using the [`asset-url` function](https://github.com/coopdigital/coop-frontend-toolkit/blob/master/styles/_functions.scss) will then resolve to the set path automatically:
 
 ```scss
 $base-asset-url: '/assets/static/';
