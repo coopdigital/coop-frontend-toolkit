@@ -7,7 +7,6 @@ Typography amd Vertical Rhythm mixins - Co-op Front-end Toolkit
 
 @mixin font-size($element: 'body', $line-height: $base-line-height) {
   font-size: em-calc(map-deep-get($typographic-scale, "base", $element));
-  font-family: $bold;
 
   @if $line-height != $base-line-height {
     line-height: $line-height;
@@ -143,40 +142,47 @@ $spacing-rhythm: 'base', 'half', 'quarter', 'eighth', 'sixteenth';
 
 // Headings
 @mixin heading-mega {
+  @include bold;
   @include font-size('h-mega', 1.385);
   @include spacing('margin', 'bottom', 'half');
   @include spacing('padding', 'top', 'half');
 }
 
 @mixin heading-h1 {
+  @include bold;
   @include font-size('h1', 1.4);
   @include spacing('margin', 'bottom', 'half');
 }
 
 @mixin heading-h2 {
+  @include bold;
   @include font-size('h2', 1.55);
   @include spacing('margin', 'bottom', 'eighth');
 }
 
 @mixin heading-h3 {
+  @include bold;
   @include font-size('h3', 1.455);
   @include spacing('padding', 'top', 'eighth');
   @include spacing('margin', 'bottom', 'eighth');
 }
 
 @mixin heading-h4 {
+  @include bold;
   @include font-size('h4', 1.455);
   @include spacing('padding', 'top', 'eighth');
   @include spacing('margin', 'bottom', 'eighth');
 }
 
 @mixin heading-h5 {
+  @include bold;
   @include font-size('h5', 1.455);
   @include spacing('padding', 'top', 'eighth');
   @include spacing('margin', 'bottom', 'eighth');
 }
 
 @mixin heading-h6 {
+  @include bold;
   @include font-size('h6', 1.5);
   @include spacing('padding', 'top', 'quarter');
   @include spacing('margin', 'bottom', 'sixteenth');
@@ -185,14 +191,12 @@ $spacing-rhythm: 'base', 'half', 'quarter', 'eighth', 'sixteenth';
 @mixin intro-text {
   @include font-size('lead', 1.6);
   @include spacing('margin', 'bottom', 'eighth');
-  font-family: $regular;
 }
 
 @mixin small {
   @include font-size('small', 1.25);
   @include spacing('padding', 'top', 'quarter');
   @include spacing('margin', 'bottom', 'sixteenth');
-  font-family: $regular;
 }
 
 // Other typographic elements
@@ -230,7 +234,6 @@ $spacing-rhythm: 'base', 'half', 'quarter', 'eighth', 'sixteenth';
   cite {
     @include body;
     @include spacing('margin', 'top', 'quarter');
-    font-family: $regular;
     font-style: normal;
   }
 
@@ -238,7 +241,6 @@ $spacing-rhythm: 'base', 'half', 'quarter', 'eighth', 'sixteenth';
 
 @mixin cite {
   display: block;
-  font-family: $regular;
   font-size: 0.75em;
 }
 

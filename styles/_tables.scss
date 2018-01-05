@@ -10,7 +10,7 @@ Tables - Co-op Front-end Toolkit
 table {
   width: 100%;
   table-layout: fixed;
-  font-size: 20px;
+  @include body;
   @include spacing('margin', 'bottom', 'half');
 
   caption {
@@ -91,7 +91,6 @@ table {
     tbody {
       th {
         display: block;
-        font-size: 16px;
         border-top: 2px solid $coop-border-grey;
         margin-top: $quarter-spacing-unit;
       }
@@ -103,14 +102,12 @@ table {
       td {
         display: block;
         border-bottom: 0;
-        font-size: 16px;
 
         &:before {
           content: attr(data-th)"";
           vertical-align: top;
           font-family: $regular;
           font-weight: normal;
-          font-size: 16px;
           // Should be amended with a custom value...
           width: 40%;
           display: inline-block;
@@ -122,7 +119,6 @@ table {
 
       ul {
         display: inline-block;
-        font-size: 16px;
         // This old chestnut https://css-tricks.com/fighting-the-space-between-inline-block-elements/
         margin-left: -5px;
       }
@@ -176,10 +172,6 @@ table {
 
   .table__bold {
      font-family: $bold;
-     font-size: em-calc(20);
-     @include media(medium) {
-       font-size: em-calc(26);
-     }
   }
 }
 
