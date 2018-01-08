@@ -150,9 +150,6 @@ The [core styles](styles) are available as SASS stylesheets. Most are available 
 Some stylesheets may need to contain Internet Explorer-specific styles, to cater for the older versions of IE that still require support. This is done through the use of the [`ie($version)` mixin](styles/mixins/_helpers.scss#L24), which adds the styles to the outputted CSS if the variable `$ie` is lower than the specified version. To make use of those styles, a separate stylesheet should be created for IE browsers, which should be served using conditional comments:
 
 ```html
-<!-- This stylesheet will be served to IE less than or equal to version 8: -->
-<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/css/ie-lte8.css"><![endif]-->
-
 <!-- This stylesheet will be served to IE 9: -->
 <!--[if IE 9]><link rel="stylesheet" type="text/css" href="/css/ie-9.css"><![endif]-->
 
@@ -170,6 +167,14 @@ The static assets contain the necessary fonts (Avenir, Coopicons) used by the st
 See [CONTRIBUTING.md](CONTRIBUTING.md) guidelines.
 
 ## Changelog
+
+###### 2.1.0
+- Usage guidance
+- Remove pixel font sizes
+- Colours and layout helpers separation
+
+###### 2.0.3
+- Table styles
 
 ###### 2.0.2
 - Updated README
