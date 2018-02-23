@@ -4,7 +4,7 @@ Links mixins - Co-op Front-end Toolkit
 
 @mixin link($color: $coop-link-blue) {
   color: $color;
-  border-bottom: .075em solid $color;
+  border-bottom: .05em solid $color; 
   text-decoration: none;
 
   &:hover {
