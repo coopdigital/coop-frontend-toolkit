@@ -11,23 +11,23 @@ Buttons mixins - Co-op Front-end Toolkit
   padding: $quarter-spacing-unit $half-spacing-unit * 1.25;
   color: $coop-link-blue;
   font-family: $medium;
-  text-align: center;   
-  border: 0;
-  background-color: $white;
+  text-align: center;
+  border: 0;  
   border-radius: $border-radius;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.4), #6e6e6e 0px 0px 1px inset;
   transition: all 0.15s linear;
   outline: none;
 
   &:hover,
   &:focus {
-    background: $offwhite;
     border: 0;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.5), #505050 0px 0px 1px inset;
   }
 
   &:focus {
     outline: 4px solid $coop-blue;
+  }
+
+  &:active {
+    outline: 0;
   }
 
   &:disabled,
@@ -41,8 +41,10 @@ Buttons mixins - Co-op Front-end Toolkit
 
 @mixin button-colour($text-colour: $coop-link-blue,
                      $hover-text-colour: $coop-blue-highlighted,
+                     $active-text-colour: $coop-blue-highlighted,
                      $bg-colour: $white,
-                     $hover-bg-colour: #fafafa) {
+                     $hover-bg-colour: $grey-light,
+                     $active-bg-colour: $grey-light) {
 
   color: $text-colour;
   background-color: $bg-colour;
@@ -51,6 +53,11 @@ Buttons mixins - Co-op Front-end Toolkit
   &:focus {
     background-color: $hover-bg-colour;
     color: $hover-text-colour;
+  }
+
+  &:active {
+    background-color: $active-bg-colour;
+    color: $active-text-colour;
   }
 
   &:disabled,
