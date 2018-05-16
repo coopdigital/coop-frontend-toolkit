@@ -2,18 +2,13 @@
 Forms - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "variables";
 @import "functions";
 @import "mixins/forms";
+@import "mixins/icons";
 
 .form-row {
   @extend %form-row;
-}
-
-fieldset {
-  border: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
 }
 
 .form-section {
@@ -25,6 +20,20 @@ legend {
   @extend %form-label;
 }
 
+.label__hint {
+  display: block;
+  color: $coop-grey;
+  font-size: em-calc(14px);
+  font-family: $regular;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
 input,
 textarea  {
   @include form-field;
@@ -32,22 +41,17 @@ textarea  {
 
 textarea {
   resize: vertical;
-  transition: border-color .3s ease-in-out;
 }
 
 select {
   @include form-select;
 }
 
-input[type=checkbox] {
-  @include form-check-field("checkbox");
-}
-input[type=radio] {
-  @include form-check-field("radio");
+.block-label {
+  @include tap-check;
 }
 
-.tap-input,
-input[type=radio].tap-input {
+.tap-input {
   @include form-tap-tile;
 }
 
@@ -84,6 +88,10 @@ input[type='range'] {
       background: $dark-grey;
     }
   }
+}
+
+.indented {
+  @include indented;
 }
 
 span.prefix {

@@ -2,6 +2,7 @@
 Grid layout mixins - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "../functions";
 @import "helpers";
 
 %wrap {
@@ -13,10 +14,10 @@ Grid layout mixins - Co-op Front-end Toolkit
   padding-right: $grid-gutter/2;
   max-width: map-get-default($breakpoints, "xlarge", 1300px);
 
-  @include media(medium) {
-    padding-left: $grid-gutter *.8;
-    padding-right: $grid-gutter *.8;
-  }
+  // @include media(medium) {
+  //   padding-left: $grid-gutter *.8;
+  //   padding-right: $grid-gutter *.8;
+  // }
 
   @include media(large) {
     padding-left: $grid-gutter;

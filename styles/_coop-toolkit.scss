@@ -6,18 +6,19 @@
 // there is no overhead when including them.
 // The variables can be overridden by providing alternative defaults: refer to
 // _variables.scss for more information.
-@import "colours";
+
 @import "variables";
 
-// Core styles
+// Reset
 @import "normalize";
-@import "helpers";
+
+// Core styles
 @import "fonts";
+@import "typography";
 @import "global";
 @import "logo";
 @import "grid";
 @import "links";
-@import "typography";
 @import "lists";
 @import "icons";
 @import "tables";
@@ -30,12 +31,17 @@
 @import "components/info-banner";
 @import "components/header-main";
 @import "components/navigation-main";
+@import "components/navigation-inpage";
 @import "components/footer-main";
 @import "components/skip-nav";
-@import "components/panels";
+@import "components/tiles";
 @import "components/messages";
 @import "components/pagination";
 @import "components/breadcrumbs";
 @import "components/search";
 @import "components/tabs";
 @import "components/toggles";
+
+// Helpers / style trumps
+@import "helpers/layout";
+@import "helpers/colour";

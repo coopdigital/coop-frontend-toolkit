@@ -2,10 +2,24 @@
 Lists - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "variables";
+@import "mixins/helpers";
 @import "mixins/lists";
 
 ul, ol {
   @include list;
+}
+
+p + ul {
+  margin-top: -$eighth-spacing-unit;
+
+  @include media(medium) {
+     margin-top: -$quarter-spacing-unit;
+  }
+}
+
+dl {
+  @include definition-list;
 }
 
 .undecorated-list,

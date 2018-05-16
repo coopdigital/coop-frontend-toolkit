@@ -2,21 +2,18 @@
 Breadcrumbs - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "../variables";
 @import "../functions";
 @import "../mixins/helpers";
 @import "../mixins/icons";
 
 .breadcrumbs {
   padding: $quarter-spacing-unit / 2 0;
-  color: $coop-grey;
-  margin-top: -$half-spacing-unit;
   margin-bottom: $half-spacing-unit;
-  font-size: em-calc(14);
 
   @include media(medium) {
-    background: $offwhite;
-    padding-left: $quarter-spacing-unit;
-    padding-right: $quarter-spacing-unit;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   li {
@@ -26,22 +23,13 @@ Breadcrumbs - Co-op Front-end Toolkit
     &:after {
       @extend %icon;
       @extend %icon-forward-arrow;
+      color: $coop-border-grey;
       position: relative;
       top: -1px;
-      padding: 5px;
-    }
-
-    a {
-      color: $coop-grey;
-      border-bottom: 0;
-
-      &:hover {
-        border-bottom: 1px dotted $coop-grey;
-      }
+      padding: 5px 14px;
     }
 
     &:last-child {
-      font-family: $bold;
 
       &:after {
         content: none;

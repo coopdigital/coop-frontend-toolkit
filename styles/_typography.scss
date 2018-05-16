@@ -2,6 +2,7 @@
 Typography - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "variables";
 @import "mixins/typography";
 
 h1, .h1, .alpha,
@@ -18,10 +19,32 @@ address {
   margin-top: 0;
 }
 
-p,
+h1, .h1, .alpha,
+h2, .h2, .beta,
+h3, .h3, .gamma,
+h4, .h4, .delta,
+h5, .h5, .epsilon,
+h6, .h6, .zeta {
+  font-family: $bold;
+}
+
+p {
+  @include body;
+  @include spacing('margin', 'bottom', 'quarter');
+}
+
 ul,
 ol {
-  font-size: 1em;
+  @include body;
+  @include spacing('margin', 'bottom', 'quarter');
+}
+
+p:last-child {
+  @include spacing('margin', 'bottom', 'half');
+}
+
+.h-mega {
+  @include heading-mega;
 }
 
 h1, .h1, .alpha {
@@ -83,6 +106,10 @@ strong {
   @include bold;
 }
 
+.medium {
+  @include medium;
+}
+
 .bold-italic {
   @include bold-italic;
 }
@@ -104,19 +131,6 @@ address {
   @include regular;
 }
 
-.byline {
-  color: $coop-grey;
-}
-
 .intro-text {
   @include intro-text;
-}
-
-dt {
-  margin-bottom: $quarter-spacing-unit;
-  color: $coop-blue;
-}
-
-dd {
-  margin: 0 0 $half-spacing-unit;
 }

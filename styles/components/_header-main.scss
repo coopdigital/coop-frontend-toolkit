@@ -27,11 +27,15 @@ Main header - Co-op Front-end Toolkit
     margin: 0 13px 0 -5px;
 
     @include media(medium) {
-      width: 72px;
+      width: 68px;
       height: 72px;
-      margin-left: $quarter-spacing-unit - 10px;
-      margin-right: 26px;
+      margin-right: 7px;
       padding: 10px;
+
+      img {
+        width: 68px;
+        height: 72px;
+      }
     }
   }
 
@@ -40,7 +44,7 @@ Main header - Co-op Front-end Toolkit
     margin-top: 9px;
     padding: 5px 0;
     border-bottom: 0;
-    color: $coop-grey;
+    color: $body-copy;
     font-size: em-calc(18);
     line-height: 1;
 

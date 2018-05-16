@@ -2,19 +2,15 @@ language: node_js
 node_js:
   - "5"
 
-cache:
-  directories:
-    - node_modules
-
 before_install:
   - rvm install ruby-2.2.0
   - gem install sass
 
 install:
-  - npm install --only=dev
   - npm install node-sass -g
 
 script:
-  - npm test
-  - node-sass --include-path styles styles/_coop-toolkit.scss > /dev/null
-  - sass styles/_coop-toolkit.scss > /dev/null
+  - npm run test
+
+notifications:
+  email: false

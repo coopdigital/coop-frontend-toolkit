@@ -2,34 +2,134 @@
 
 The Co-op Front-end Toolkit contains all the core assets needed to build Co-op-branded digital content.
 
-For more information on all the available styles and modules, please refer to the [Co-op Style Guide](http://single-site-styleguide.herokuapp.com/front-end-elements/).
+For more information on all the available styles and modules, please refer to the [Co-op Design Manual](http://coop.co.uk/designmanual).
 
 ## Installation
 
-Install the Toolkit by adding it as a [Bower](http://bower.io/) or NPM package to your project:
+Install the Toolkit by adding it as a NPM package to your project:
 
-```
-bower install git@github.com:coopdigital/coop-frontend-toolkit.git --save
-```
-
-_or_
-
-```
-npm install coopdigital/coop-frontend-toolkit --save
+```sh
+npm install coop-frontend-toolkit --save
 ```
 
-_Note: if you are installing via Bower, in order for the dependency to be saved in your project, you may first need to run `bower init` to create the `bower.json` file._
+## Usage
 
-Alternatively, you can add the dependency to your project's `bower.json` or `package.json` directly then run `bower install` or `npm install`:
+Simply import the style components you require into your own stylesheet:
+
+```scss
+/* my_styles.scss */
+@import 'node_modules/coop-frontend-toolkit/styles/fonts';
+@import 'node_modules/coop-frontend-toolkit/styles/forms';
+/* Import some more and add your own styles */
+```
+
+You can override default variables by setting your own. Copy `/styles/_variables.scss` into your project and start modifying typographic scale, colours and other settings (you can omit the settings you want to keep as is), then import it before importing toolkit components:
+
+```scss
+/* _my_variables.scss */
+$base-line-height: 1.25;
+$body-copy: #bbb;
+```
+
+```scss
+/* my_styles.scss */
+@import 'my_variables';
+@import 'node_modules/coop-frontend-toolkit/styles/coop-toolkit';
+```
+
+### Static assets
+
+You will need to copy the static assets found in `/static/` to your project as required.
+
+The default path for those assets is set by the variable `$base-asset-url`, which you can update as required. For instance, if your assets will be served at `/assets/static/`, set `$base-asset-url: '/assets/static/';`.
+
+Any asset referenced in your CSS using the [`asset-url` function](https://github.com/coopdigital/coop-frontend-toolkit/blob/master/styles/_functions.scss) will then resolve to the set path automatically:
+
+```scss
+$base-asset-url: '/assets/static/';
+
+@import 'node_modules/coop-frontend-toolkit/functions';
+
+body {
+  background-image: asset-url('images/background.jpg');
+}
+
+/* Will result in:
+body {
+  background-image: url('/assets/static/images/background.jpg');
+}
+*/
+```
+
+---
+
+### Older version of the Toolkit
+
+The base styles provided by the Toolkit changed quite a bit between version 1.1.3 and version >= 2.0.0, unfortunately resulting in a couple of breaking changes. The older versions (up to 1.1.3) are available on the Co-op Digital organisation repository on Github.
+
+If you need to carry on using the older styles, you need to make sure you are using version 1.1.3 of the Toolkit. To do so use the full github URL, including the version number:
 
 ```json
 {
   "name": "project-name",
   "dependencies": {
-    "coop-frontend-toolkit": "git@github.com:coopdigital/coop-frontend-toolkit.git"
+    "coop-frontend-toolkit": "coopdigital/coop-frontend-toolkit#1.1.3"
   }
 }
 ```
+
+#### Breaking changes between 1.1.3 and 2.0.0
+
+If you want to update to version 2, you need to be aware of the following breaking changes.
+
+##### Typographic scale
+
+If you have set a custom typographic scale, this will need to be updated to contain all the necessary `base` properties. Here are the defaults now set, all of which need to be present in the `base` property of your custom scale:
+
+```css
+$typographic-scale: (
+  base: (
+    body: 16px,
+    h-mega: 46px,
+    h1: 30px,
+    h2: 20px,
+    h3: 18px,
+    h4: 18px,
+    h5: 18px,
+    h6: 13px,
+    blockquote: 20px,
+    lead: 20px,
+    small: 13px,
+    base-line-height: 1.7,
+    base-spacing-unit: 32px,
+  )
+}
+```
+
+##### Checkboxes and Radio buttons
+
+Checkboxes and radio buttons followed directly by a `<label>` element will need a small tweak to display on the same line. The following CSS handles this realignment:
+
+```css
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline-block;
+  width: auto;
+}
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: inline-block;
+  margin: 0 0 0 5px;
+  vertical-align: middle;
+}
+```
+
+##### JavaScript modules
+
+The Javascript modules (Tabs and Toggles) have been removed from the Toolkit. If you wish to carry on using those, you will need to copy them over from version 1.1.3 to your project manually, as well as the modules loader.
+
+---
 
 ## Usage
 
@@ -50,19 +150,12 @@ The [core styles](styles) are available as SASS stylesheets. Most are available 
 Some stylesheets may need to contain Internet Explorer-specific styles, to cater for the older versions of IE that still require support. This is done through the use of the [`ie($version)` mixin](styles/mixins/_helpers.scss#L24), which adds the styles to the outputted CSS if the variable `$ie` is lower than the specified version. To make use of those styles, a separate stylesheet should be created for IE browsers, which should be served using conditional comments:
 
 ```html
-<!-- This stylesheet will be served to IE less than or equal to version 8: -->
-<!--[if lte IE 8]><link rel="stylesheet" type="text/css" href="/css/ie-lte8.css"><![endif]-->
-
 <!-- This stylesheet will be served to IE 9: -->
 <!--[if IE 9]><link rel="stylesheet" type="text/css" href="/css/ie-9.css"><![endif]-->
 
 <!-- This stylesheet will be served to all other browsers: -->
 <!--[if gt IE 9]><!--><link rel="stylesheet" type="text/css" href="/css/main.css"><!--<![endif]-->
 ```
-
-### Scripts
-
-The toolkit scripts are based on [modules](scripts/modules), all loaded by calling the `init` method from the main [coop-toolkit.js](scripts/coop-toolkit.js) script. Typically, you should only have to load the scripts for the modules your application will require; for an example, refer to the [Single Site Styleguide implementation](https://github.com/coopdigital/single-site-styleguide/blob/master/src/_js/main.js).
 
 ### Static assets
 
@@ -75,32 +168,64 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) guidelines.
 
 ## Changelog
 
+###### 2.1.0
+- Usage guidance
+- Remove pixel font sizes
+- Colours and layout helpers separation
+
+###### 2.0.3
+- Table styles
+
+###### 2.0.2
+- Updated README
+
+###### 2.0.1
+- Added missing fonts
+- Link hover colour
+- Tweaked list spacing
+- Tiles hover states
+
+###### 2.0.0
+- Public release
+- Major update to styles
+- Removal of JavaScript modules
+
 ###### 1.1.3
-Fix tables content copy colour
-Add `nowrap` helper
+- Fix tables content copy colour
+- Add `nowrap` helper
+
 ###### 1.1.2
-Added info banner component
+- Added info banner component
+
 ###### 1.1.1
-Travis CI integration
+- Travis CI integration
+
 ###### 1.1.0
-Customisable typographic scale
-Toggles modules
-More consistent JS test fixtures
-Darker default body text
-Video wrapper module
-Freeform media queries
-Several tweaks and fixes
+- Customisable typographic scale
+- Toggles modules
+- More consistent JS test fixtures
+- Darker default body text
+- Video wrapper module
+- Freeform media queries
+- Several tweaks and fixes
+
 ###### 1.0.0
-'Public' release
+- 'Public' release
+
 ###### 0.1.5
-Added JS modules
+- Added JS modules
+
 ###### 0.1.4
-Main logo aligned to the left.
+- Main logo aligned to the left.
+
 ###### 0.1.3
-Updated package links in README.
+- Updated package links in README.
+
 ###### 0.1.2
-Added option to install as NPM package.
+- Added option to install as NPM package.
+
 ###### 0.1.1
-Added minimal scripts.
+- Added minimal scripts.
+
 ###### 0.1.0
-Initial release: streamlined version of the Co-op Styleguide styles.
+- Initial release: streamlined version of the Co-op Styleguide styles.

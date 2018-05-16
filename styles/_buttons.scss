@@ -2,50 +2,54 @@
 Buttons - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "variables";
+@import "mixins/typography";
 @import "mixins/buttons";
 
-button,
 .btn {
-  @extend %button-base;
-}
-
-.btn-primary {
+  @extend %button-base;    
   @include button-colour($text-colour: $white,
                          $hover-text-colour: $white,
-                         $bg-colour: $button-green,
-                         $border-colour: $button-green,
-                         $hover-border-colour: $button-green-highlighted,
-                         $shadow-colour: darken($button-green, 6%),
-                         $hover-bg-colour: $button-green-highlighted);
+                         $active-text-colour: $white,
+                         $bg-colour: $button-grey,
+                         $hover-bg-colour: $button-grey-highlighted,
+                         $active-bg-colour: darken($button-grey-highlighted, 10%));
+}
+
+.btn-primary,
+.btn--primary {
+  @include button-colour($text-colour: $white,
+                         $hover-text-colour: $white,
+                         $active-text-colour: $white,
+                         $bg-colour: $green-blue-mid,
+                         $hover-bg-colour: #2B9E9C,
+                         $active-bg-colour: #0C6F6D);
+}
+
+.btn-primary-dark {
+  @include button-colour($text-colour: $white,
+                         $hover-text-colour: $white,
+                         $active-text-colour: $white,
+                         $bg-colour: $button-grey,
+                         $hover-bg-colour: $button-grey-highlighted,
+                         $active-bg-colour: darken($button-grey-highlighted, 10%));
 }
 
 .btn-secondary {
-  @include button-colour($text-colour: $white,
-                         $hover-text-colour: $white,
-                         $bg-colour: $coop-blue,
-                         $border-colour: $coop-blue,
-                         $hover-border-colour: lighten($coop-blue, 10%),
-                         $shadow-colour: darken($coop-blue, 6%),
-                         $hover-bg-colour: lighten($coop-blue, 10%));
-}
+  @include button-colour($text-colour: $coop-link-blue,
+                         $hover-text-colour: $coop-link-blue,
+                         $bg-colour: $white,
+                         $hover-bg-colour: $offwhite);
 
-.btn-tertiary-positive {
-  @include button-colour($text-colour: $coop-grey,
-                         $hover-text-colour: $white,
-                         $bg-colour: transparent,
-                         $border-colour: $coop-grey,
-                         $hover-bg-colour: $coop-grey);
-  box-shadow: none;
-}
+ &:disabled,
+ &.disabled {
+   background-color: $offwhite;
 
-.btn-tertiary-negative {
-  @include button-colour($text-colour: $white,
-                         $hover-text-colour: $coop-grey,
-                         $bg-colour: transparent,
-                         $border-colour: $white,
-                         $shadow-colour: darken($coop-grey, 6%),
-                         $hover-bg-colour: $white);
-  box-shadow: none;
+   &:hover,
+   &:focus {
+     background-color: $offwhite;
+   }
+ }
 }
 
 .btn-full {

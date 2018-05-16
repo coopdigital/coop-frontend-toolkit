@@ -2,6 +2,10 @@
 Global - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "variables";
+@import "functions";
+@import "mixins/typography";
+
 *,
 *:before,
 *:after {
@@ -10,19 +14,14 @@ Global - Co-op Front-end Toolkit
 
 html,
 body {
-  font-size: map-deep-get($typographic-scale, "base", "body");
-  overflow-x: hidden;
-
-  @include ie(8) {
-    overflow-x: auto;
-  }
+  font-size: em-calc(map-deep-get($typographic-scale, "base", "body"));
 }
 
 body {
   position: relative;
   margin: 0;
   padding: 0;
-  line-height: $base-line-height;
+  @include line-height();
   color: $body-copy;
   font-family: $regular;
   -webkit-font-smoothing: antialiased;

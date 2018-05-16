@@ -3,6 +3,7 @@ Lists mixins - Co-op Front-end Toolkit
 ===============================================*/
 
 @mixin list {
+
   margin-bottom: $half-spacing-unit;
 }
 
@@ -16,5 +17,21 @@ Lists mixins - Co-op Front-end Toolkit
 
   li {
     display: inline-block;
+  }
+}
+
+@mixin definition-list {
+
+  margin-top: 0;
+  margin-bottom: $half-spacing-unit;
+
+  dt {
+    font-family: $regular;
+    margin-bottom: 0;
+  }
+
+  dd {
+    font-family: $bold;
+    margin: 0 0 $quarter-spacing-unit/2;
   }
 }

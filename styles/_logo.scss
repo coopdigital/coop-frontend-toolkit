@@ -2,6 +2,7 @@
 Logo - Co-op Front-end Toolkit
 ===============================================*/
 
+@import "variables";
 @import "mixins/logo";
 
 .coop-logo,
@@ -9,10 +10,20 @@ Logo - Co-op Front-end Toolkit
   @include coop-logo;
 
   width: 36px;
+  height: 38px;
+
+  img {
+    height: 38px;
+  }
 }
 
 .coop-logo-large {
   @extend .coop-logo;
 
-  width: 72px;
+  width: 68px;
+  height: 72px;
+
+  img {
+    height: 72px;
+  }
 }
