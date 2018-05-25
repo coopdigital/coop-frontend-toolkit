@@ -1,6 +1,6 @@
 // This file imports all the available styles form the Toolkit.
 
-// Colours and variables:
+// Variables:
 // These are required by most of the following styles and should always be
 // included in your project -- they do not produce any CSS by themselves, so
 // there is no overhead when including them.
@@ -29,6 +29,7 @@
 // Components
 @import "components/top-bar";
 @import "components/info-banner";
+@import "components/header";
 @import "components/header-main";
 @import "components/navigation-main";
 @import "components/navigation-inpage";

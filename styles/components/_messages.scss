@@ -16,7 +16,8 @@ Messages/alerts - Co-op Front-end Toolkit
   }
 }
 
-.message-info {
+.message-info,
+.message--info {
   border-color: $info-orange;
   color: $body-copy;
   background: lighten($info-orange, 55%);
@@ -27,7 +28,8 @@ Messages/alerts - Co-op Front-end Toolkit
   }
 }
 
-.message-error {
+.message-error,
+.message--error {
   border-color: $saleerror-red;
   color: $body-copy;
   background: lighten($saleerror-red, 55%);
@@ -38,7 +40,8 @@ Messages/alerts - Co-op Front-end Toolkit
   }
 }
 
-.message-success {
+.message-success,
+.message--success {
   border-color: $success-green;
   color: $body-copy;
   background: lighten($success-green, 65%);
