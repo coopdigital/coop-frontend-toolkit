@@ -18,29 +18,52 @@ body {
 }
 
 body {
+  @include line-height();
   position: relative;
   margin: 0;
   padding: 0;
-  @include line-height();
   color: $body-copy;
   font-family: $regular;
-  -webkit-font-smoothing: antialiased;
+   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   @include ie(8) {
     min-width: 960px;
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    nav,
+    section {
+      display: block;
+    }
 
-    article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
-    audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
-    audio:not([controls]) { display: none; }
-    [hidden] { display: none; }
+    audio,
+    canvas,
+    video {
+       display: inline-block;
+      *display: inline;
+      *zoom: 1;
+    }
+
+    audio:not([controls]) {
+      display: none;
+    }
+
+    [hidden] {
+      display: none;
+    }
   }
 }
 
 
 // Responsive images
 img {
-  max-width: 100%; height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 img {

@@ -12,6 +12,7 @@ Main header - Co-op Front-end Toolkit
   @include spacing("padding", "right", "quarter");
   @include spacing("padding", "bottom", "quarter");
   @include spacing("padding", "left", "quarter");
+  background: $page;
 }
 
 .header--shadow {

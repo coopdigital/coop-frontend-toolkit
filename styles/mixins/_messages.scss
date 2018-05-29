@@ -10,9 +10,9 @@ Messages/alerts mixins - Co-op Front-end Toolkit
   @include spacing('margin', 'bottom', 'half');
   position: relative;
   padding: $quarter-spacing-unit $quarter-spacing-unit $quarter-spacing-unit $base-spacing-unit;
-  border: 1px solid $coop-blue;
-  background: lighten($coop-blue, 57%);
-  color: $body-copy;
+  border: 2px solid $info-orange;
+  background: $page;
+  color: $text;
   font-size: em-calc(16px);
 
   p,
@@ -37,6 +37,6 @@ Messages/alerts mixins - Co-op Front-end Toolkit
     left: .6em;
     top: .75em;
     font-size: 1.6em !important;
-    color: $coop-blue;
+    color: $info-orange;
   }
 }
