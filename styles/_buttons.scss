@@ -6,7 +6,7 @@ Buttons - Co-op Front-end Toolkit
 @import "mixins/typography";
 @import "mixins/buttons";
 
-.btn {
+.btn {  
   @extend %button-base;
   @include button-colour($text-colour: $white,
                          $hover-text-colour: $white,
@@ -21,7 +21,7 @@ Buttons - Co-op Front-end Toolkit
   @include button-colour($text-colour: $white,
                          $hover-text-colour: $white,
                          $active-text-colour: $white,
-                         $bg-colour: $green-blue-mid,  
+                         $bg-colour: $green-blue-mid,
                          $hover-bg-colour: #2B9E9C,
                          $active-bg-colour: #0C6F6D);
 }
