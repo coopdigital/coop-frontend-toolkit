@@ -129,18 +129,6 @@ table {
   }
 }
 
-// Simple responsive tables. Wrap a div round your table and apply the class.
-.table-overflow-x {
-  @warn "The table overflow-x responsive will be depricated in the next toolkit release. Please use the table-smallscreen--stacked solution or build a custom responsive table based on your needs";
-  overflow-x: visible;
-  overflow-y: hidden;
-  margin-bottom: $half-spacing-unit;
-
-  table {
-    margin-bottom: 0;
-  }
-}
-
 .unstyled-table {
   border: 0;
   margin-bottom: 0;
