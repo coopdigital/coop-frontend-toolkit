@@ -9,7 +9,6 @@ Cards - Co-op Front-end Toolkit
   @include spacing('margin', 'bottom', 'base');
 }
 
-
 .card__content {
   padding: 12px;
   color: $text;
@@ -55,6 +54,20 @@ Cards - Co-op Front-end Toolkit
 
 .card__title {
   color: $text;
+}
+
+.card__label {
+  position: absolute;
+  top: -35px;
+  left: 40px;
+  display: block;
+  padding: 20px 24px;
+  background: $page;
+  color: $text;
+  font-family: $medium;
+  font-size: em-calc(20px);
+  text-decoration: underline;
+  border-bottom: 0;
 }
 
 // Some styles are only applied if the card is a link
